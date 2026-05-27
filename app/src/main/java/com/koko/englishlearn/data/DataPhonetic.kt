@@ -8,8 +8,8 @@ const val vowels_æ = "æ"//cat
 const val vowels_uk_ɒ = "ɒ"//hot,读起来像 "霍特"（偏“奥”的音）
 const val vowels_us_ɑ = "ɑ"//hot,读起来像 "哈特"（偏“啊”的音）
 const val vowels_ʌ = "ʌ"//run
-const val vowels_us_ʊ = "ʊ"//put
-const val cvowels_us_ə = "ə"//away
+const val vowels_ʊ = "ʊ"//put
+const val cvowels_ə = "ə"//away
 
 //单元音(长元音) 5个
 const val vowels_iː = "iː"//see
