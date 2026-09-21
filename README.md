@@ -1,6 +1,6 @@
 # EnglishLearn 英语学习项目
 
-> 🌐 本项目已启用 GitHub Pages，[点此访问网页版首页](https://<你的用户名>.github.io/<仓库名>/)（首次开启 Pages 后需替换为实际地址）。
+> 🌐 本项目已启用 GitHub Pages，[点此访问网页版首页](https://smilekoko.github.io/EnglishLearn/) —— 元音音标发音练习请见[音标篇](https://smilekoko.github.io/EnglishLearn/phonetics/Vowels.html)。
 
 ## 📁 项目结构
 
