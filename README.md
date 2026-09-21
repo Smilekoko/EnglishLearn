@@ -1,5 +1,7 @@
 # EnglishLearn 英语学习项目
 
+> 🌐 本项目已启用 GitHub Pages，[点此访问网页版首页](https://<你的用户名>.github.io/<仓库名>/)（首次开启 Pages 后需替换为实际地址）。
+
 ## 📁 项目结构
 
 - `app/` — Android 应用代码

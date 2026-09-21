@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EnglishLearn 英语学习项目</title>
+<style>
+  :root {
+    --bg: #f8f9fb;
+    --card: #ffffff;
+    --border: #e3e6ec;
+    --text: #24292f;
+    --muted: #6a737d;
+    --accent: #2f6fed;
+    --accent-soft: #e8f0fe;
+    --warn: #b35900;
+    --warn-bg: #fff8e6;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 24px 16px 60px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif;
+    line-height: 1.7;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; }
+  h1 { font-size: 26px; border-bottom: 2px solid var(--border); padding-bottom: 12px; }
+  h2 { font-size: 21px; margin-top: 40px; }
+  h3 { font-size: 17px; color: var(--muted); margin-bottom: 12px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,.06);
+    margin: 8px 0 24px;
+  }
+  th, td { padding: 12px 14px; border-bottom: 1px solid var(--border); text-align: left; font-size: 14.5px; vertical-align: top; }
+  th { background: #f0f3f8; font-size: 13.5px; color: var(--muted); white-space: nowrap; }
+  tr:last-child td { border-bottom: none; }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .badge {
+    display: inline-block; background: var(--accent-soft); color: var(--accent);
+    border-radius: 999px; padding: 2px 10px; font-size: 12px; margin-left: 6px;
+  }
+  .tip {
+    background: var(--warn-bg); border-left: 4px solid var(--warn);
+    border-radius: 6px; padding: 10px 16px; font-size: 14px;
+  }
+  code {
+    background: #f0f3f8; border: 1px solid var(--border); border-radius: 4px;
+    padding: 1px 6px; font-size: 13px; font-family: Consolas, monospace;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>EnglishLearn 英语学习项目</h1>
+
+  <h2>📁 项目结构</h2>
+  <ul>
+    <li><code>app/</code> — Android 应用代码</li>
+    <li><code>grammar/</code> — 英语语法学习资料</li>
+    <li><code>phonetics/</code> — 英语语音学习资料</li>
+  </ul>
+
+  <h2>🔊 语音资料</h2>
+
+  <h3>音标篇</h3>
+  <table>
+    <tr><th>主题</th><th>简介</th><th>链接</th></tr>
+    <tr>
+      <td><b>元音（Vowels）</b><span class="badge">可发音</span></td>
+      <td>20 个元音音标：单元音（短/长）+ 双元音，可点击音标就地播放发音，支持连续播放，示例单词标注完整音标</td>
+      <td><a href="phonetics/Vowels.html">查看</a></td>
+    </tr>
+  </table>
+
+  <h2>📚 语法资料</h2>
+
+  <h3>词法篇</h3>
+  <table>
+    <tr><th>主题</th><th>简介</th><th>链接</th></tr>
+    <tr><td><b>名词（Noun）</b></td><td>名词的定义与分类、单复数、所有格、可数与不可数等</td><td><a href="grammar/noun.md">查看</a></td></tr>
+    <tr><td><b>形容词（Adjective）</b></td><td>形容词的分类、功能、比较级与最高级等</td><td><a href="grammar/adjective.md">查看</a></td></tr>
+    <tr><td><b>副词（Adverb）</b></td><td>副词的分类、位置、比较级与常用搭配等</td><td><a href="grammar/adverb.md">查看</a></td></tr>
+  </table>
+
+  <h2>🚀 快速入口</h2>
+  <ul>
+    <li><a href="phonetics/Vowels.html">元音音标发音练习</a></li>
+    <li><a href="grammar/noun.md">英语名词语法大全</a></li>
+    <li><a href="grammar/adjective.md">英语形容词语法大全</a></li>
+    <li><a href="grammar/adverb.md">英语副词语法大全</a></li>
+  </ul>
+
+  <div class="tip">
+    💡 在 GitHub Pages 上，grammar 目录下的 Markdown 文件会被自动渲染为网页；本地查看时建议用支持 Markdown 预览的编辑器打开。
+  </div>
+</div>
+</body>
+</html>
