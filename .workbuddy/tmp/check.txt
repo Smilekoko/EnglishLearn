@@ -1,1 +1,0 @@
-replaced: 1, double_close_tr: 0, stray_tr_td: 0, rows_with_word_last: 25
