@@ -1,20 +1,12 @@
 # EnglishLearn 英语学习项目
 
-> 🌐 本项目已启用 GitHub Pages，[点此访问网页版首页](https://smilekoko.github.io/EnglishLearn/) —— 元音音标发音练习请见[音标篇](https://smilekoko.github.io/EnglishLearn/phonetics/Vowels.html)。
+> 🌐 网页版入口：[https://smilekoko.github.io/EnglishLearn/](https://smilekoko.github.io/EnglishLearn/)
 
 ## 📁 项目结构
 
 - `app/` — Android 应用代码
 - `grammar/` — 英语语法学习资料
 - `phonetics/` — 英语语音学习资料
-
-## 🔊 语音资料
-
-### 音标篇
-
-| 主题 | 简介 |
-|------|------|
-| [**元音（Vowels）**](phonetics/Vowels.html) 🔊 | 20 个元音音标：单元音（短/长）+ 双元音，可点击音标就地播放发音，支持连续播放，含发音要点与易混淆对比 |
 
 ## 📚 语法资料
 
