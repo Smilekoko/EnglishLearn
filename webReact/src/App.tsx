@@ -2,6 +2,7 @@ import { NavLink, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home.tsx'
 import Grammar from './pages/Grammar.tsx'
 import Phonetics from './pages/Phonetics.tsx'
+import Vowels from './pages/Vowels.tsx'
 import NotFound from './pages/NotFound.tsx'
 import styles from './App.module.css'
 
@@ -43,6 +44,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/grammar" element={<Grammar />} />
           <Route path="/phonetics" element={<Phonetics />} />
+          <Route path="/phonetics/vowels" element={<Vowels />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
