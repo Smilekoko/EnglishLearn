@@ -1,17 +1,22 @@
+# Android / Gradle 构建产物（工程位于 android/）
+.gradle/
+.kotlin/
+build/
+captures/
+.externalNativeBuild/
+.cxx/
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-/.idea
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
 local.properties
+
+# IDE
+.idea/
+
+# macOS
+.DS_Store
+
+# 本地工具目录
 .workbuddy/
+
+# 前端（webReact/）
+node_modules/
+dist/
