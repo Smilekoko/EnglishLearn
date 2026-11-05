@@ -1,0 +1,84 @@
+.layout {
+  min-height: 100vh;
+}
+
+.sider {
+  border-right: 1px solid #e6ebf2;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 56px;
+  padding: 0 16px;
+  border-bottom: 1px solid #eef1f6;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.mark {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #2f6fed, #6aa1ff);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.brandText {
+  color: #111827;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  padding: 0 24px;
+  border-bottom: 1px solid #eef1f6;
+  background: #fff;
+  line-height: normal;
+}
+
+.headerTitle {
+  color: #111827;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.user:hover {
+  background: #f3f6fc;
+}
+
+.userName {
+  color: #1f2937;
+  font-size: 13.5px;
+}
+
+.content {
+  padding: 24px;
+  background: #f5f7fa;
+}
+
+.inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}

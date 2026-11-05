@@ -1,9 +1,12 @@
+import { Link } from 'react-router-dom'
 import styles from './Page.module.css'
 
 const topics = [
   {
     title: '名词 Noun',
-    text: '定义与分类、单数与复数、所有格、可数与不可数、常用量词搭配。',
+    text: '可数性、单复数、所有格、冠词搭配、复合名词，按难度分 5 个主题。',
+    to: '/grammar/noun',
+    action: '查看名词语法 →',
   },
   {
     title: '形容词 Adjective',
@@ -19,20 +22,26 @@ function Grammar() {
   return (
     <section>
       <h1 className={styles.pageTitle}>语法</h1>
-      <p className={styles.lead}>
-        按词法、句法归类整理英语语法，每篇配例句和易错提示。
-      </p>
+      <p className={styles.lead}>按词法、句法归类整理英语语法，每个主题配规则要点和例句。</p>
 
       <div className={styles.list}>
-        {topics.map((topic) => (
-          <article key={topic.title} className={styles.item}>
-            <h2>
-              {topic.title}
-              <span className={styles.badge}>整理中</span>
-            </h2>
-            <p>{topic.text}</p>
-          </article>
-        ))}
+        {topics.map((topic) =>
+          topic.to ? (
+            <Link key={topic.title} to={topic.to} className={`${styles.item} ${styles.itemLink}`}>
+              <h2>{topic.title}</h2>
+              <p>{topic.text}</p>
+              <span className={styles.itemAction}>{topic.action}</span>
+            </Link>
+          ) : (
+            <article key={topic.title} className={styles.item}>
+              <h2>
+                {topic.title}
+                <span className={styles.badge}>整理中</span>
+              </h2>
+              <p>{topic.text}</p>
+            </article>
+          ),
+        )}
       </div>
     </section>
   )

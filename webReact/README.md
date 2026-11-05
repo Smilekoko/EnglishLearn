@@ -52,10 +52,12 @@ webReact/
     ├── App.module.css
     ├── index.css           # 全局变量与基础样式（含深色模式）
     ├── data/
-    │   └── vowels.ts       # 20 个元音的数据（音标、分类、音频文件名、发音要点、例词）
+    │   ├── vowels.ts       # 20 个元音的数据（音标、分类、音频文件名、发音要点、例词）
+    │   └── nounGrammar.ts  # 名词语法 5 个主题（难度、概述、规则要点、例句）
     └── pages/
         ├── Home.tsx        # 首页
-        ├── Grammar.tsx     # 语法
+        ├── Grammar.tsx     # 语法（词法目录）
+        ├── NounGrammar.tsx # 名词语法：左侧主题列表 + 右侧要点与例句
         ├── Phonetics.tsx   # 音标（元音 / 辅音入口）
         ├── Vowels.tsx      # 元音：20 张卡片 + 播放按钮
         ├── NotFound.tsx    # 404
@@ -68,8 +70,29 @@ webReact/
 |------|------|
 | `/#/` | 首页 |
 | `/#/grammar` | 语法 |
+| `/#/grammar/noun` | 名词语法（5 个主题） |
 | `/#/phonetics` | 音标 |
 | `/#/phonetics/vowels` | 元音（20 个） |
+
+## 名词语法数据
+
+`src/data/nounGrammar.ts` 导出一个数组，按难度从简单到难排列，每项结构：
+
+```ts
+{
+  id: string          // 页面内唯一标识
+  title: string       // 中文标题
+  en: string          // 英文标题
+  level: '入门' | '基础' | '进阶' | '提高'
+  summary: string     // 一句话概述
+  points: string[]    // 规则要点
+  examples: { en: string; zh: string; note?: string }[]
+}
+```
+
+页面按数组顺序渲染左侧列表，点击切换右侧内容。后续做管理页面时，把数组换成接口或本地存储读取即可，`NounGrammar.tsx` 不用改。
+
+内容参考：[可数名词与不可数名词](https://m.koolearn.com/english/20200810/829079.html)、[名词变复数的规则](https://yingyu.xdf.cn/201807/10798089.html)、[名词所有格的三种表示方法](https://english.koolearn.com/20230903/865488.html)。
 
 ## 约定
 

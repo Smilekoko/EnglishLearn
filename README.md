@@ -9,6 +9,7 @@
   - `android/gradle/` — 版本目录与 Gradle Wrapper 配置
   - `android/build.gradle.kts`、`android/settings.gradle.kts` — 构建脚本
 - `webReact/` — 前端站点（React + TypeScript + Vite）
+- `webAdmin/` — `webReact` 的管理端 SPA（React + Ant Design，登录与数据暂为前端演示）
 - `grammar/` — 英语语法学习资料
 - `phonetics/` — 英语语音学习资料
 - `index.html` — 网页版入口页（GitHub Pages）
