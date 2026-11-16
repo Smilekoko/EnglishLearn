@@ -10,6 +10,8 @@
   - `android/build.gradle.kts`、`android/settings.gradle.kts` — 构建脚本
 - `webReact/` — 前端站点（React + TypeScript + Vite）
 - `webAdmin/` — `webReact` 的管理端 SPA（React + Ant Design，登录与数据暂为前端演示）
+- `server/` — 后端 API（Spring Boot 4 + Java 21 + MySQL 8），给两个前端提供数据
+- `deploy/` — 部署配置（Nginx、systemd、备份脚本、香港服务器部署手册）
 - `grammar/` — 英语语法学习资料
 - `phonetics/` — 英语语音学习资料
 - `index.html` — 网页版入口页（GitHub Pages）

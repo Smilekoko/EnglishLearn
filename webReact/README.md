@@ -24,6 +24,27 @@ npm run preview    # 预览构建结果
 npm run lint       # Oxlint 检查
 ```
 
+## 数据接口
+
+**语法详情页和词汇页**的数据都来自后端 `server`（Spring Boot）：
+
+```
+页面  ──fetch /api/...──▶  Vite 代理  ──▶  http://localhost:8080
+```
+
+- 接口层在 `src/api/`：`client.ts` 负责 baseURL、错误处理；`grammar.ts`、`vocabulary.ts` 定义各自的类型和请求函数
+- 开发环境靠 `vite.config.ts` 的 `server.proxy` 把 `/api` 转发到 8080，**没有跨域问题**，也不需要在代码里写死地址
+- 生产环境用环境变量指定后端地址：
+
+  ```bash
+  VITE_API_BASE=https://api.example.com npm run build
+  ```
+
+  不设置则默认同源（`''`），适合把前端和后端部署在同一域名下
+- 页面处理了三种状态：加载中、加载失败（带「重试」按钮）、空数据
+
+> 音标页（`/phonetics/vowels`）目前仍读本地 `src/data/vowels.ts`，后续再接到 `/api/vowels`。
+
 ## 运行配置（WebStorm）
 
 项目的 `.idea/runConfigurations/` 下预置了 5 个运行配置，直接在 WebStorm 右上角的下拉框里选：
@@ -53,13 +74,21 @@ webReact/
     ├── index.css           # 全局变量与基础样式（含深色模式）
     ├── data/
     │   ├── vowels.ts       # 20 个元音的数据（音标、分类、音频文件名、发音要点、例词）
-    │   └── nounGrammar.ts  # 名词语法 5 个主题（难度、概述、规则要点、例句）
+    │   ├── grammarTopics.ts # 语法目录：词法 13 条、句法 10 条
+    │   └── grammarTopicMeta.ts # 各语法详情页的标题与导语（词法 13 个 + 句法「句子成分与基本句型」「定语从句」「状语从句」）
+    ├── api/
+    │   ├── client.ts       # fetch 封装、baseURL、错误处理
+    │   ├── grammar.ts      # 语法接口的类型与请求函数
+    │   └── vocabulary.ts   # 词库接口的类型与请求函数
     └── pages/
         ├── Home.tsx        # 首页
-        ├── Grammar.tsx     # 语法（词法目录）
-        ├── NounGrammar.tsx # 名词语法：左侧主题列表 + 右侧要点与例句
+        ├── Grammar.tsx     # 语法首页：词法 / 句法两个入口
+        ├── GrammarCategory.tsx # 词法、句法共用的条目列表页
+        ├── GrammarTopic.tsx # 语法详情页（词法、句法主题共用），数据来自 /api/grammar
+        ├── Vocabulary.tsx  # 词汇首页：词库系列卡片，数据来自 /api/vocabulary/series
+        ├── VocabularySeries.tsx # 系列词库：按分类展示词条
         ├── Phonetics.tsx   # 音标（元音 / 辅音入口）
-        ├── Vowels.tsx      # 元音：20 张卡片 + 播放按钮
+        ├── Vowels.tsx      # 元音：20 张卡片 + 播放按钮（数据仍在本地）
         ├── NotFound.tsx    # 404
         └── Page.module.css # 各页面共用样式
 ```
@@ -69,30 +98,25 @@ webReact/
 | 路径 | 页面 |
 |------|------|
 | `/#/` | 首页 |
-| `/#/grammar` | 语法 |
-| `/#/grammar/noun` | 名词语法（5 个主题） |
+| `/#/grammar` | 语法（词法 / 句法两个入口） |
+| `/#/grammar/word` | 词法 · 13 个条目（全部已上线） |
+| `/#/grammar/:category/:topic` | 语法详情，`category` 为 `word` / `syntax`，`topic` 为 `noun`、`tenses`、`sentence`、`relative-clauses`、`adverbial-clauses` 等 |
+| `/#/grammar/word/noun` | 名词语法（5 个主题） |
+| `/#/grammar/word/articles` | 冠词语法（5 个主题） |
+| `/#/grammar/syntax` | 句法 · 10 个条目（已上线「句子成分与基本句型」「定语从句」「状语从句」） |
+| `/#/grammar/syntax/sentence` | 句子成分与基本句型（7 个主题：五种基本句型、主谓语、表语、宾语、宾补、定状、成分划分） |
+| `/#/grammar/syntax/relative-clauses` | 定语从句（9 个主题：先行词与关系词、关系代词、关系副词、that/which、介词提前、限制性、一致性、as、易错辨析） |
+| `/#/grammar/syntax/adverbial-clauses` | 状语从句（10 个主题：时间、地点、条件、原因、目的与结果、让步、比较方式、省略简化、易错辨析） |
 | `/#/phonetics` | 音标 |
 | `/#/phonetics/vowels` | 元音（20 个） |
+| `/#/vocabulary` | 词汇 · 词库系列 |
+| `/#/vocabulary/:seriesId` | 系列词库，如 `dates-numbers-units`（日期数字单位） |
 
-## 名词语法数据
+## 语法与词汇数据
 
-`src/data/nounGrammar.ts` 导出一个数组，按难度从简单到难排列，每项结构：
-
-```ts
-{
-  id: string          // 页面内唯一标识
-  title: string       // 中文标题
-  en: string          // 英文标题
-  level: '入门' | '基础' | '进阶' | '提高'
-  summary: string     // 一句话概述
-  points: string[]    // 规则要点
-  examples: { en: string; zh: string; note?: string }[]
-}
-```
-
-页面按数组顺序渲染左侧列表，点击切换右侧内容。后续做管理页面时，把数组换成接口或本地存储读取即可，`NounGrammar.tsx` 不用改。
-
-内容参考：[可数名词与不可数名词](https://m.koolearn.com/english/20200810/829079.html)、[名词变复数的规则](https://yingyu.xdf.cn/201807/10798089.html)、[名词所有格的三种表示方法](https://english.koolearn.com/20230903/865488.html)。
+- **语法详情**：条目内容（标题、要点、例句）全部来自数据库，经 `/api/grammar?topic=xxx` 读出，前端不写死任何一节课的内容；主题目录在 `src/data/grammarTopics.ts`，每页标题和导语在 `src/data/grammarTopicMeta.ts`
+- **词汇**：系列列表来自 `/api/vocabulary/series`，系列详情来自 `/api/vocabulary/series/{id}`，词条按 `category` 分组渲染
+- 两者都走 `src/api/client.ts` 的 `apiGet`，统一处理 baseURL、非 2xx 和网络错误；页面都有加载中 / 失败重试 / 空数据三种状态
 
 ## 约定
 

@@ -1,9 +1,12 @@
-import { NavLink, Route, Routes } from 'react-router-dom'
+import { NavLink, Navigate, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home.tsx'
 import Grammar from './pages/Grammar.tsx'
-import NounGrammar from './pages/NounGrammar.tsx'
+import GrammarCategory from './pages/GrammarCategory.tsx'
+import GrammarTopic from './pages/GrammarTopic.tsx'
 import Phonetics from './pages/Phonetics.tsx'
 import Vowels from './pages/Vowels.tsx'
+import Vocabulary from './pages/Vocabulary.tsx'
+import VocabularySeries from './pages/VocabularySeries.tsx'
 import NotFound from './pages/NotFound.tsx'
 import styles from './App.module.css'
 
@@ -11,6 +14,7 @@ const navItems = [
   { to: '/', label: '首页', end: true },
   { to: '/grammar', label: '语法', end: false },
   { to: '/phonetics', label: '音标', end: false },
+  { to: '/vocabulary', label: '词汇', end: false },
 ]
 
 function App() {
@@ -44,9 +48,14 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/grammar" element={<Grammar />} />
-          <Route path="/grammar/noun" element={<NounGrammar />} />
+          <Route path="/grammar/:category" element={<GrammarCategory />} />
+          <Route path="/grammar/:category/:topic" element={<GrammarTopic />} />
+          {/* 旧地址兼容 */}
+          <Route path="/grammar/noun" element={<Navigate to="/grammar/word/noun" replace />} />
           <Route path="/phonetics" element={<Phonetics />} />
           <Route path="/phonetics/vowels" element={<Vowels />} />
+          <Route path="/vocabulary" element={<Vocabulary />} />
+          <Route path="/vocabulary/:seriesId" element={<VocabularySeries />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

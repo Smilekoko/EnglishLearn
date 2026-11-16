@@ -1,0 +1,136 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.breadcrumb a {
+  color: var(--muted);
+}
+
+.breadcrumb a:hover {
+  color: var(--accent);
+}
+
+.titleEn {
+  margin-left: 10px;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.meta {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 28px;
+}
+
+.categoryHead {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.categoryTitle {
+  margin: 0;
+  font-size: 16px;
+}
+
+.categoryCount {
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.words {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.word {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+}
+
+.wordEn {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.wordZh {
+  color: var(--muted);
+  font-size: 13.5px;
+}
+
+.wordNote {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+.state {
+  padding: 56px 16px;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 18px;
+  border: 1px solid rgba(180, 35, 24, 0.35);
+  border-radius: var(--radius);
+  background: rgba(180, 35, 24, 0.06);
+  color: #d92d20;
+  font-size: 14px;
+}
+
+.retry {
+  flex-shrink: 0;
+  padding: 6px 14px;
+  border: 1px solid currentColor;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.retry:hover {
+  background: rgba(180, 35, 24, 0.08);
+}
+
+@media (max-width: 640px) {
+  .words {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}

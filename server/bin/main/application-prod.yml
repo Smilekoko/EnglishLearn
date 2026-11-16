@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: englishlearn-server
+
+  datasource:
+    # 生产环境：全部走环境变量，不设默认密码
+    url: ${DB_URL:jdbc:mysql://127.0.0.1:3306/englishlearn?useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true&connectionTimeZone=Asia/Shanghai}
+    username: ${DB_USERNAME:englishlearn}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+logging:
+  file:
+    name: ${LOG_FILE:/opt/englishlearn/logs/server.log}
+  level:
+    root: info
+    org.hibernate.SQL: warn

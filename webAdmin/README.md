@@ -71,6 +71,16 @@ webAdmin/
 | `/#/grammar` | 语法管理 | 是 |
 | `/#/vowels` | 音标管理 | 是 |
 
+## 部署
+
+生产环境通常挂在同一域名的 `/admin/` 下（后端 `/api` 反代到 Spring Boot）。构建时要指定 base，否则静态资源会去根路径找：
+
+```bash
+VITE_BASE=/admin/ npm run build
+```
+
+产物 `dist/` 交给 Nginx 的 `/admin/` location 即可，详见根目录的 `deploy/README.md`。
+
 ## 和后端的关系
 
 后端（Spring Boot）尚未搭建。接入后需要替换三处：

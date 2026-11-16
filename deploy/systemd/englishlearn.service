@@ -1,0 +1,22 @@
+# /etc/systemd/system/englishlearn.service
+[Unit]
+Description=EnglishLearn API server
+After=network.target mysql.service
+
+[Service]
+Type=simple
+User=englishlearn
+Group=englishlearn
+WorkingDirectory=/opt/englishlearn
+EnvironmentFile=/etc/englishlearn/env
+ExecStart=/usr/bin/java -Xms256m -Xmx512m -jar /opt/englishlearn/server.jar --spring.profiles.active=prod
+Restart=on-failure
+RestartSec=5
+SuccessExitStatus=143
+
+# 基础加固
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

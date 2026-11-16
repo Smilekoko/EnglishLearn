@@ -1,0 +1,22 @@
+[
+  { "symbol": "ɪ",  "label": "短元音",   "word": "sit",   "wordIpa": "/sɪt/",    "audioFile": "vowel_ih.mp3",    "sortOrder": 1 },
+  { "symbol": "e",  "label": "短元音",   "word": "bed",   "wordIpa": "/bed/",    "audioFile": "vowel_e.mp3",     "sortOrder": 2 },
+  { "symbol": "æ",  "label": "短元音",   "word": "cat",   "wordIpa": "/kæt/",    "audioFile": "vowel_ae.mp3",    "sortOrder": 3 },
+  { "symbol": "ʌ",  "label": "短元音",   "word": "cup",   "wordIpa": "/kʌp/",    "audioFile": "vowel_uh.mp3",    "sortOrder": 4 },
+  { "symbol": "ɒ",  "label": "短元音",   "word": "dog",   "wordIpa": "/dɒɡ/",    "audioFile": "vowel_oh.mp3",    "sortOrder": 5 },
+  { "symbol": "iː", "label": "长元音",   "word": "see",   "wordIpa": "/siː/",    "audioFile": "vowel_ee.mp3",    "sortOrder": 6 },
+  { "symbol": "ɜː", "label": "长元音",   "word": "bird",  "wordIpa": "/bɜːd/",   "audioFile": "vowel_er.mp3",    "sortOrder": 7 },
+  { "symbol": "ɑː", "label": "长元音",   "word": "car",   "wordIpa": "/kɑː/",    "audioFile": "vowel_ah.mp3",    "sortOrder": 8 },
+  { "symbol": "ɔː", "label": "长元音",   "word": "door",  "wordIpa": "/dɔː/",    "audioFile": "vowel_aw.mp3",    "sortOrder": 9 },
+  { "symbol": "uː", "label": "长元音",   "word": "blue",  "wordIpa": "/bluː/",   "audioFile": "vowel_oo.mp3",    "sortOrder": 10 },
+  { "symbol": "ʊ",  "label": "其他单元音", "word": "put",   "wordIpa": "/pʊt/",    "audioFile": "vowel_u.mp3",     "sortOrder": 11 },
+  { "symbol": "ə",  "label": "其他单元音", "word": "about", "wordIpa": "/əˈbaʊt/", "audioFile": "vowel_schwa.mp3", "sortOrder": 12 },
+  { "symbol": "eɪ", "label": "合口双元音", "word": "day",   "wordIpa": "/deɪ/",    "audioFile": "vowel_ay.mp3",    "sortOrder": 13 },
+  { "symbol": "aɪ", "label": "合口双元音", "word": "time",  "wordIpa": "/taɪm/",   "audioFile": "vowel_ai.mp3",    "sortOrder": 14 },
+  { "symbol": "ɔɪ", "label": "合口双元音", "word": "boy",   "wordIpa": "/bɔɪ/",    "audioFile": "vowel_oy.mp3",    "sortOrder": 15 },
+  { "symbol": "aʊ", "label": "合口双元音", "word": "now",   "wordIpa": "/naʊ/",    "audioFile": "vowel_au.mp3",    "sortOrder": 16 },
+  { "symbol": "əʊ", "label": "合口双元音", "word": "go",    "wordIpa": "/ɡəʊ/",    "audioFile": "vowel_ou.mp3",    "sortOrder": 17 },
+  { "symbol": "ɪə", "label": "集中双元音", "word": "here",  "wordIpa": "/hɪə/",    "audioFile": "vowel_ia.mp3",    "sortOrder": 18 },
+  { "symbol": "eə", "label": "集中双元音", "word": "hair",  "wordIpa": "/heə/",    "audioFile": "vowel_ea.mp3",    "sortOrder": 19 },
+  { "symbol": "ʊə", "label": "集中双元音", "word": "tour",  "wordIpa": "/tʊə/",    "audioFile": "vowel_ua.mp3",    "sortOrder": 20 }
+]
