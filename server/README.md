@@ -40,35 +40,40 @@
 
 ## 运行
 
-需要 JDK 21。本机 `JAVA_HOME` 指向 Android Studio 的 JDK 25，直接跑会用到 25，建议显式指定：
+需要 JDK 21。用户级 `JAVA_HOME` 已指向 `C:\Program Files\Java\jdk-21`（21.0.8），`gradle.properties` 里也固定了 `org.gradle.java.installations.paths=C:\\Program Files\\Java\\jdk-21`，所以直接跑即可：
 
 ```bash
 cd server
-# Windows
-set JAVA_HOME=C:\Program Files\Java\jdk-21
+# Windows（新开的终端才读得到新的 JAVA_HOME）
 .\gradlew.bat bootRun
 
 # Git Bash / macOS / Linux
 JAVA_HOME=/path/to/jdk-21 ./gradlew bootRun
 ```
 
+> 换机器时把这两个地方一起改：用户环境变量 `JAVA_HOME` 与 `gradle.properties` 里的 JDK 路径。
+
 启动后 <http://localhost:8080>。
 
-启动时会把 `src/main/resources/seed/*.json` 灌进数据库（20 个元音，词法 13 个主题共 74 条 + 句法「句子成分与基本句型」7 条 +「定语从句」9 条 +「状语从句」10 条 = 100 条语法，3 个词库共 251 个词）。语法和词库都按 id 增量插入：库里没有的条目补进去，已有的不覆盖，所以新增主题不用清库，重启即生效；元音表仍是「有数据就跳过」。
+启动时会把 `src/main/resources/seed/*.json` 灌进数据库（20 个元音含发音要点与例词、2 个语法大类、23 个语法主题、110 条语法、3 个词库共 251 个词）。灌数据的策略分两种：
+
+- **语法目录**（`grammar-categories.json` / `grammar-topics.json`）按 id、**元音**按符号 upsert：每次启动都会用种子文件覆盖成最新值
+- **语法条目**（`grammar.json`）和**词库**按 id 增量插入：库里没有的补进去，已有的不覆盖，所以新增主题不用清库
 
 ## 接口
 
 | 方法 | 路径 | 说明 |
 |------|------|------|
 | GET | `/api/health` | 健康检查，返回 `{"status":"ok"}` |
-| GET | `/api/vowels` | 20 个元音，按 `sortOrder` 排序 |
-| GET | `/api/grammar` | 全部语法条目（共 100 条：词法 12 个主题各 5 节 + 时态 14 节 + 句法 26 节） |
+| GET | `/api/vowels` | 20 个元音，含单元音/双元音分类、音频文件名、主例词、发音要点与补充例词 |
+| GET | `/api/grammar` | 全部语法条目（共 110 条：词法 12 个主题各 5 节 + 时态 14 节 + 句法 36 节） |
+| GET | `/api/grammar/topics` | 语法目录：大类、主题、每个主题已收录的节数（前端目录页只读这个接口） |
 | GET | `/api/grammar?topic=articles` | 按主题过滤，主题见下表 |
 | GET | `/api/grammar/{id}` | 单条语法，如 `/api/grammar/plural`，不存在返回 404 |
 | GET | `/api/vocabulary/series` | 词库系列列表，含每个系列的词数 |
 | GET | `/api/vocabulary/series/{id}` | 某系列的词条，按分类分组 |
 
-`topic` 可选值（时态 14 节，句法 `sentence` 7 节、`relative-clauses` 9 节、`adverbial-clauses` 10 节，其余各 5 节）：
+`topic` 可选值（时态 14 节，句法 `sentence` 7 节、`relative-clauses` 9 节、`adverbial-clauses` 10 节、`noun-clauses` 10 节，其余各 5 节）：
 
 | topic | 主题 | topic | 主题 |
 |-------|------|-------|------|
@@ -81,6 +86,7 @@ JAVA_HOME=/path/to/jdk-21 ./gradlew bootRun
 | `verbs` | 动词基础 | `sentence` | 句子成分与基本句型（句法） |
 | | | `relative-clauses` | 定语从句（句法） |
 | | | `adverbial-clauses` | 状语从句（句法） |
+| | | `noun-clauses` | 名词性从句（句法） |
 
 示例：
 
@@ -98,7 +104,7 @@ GET /api/grammar?topic=articles
 }]
 ```
 
-新增一个语法主题时，只要在 `seed/grammar.json` 里加对应 `topic` 的条目，重启服务即可增量写入数据库，接口传 `?topic=xxx` 就能读到，不需要改后端代码。前端再加一条主题目录（`webReact/src/data/grammarTopics.ts`）和页面文案（`grammarTopicMeta.ts`）就能访问。
+新增一个语法主题时，在 `seed/grammar.json` 里加对应 `topic` 的条目、在 `seed/grammar-topics.json` 里加一条目录（标题、卡片摘要、导语、排序），重启服务即可写入数据库，接口传 `?topic=xxx` 就能读到，不需要改后端代码；前端的目录和详情页都直接读接口，不用再改前端。
 
 ## 目录结构
 
@@ -110,12 +116,12 @@ server/
 ├── src/main/java/com/englishlearn/server/
 │   ├── ServerApplication.java
 │   ├── config/                 # CORS、健康检查、种子数据
-│   ├── grammar/                # 语法实体 / 仓库 / 控制器 / DTO
+│   ├── grammar/                # 语法大类 / 主题目录 / 条目（实体 / 仓库 / 控制器 / DTO）
 │   ├── vocabulary/             # 词库系列与词条（实体 / 仓库 / 控制器 / DTO）
-│   └── vowel/                  # 元音实体 / 仓库 / 控制器
+│   └── vowel/                  # 元音与补充例词（实体 / 仓库 / 控制器 / DTO）
 ├── src/main/resources/
 │   ├── application.yml         # 端口、数据源、JPA
-│   └── seed/                   # 首次启动灌入的 JSON 数据
+│   └── seed/                   # 启动时灌入的 JSON：语法大纲、主题目录、语法条目、元音、词库
 └── db/init.sql                 # 建库脚本（只需执行一次）
 ```
 
@@ -143,3 +149,4 @@ server/
 3. **Gradle 工具链**：`gradle.properties` 里固定了 JDK 21 的路径，避免误用 JAVA_HOME 里的 JDK 25。
 4. **给已有表加非空字段**：`ddl-auto: update` 只会加列，不会给旧数据回填。给 `grammar_sections` 加 `topic` 时，旧库里 5 行没有 topic，启动会失败——本地直接 `DROP DATABASE` 重建，让 seeder 重新灌数据。
 5. **增量种子只补不更新**：`seedGrammar` 按 id 判重，`grammar_sections` 里已有的条目不会因为 JSON 改了而更新。改已有条目的文案要手动 `UPDATE`（或先删该行再重启），新增条目则直接重启即可。
+6. **MySQL 保留字**：`grammar_topics` 的导语字段原本叫 `lead`，MySQL 8 里 `LEAD` 是窗口函数保留字，`create table` 直接报语法错误。改列名 `lead_text` 才建表成功；写新实体时避开 `lead`、`rank`、`groups`、`system` 这类词。

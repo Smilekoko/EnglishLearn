@@ -1,40 +1,65 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { syntaxCategory, wordCategory } from '../data/grammarTopics.ts'
-import { vowels } from '../data/vowels.ts'
+import { fetchGrammarCatalog } from '../api/grammar.ts'
+import { fetchVowels } from '../api/vowels.ts'
 import styles from './Home.module.css'
 
-const sections = [
-  {
-    to: '/phonetics',
-    title: '音标',
-    en: 'Phonetics',
-    text: '20 个元音、28 个辅音，配合示例单词和发音，练习准确口型。',
-    meta: `${vowels.length} 个元音 →`,
-  },
-  {
-    to: '/grammar/word',
-    title: '词法',
-    en: 'Parts of Speech',
-    text: '名词、冠词、代词、形容词、副词、时态、非谓语动词……按词性逐条整理。',
-    meta: `${wordCategory.topics.length} 个条目 →`,
-  },
-  {
-    to: '/grammar/syntax',
-    title: '句法',
-    en: 'Syntax',
-    text: '基本句型、定语从句、状语从句、名词性从句、虚拟语气与特殊句式。',
-    meta: `${syntaxCategory.topics.length} 个条目 →`,
-  },
-  {
-    to: '/vocabulary',
-    title: '词汇',
-    en: 'Vocabulary',
-    text: '日期数字单位、日常高频词……按主题分系列的词库，配释义和用法提示。',
-    meta: '按系列分类 →',
-  },
-]
+interface Counts {
+  word?: number
+  syntax?: number
+  vowels?: number
+}
 
 function Home() {
+  const [counts, setCounts] = useState<Counts>({})
+
+  useEffect(() => {
+    const controller = new AbortController()
+    Promise.all([fetchGrammarCatalog(controller.signal), fetchVowels(controller.signal)])
+      .then(([catalog, vowels]) => {
+        if (controller.signal.aborted) return
+        setCounts({
+          word: catalog.find((category) => category.key === 'word')?.topics.length,
+          syntax: catalog.find((category) => category.key === 'syntax')?.topics.length,
+          vowels: vowels.length,
+        })
+      })
+      // 首页统计只是装饰，接口挂了就退化成「查看」文案，不挡住入口
+      .catch(() => undefined)
+    return () => controller.abort()
+  }, [])
+
+  const sections = [
+    {
+      to: '/phonetics',
+      title: '音标',
+      en: 'Phonetics',
+      text: '元音与辅音逐个拆解，配合示例单词和发音，练准口型和舌位。',
+      meta: counts.vowels === undefined ? '查看音标 →' : `${counts.vowels} 个元音 →`,
+    },
+    {
+      to: '/grammar/word',
+      title: '词法',
+      en: 'Parts of Speech',
+      text: '名词、冠词、代词、形容词、副词、时态、非谓语动词……按词性逐条整理。',
+      meta: counts.word === undefined ? '查看词法 →' : `${counts.word} 个条目 →`,
+    },
+    {
+      to: '/grammar/syntax',
+      title: '句法',
+      en: 'Syntax',
+      text: '基本句型、定语从句、状语从句、名词性从句、虚拟语气与特殊句式。',
+      meta: counts.syntax === undefined ? '查看句法 →' : `${counts.syntax} 个条目 →`,
+    },
+    {
+      to: '/vocabulary',
+      title: '词汇',
+      en: 'Vocabulary',
+      text: '日期数字单位、日常高频词……按主题分系列的词库，配释义和用法提示。',
+      meta: '按系列分类 →',
+    },
+  ]
+
   return (
     <>
       <section className={styles.hero}>

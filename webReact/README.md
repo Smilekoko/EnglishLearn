@@ -43,7 +43,7 @@ npm run lint       # Oxlint 检查
   不设置则默认同源（`''`），适合把前端和后端部署在同一域名下
 - 页面处理了三种状态：加载中、加载失败（带「重试」按钮）、空数据
 
-> 音标页（`/phonetics/vowels`）目前仍读本地 `src/data/vowels.ts`，后续再接到 `/api/vowels`。
+> 站点上没有内容数据：语法目录、语法条目、元音全部由后端从 MySQL 读出来，前端只保留页面结构与文案。
 
 ## 运行配置（WebStorm）
 
@@ -72,23 +72,20 @@ webReact/
     ├── App.tsx             # 布局骨架（页头导航 / 路由出口 / 页脚）
     ├── App.module.css
     ├── index.css           # 全局变量与基础样式（含深色模式）
-    ├── data/
-    │   ├── vowels.ts       # 20 个元音的数据（音标、分类、音频文件名、发音要点、例词）
-    │   ├── grammarTopics.ts # 语法目录：词法 13 条、句法 10 条
-    │   └── grammarTopicMeta.ts # 各语法详情页的标题与导语（词法 13 个 + 句法「句子成分与基本句型」「定语从句」「状语从句」）
     ├── api/
     │   ├── client.ts       # fetch 封装、baseURL、错误处理
-    │   ├── grammar.ts      # 语法接口的类型与请求函数
+    │   ├── grammar.ts      # 语法接口：目录（/api/grammar/topics）与条目（/api/grammar）
+    │   ├── vowels.ts       # 元音接口（/api/vowels）
     │   └── vocabulary.ts   # 词库接口的类型与请求函数
     └── pages/
-        ├── Home.tsx        # 首页
-        ├── Grammar.tsx     # 语法首页：词法 / 句法两个入口
+        ├── Home.tsx        # 首页（条目数、元音数来自接口）
+        ├── Grammar.tsx     # 语法首页：词法 / 句法两个入口，目录来自接口
         ├── GrammarCategory.tsx # 词法、句法共用的条目列表页
-        ├── GrammarTopic.tsx # 语法详情页（词法、句法主题共用），数据来自 /api/grammar
+        ├── GrammarTopic.tsx # 语法详情页（词法、句法主题共用），目录与条目都来自接口
         ├── Vocabulary.tsx  # 词汇首页：词库系列卡片，数据来自 /api/vocabulary/series
         ├── VocabularySeries.tsx # 系列词库：按分类展示词条
-        ├── Phonetics.tsx   # 音标（元音 / 辅音入口）
-        ├── Vowels.tsx      # 元音：20 张卡片 + 播放按钮（数据仍在本地）
+        ├── Phonetics.tsx   # 音标（元音 / 辅音入口，元音数来自接口）
+        ├── Vowels.tsx      # 元音：卡片 + 播放按钮，数据来自 /api/vowels
         ├── NotFound.tsx    # 404
         └── Page.module.css # 各页面共用样式
 ```
@@ -100,23 +97,26 @@ webReact/
 | `/#/` | 首页 |
 | `/#/grammar` | 语法（词法 / 句法两个入口） |
 | `/#/grammar/word` | 词法 · 13 个条目（全部已上线） |
-| `/#/grammar/:category/:topic` | 语法详情，`category` 为 `word` / `syntax`，`topic` 为 `noun`、`tenses`、`sentence`、`relative-clauses`、`adverbial-clauses` 等 |
+| `/#/grammar/:category/:topic` | 语法详情，`category` 为 `word` / `syntax`，`topic` 为 `noun`、`tenses`、`sentence`、`relative-clauses`、`adverbial-clauses`、`noun-clauses` 等 |
 | `/#/grammar/word/noun` | 名词语法（5 个主题） |
 | `/#/grammar/word/articles` | 冠词语法（5 个主题） |
-| `/#/grammar/syntax` | 句法 · 10 个条目（已上线「句子成分与基本句型」「定语从句」「状语从句」） |
+| `/#/grammar/syntax` | 句法 · 10 个条目（已上线「句子成分与基本句型」「定语从句」「状语从句」「名词性从句」） |
 | `/#/grammar/syntax/sentence` | 句子成分与基本句型（7 个主题：五种基本句型、主谓语、表语、宾语、宾补、定状、成分划分） |
 | `/#/grammar/syntax/relative-clauses` | 定语从句（9 个主题：先行词与关系词、关系代词、关系副词、that/which、介词提前、限制性、一致性、as、易错辨析） |
 | `/#/grammar/syntax/adverbial-clauses` | 状语从句（10 个主题：时间、地点、条件、原因、目的与结果、让步、比较方式、省略简化、易错辨析） |
+| `/#/grammar/syntax/noun-clauses` | 名词性从句（10 个主题：入门、that、whether/if、连接代词、连接副词、主语、宾语、表语、同位语、与定语从句辨析） |
 | `/#/phonetics` | 音标 |
-| `/#/phonetics/vowels` | 元音（20 个） |
+| `/#/phonetics/vowels` | 元音（20 个，来自 `/api/vowels`） |
 | `/#/vocabulary` | 词汇 · 词库系列 |
 | `/#/vocabulary/:seriesId` | 系列词库，如 `dates-numbers-units`（日期数字单位） |
 
-## 语法与词汇数据
+## 数据来源
 
-- **语法详情**：条目内容（标题、要点、例句）全部来自数据库，经 `/api/grammar?topic=xxx` 读出，前端不写死任何一节课的内容；主题目录在 `src/data/grammarTopics.ts`，每页标题和导语在 `src/data/grammarTopicMeta.ts`
+- **语法**：`GET /api/grammar/topics` 返回大类（词法 / 句法）、主题、每个主题已收录的节数；`GET /api/grammar?topic=xxx` 返回该主题的条目（标题、要点、例句）。目录文案、导语、条目全部存在 MySQL，前端不写死任何一条
+- **元音**：`GET /api/vowels` 返回音标、单元音/双元音分类、音频文件名、主例词、发音要点与补充例词
 - **词汇**：系列列表来自 `/api/vocabulary/series`，系列详情来自 `/api/vocabulary/series/{id}`，词条按 `category` 分组渲染
-- 两者都走 `src/api/client.ts` 的 `apiGet`，统一处理 baseURL、非 2xx 和网络错误；页面都有加载中 / 失败重试 / 空数据三种状态
+- 都走 `src/api/client.ts` 的 `apiGet`，统一处理 baseURL、非 2xx 和网络错误；页面都有加载中 / 失败重试 / 空数据三种状态
+- 首页和音标页只额外取「条目数 / 元音数」做展示，接口挂了会退化成不带数字的文案，不挡住入口
 
 ## 约定
 

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { diphthongs, monophthongs, type Vowel } from '../data/vowels.ts'
+import page from './Page.module.css'
+import { fetchVowels, type Vowel } from '../api/vowels.ts'
 import styles from './Vowels.module.css'
 
 const AUDIO_BASE = `${import.meta.env.BASE_URL}audio/`
@@ -88,8 +89,6 @@ function VowelCard({
   isPlaying: boolean
   onPlay: (vowel: Vowel) => void
 }) {
-  const [primary, ...others] = vowel.examples
-
   return (
     <article className={styles.card}>
       <div className={styles.cardHead}>
@@ -107,18 +106,18 @@ function VowelCard({
       </div>
 
       <p className={styles.primaryWord}>
-        {primary.word}
-        <span className={styles.ipa}>{primary.ipa}</span>
+        {vowel.word}
+        {vowel.wordIpa && <span className={styles.ipa}>{vowel.wordIpa}</span>}
       </p>
 
-      <p className={styles.tip}>{vowel.tip}</p>
+      {vowel.tip && <p className={styles.tip}>{vowel.tip}</p>}
 
-      {others.length > 0 && (
+      {vowel.examples.length > 0 && (
         <p className={styles.moreWords}>
-          {others.map((example) => (
+          {vowel.examples.map((example) => (
             <span key={example.word} className={styles.moreWord}>
               {example.word}
-              <span className={styles.moreIpa}>{example.ipa}</span>
+              {example.ipa && <span className={styles.moreIpa}>{example.ipa}</span>}
             </span>
           ))}
         </p>
@@ -129,6 +128,36 @@ function VowelCard({
 
 function Vowels() {
   const { playing, toggle } = useVowelPlayer()
+  const [vowels, setVowels] = useState<Vowel[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+  const [reloadKey, setReloadKey] = useState(0)
+
+  useEffect(() => {
+    const controller = new AbortController()
+    fetchVowels(controller.signal)
+      .then((data) => {
+        if (controller.signal.aborted) return
+        setVowels(data)
+      })
+      .catch((err: unknown) => {
+        if (controller.signal.aborted) return
+        setError(err instanceof Error ? err.message : '加载失败')
+      })
+      .finally(() => {
+        if (!controller.signal.aborted) setLoading(false)
+      })
+    return () => controller.abort()
+  }, [reloadKey])
+
+  const retry = () => {
+    setLoading(true)
+    setError(null)
+    setReloadKey((key) => key + 1)
+  }
+
+  const monophthongs = vowels.filter((vowel) => vowel.kind === 'monophthong')
+  const diphthongs = vowels.filter((vowel) => vowel.kind === 'diphthong')
 
   return (
     <section>
@@ -140,37 +169,59 @@ function Vowels() {
 
       <h1 className={styles.pageTitle}>元音</h1>
       <p className={styles.lead}>
-        共 20 个：12 个单元音、8 个双元音。单元音守住口型和长短，双元音注意滑动方向。
-        点卡片上的播放键可以听发音。
+        {loading || error
+          ? '单元音守住口型和长短，双元音注意滑动方向。点卡片上的播放键可以听发音。'
+          : `共 ${vowels.length} 个：${monophthongs.length} 个单元音、${diphthongs.length} 个双元音。单元音守住口型和长短，双元音注意滑动方向。点卡片上的播放键可以听发音。`}
       </p>
 
-      <h2 className={styles.sectionTitle}>
-        单元音<span className={styles.count}>12</span>
-      </h2>
-      <div className={styles.grid}>
-        {monophthongs.map((vowel) => (
-          <VowelCard
-            key={vowel.symbol}
-            vowel={vowel}
-            isPlaying={playing === vowel.symbol}
-            onPlay={toggle}
-          />
-        ))}
-      </div>
+      {loading && <div className={page.state}>正在加载元音数据…</div>}
 
-      <h2 className={styles.sectionTitle}>
-        双元音<span className={styles.count}>8</span>
-      </h2>
-      <div className={styles.grid}>
-        {diphthongs.map((vowel) => (
-          <VowelCard
-            key={vowel.symbol}
-            vowel={vowel}
-            isPlaying={playing === vowel.symbol}
-            onPlay={toggle}
-          />
-        ))}
-      </div>
+      {!loading && error && (
+        <div className={page.error}>
+          <p>{error}</p>
+          <button type="button" className={page.retry} onClick={retry}>
+            重试
+          </button>
+        </div>
+      )}
+
+      {!loading && !error && vowels.length === 0 && <div className={page.state}>暂无元音数据。</div>}
+
+      {!loading && !error && monophthongs.length > 0 && (
+        <>
+          <h2 className={styles.sectionTitle}>
+            单元音<span className={styles.count}>{monophthongs.length}</span>
+          </h2>
+          <div className={styles.grid}>
+            {monophthongs.map((vowel) => (
+              <VowelCard
+                key={vowel.symbol}
+                vowel={vowel}
+                isPlaying={playing === vowel.symbol}
+                onPlay={toggle}
+              />
+            ))}
+          </div>
+        </>
+      )}
+
+      {!loading && !error && diphthongs.length > 0 && (
+        <>
+          <h2 className={styles.sectionTitle}>
+            双元音<span className={styles.count}>{diphthongs.length}</span>
+          </h2>
+          <div className={styles.grid}>
+            {diphthongs.map((vowel) => (
+              <VowelCard
+                key={vowel.symbol}
+                vowel={vowel}
+                isPlaying={playing === vowel.symbol}
+                onPlay={toggle}
+              />
+            ))}
+          </div>
+        </>
+      )}
 
       <Link to="/phonetics" className={styles.back}>
         ← 返回音标

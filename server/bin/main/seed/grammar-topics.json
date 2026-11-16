@@ -1,0 +1,190 @@
+[
+  {
+    "id": "noun",
+    "category": "word",
+    "title": "名词",
+    "en": "Noun",
+    "cardText": "可数性、单复数、所有格、冠词搭配、复合名词。",
+    "sortOrder": 1
+  },
+  {
+    "id": "articles",
+    "category": "word",
+    "title": "冠词",
+    "en": "Articles",
+    "cardText": "a/an 的选用、the 的用法、零冠词与固定搭配。",
+    "sortOrder": 2
+  },
+  {
+    "id": "pronouns",
+    "category": "word",
+    "title": "代词",
+    "en": "Pronouns",
+    "cardText": "人称、物主、反身、指示、疑问与关系代词。",
+    "sortOrder": 3
+  },
+  {
+    "id": "adjectives",
+    "category": "word",
+    "title": "形容词",
+    "en": "Adjectives",
+    "cardText": "位置与顺序、比较级和最高级、-ed 与 -ing 的区别。",
+    "sortOrder": 4
+  },
+  {
+    "id": "adverbs",
+    "category": "word",
+    "title": "副词",
+    "en": "Adverbs",
+    "cardText": "分类、在句中的位置、比较级、与形容词的区分。",
+    "sortOrder": 5
+  },
+  {
+    "id": "tenses",
+    "category": "word",
+    "title": "时态",
+    "en": "Tenses",
+    "cardText": "总览 + 12 个核心时态 + 时态呼应，按「时间 × 体」系统梳理。",
+    "sortOrder": 6
+  },
+  {
+    "id": "verbs",
+    "category": "word",
+    "title": "动词基础",
+    "en": "Verbs",
+    "cardText": "be 动词、实义动词、助动词、情态动词、短语动词。",
+    "sortOrder": 7
+  },
+  {
+    "id": "passive",
+    "category": "word",
+    "title": "被动语态",
+    "en": "Passive Voice",
+    "cardText": "构成方式、各时态的被动、by 短语、不用被动的场景。",
+    "sortOrder": 8
+  },
+  {
+    "id": "nonfinite",
+    "category": "word",
+    "title": "非谓语动词",
+    "en": "Non-finite Verbs",
+    "cardText": "不定式、动名词、现在分词与过去分词。",
+    "sortOrder": 9
+  },
+  {
+    "id": "agreement",
+    "category": "word",
+    "title": "主谓一致",
+    "en": "Subject-Verb Agreement",
+    "cardText": "单复数规则、集合名词、就近原则与特殊结构。",
+    "sortOrder": 10
+  },
+  {
+    "id": "prepositions",
+    "category": "word",
+    "title": "介词",
+    "en": "Prepositions",
+    "cardText": "时间、地点、方向，以及常见固定搭配。",
+    "sortOrder": 11
+  },
+  {
+    "id": "conjunctions",
+    "category": "word",
+    "title": "连词",
+    "en": "Conjunctions",
+    "cardText": "并列连词、从属连词、关联词的使用。",
+    "sortOrder": 12
+  },
+  {
+    "id": "numerals",
+    "category": "word",
+    "title": "数词",
+    "en": "Numerals",
+    "cardText": "基数词、序数词、分数与小数、年份与时刻的读法。",
+    "sortOrder": 13
+  },
+  {
+    "id": "sentence",
+    "category": "syntax",
+    "title": "句子成分与基本句型",
+    "en": "Sentence Structure",
+    "cardText": "主语、谓语、宾语、表语、定语、状语、补语，五种基本句型与划分顺序。",
+    "lead": "先认清主语、谓语、宾语、表语、定语、状语、补语这七种句子成分，再看五种基本句型，最后按「找谓语 → 找主语 → 补宾语或表语」的顺序划分成分。",
+    "sortOrder": 1
+  },
+  {
+    "id": "relative-clauses",
+    "category": "syntax",
+    "title": "定语从句",
+    "en": "Relative Clauses",
+    "cardText": "who/which/that、whose、关系副词、介词提前、限制性与非限制性。",
+    "lead": "从先行词和关系词入手，依次搞定关系代词、关系副词、that 与 which 的取舍、介词提前、限制性非限制性，最后收在一致性与易错点上。",
+    "sortOrder": 2
+  },
+  {
+    "id": "adverbial-clauses",
+    "category": "syntax",
+    "title": "状语从句",
+    "en": "Adverbial Clauses",
+    "cardText": "时间、地点、条件、原因、目的、结果、让步、比较方式，以及省略与易错点。",
+    "lead": "按意义分九类逐个过：时间、地点、条件、原因、目的、结果、让步、比较方式，再补省略简化和三个高频错误。",
+    "sortOrder": 3
+  },
+  {
+    "id": "noun-clauses",
+    "category": "syntax",
+    "title": "名词性从句",
+    "en": "Noun Clauses",
+    "cardText": "主语、宾语、表语、同位语从句，连接词选择、语序与时态呼应。",
+    "lead": "四种名词性从句共用一套连接词：that、whether/if、连接代词、连接副词。先认清从句在句中当什么成分，再处理语序、时态呼应和否定转移。",
+    "sortOrder": 4
+  },
+  {
+    "id": "subjunctive",
+    "category": "syntax",
+    "title": "虚拟语气",
+    "en": "Subjunctive Mood",
+    "cardText": "与现在/过去/将来事实相反、wish、建议与要求。",
+    "sortOrder": 5
+  },
+  {
+    "id": "inversion",
+    "category": "syntax",
+    "title": "倒装",
+    "en": "Inversion",
+    "cardText": "完全倒装、部分倒装、only 与否定词开头的倒装。",
+    "sortOrder": 6
+  },
+  {
+    "id": "cleft",
+    "category": "syntax",
+    "title": "强调句",
+    "en": "Cleft Sentences",
+    "cardText": "It is ... that 结构、what 从句强调。",
+    "sortOrder": 7
+  },
+  {
+    "id": "ellipsis",
+    "category": "syntax",
+    "title": "省略与替代",
+    "en": "Ellipsis & Substitution",
+    "cardText": "并列句中的省略、so/neither、do so。",
+    "sortOrder": 8
+  },
+  {
+    "id": "reported-speech",
+    "category": "syntax",
+    "title": "直接引语与间接引语",
+    "en": "Reported Speech",
+    "cardText": "时态后移、人称与时间状语的变化。",
+    "sortOrder": 9
+  },
+  {
+    "id": "questions-negation",
+    "category": "syntax",
+    "title": "疑问句与否定句",
+    "en": "Questions & Negation",
+    "cardText": "特殊疑问句、反义疑问句、否定转移。",
+    "sortOrder": 10
+  }
+]

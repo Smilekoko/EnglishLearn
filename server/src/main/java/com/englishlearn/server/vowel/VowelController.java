@@ -16,7 +16,7 @@ public class VowelController {
     }
 
     @GetMapping
-    public List<Vowel> all() {
-        return repository.findAllByOrderBySortOrderAsc();
+    public List<VowelDto> all() {
+        return repository.findAllByOrderBySortOrderAsc().stream().map(VowelDto::from).toList();
     }
 }

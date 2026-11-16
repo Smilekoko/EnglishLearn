@@ -67,3 +67,42 @@
   font-size: 14px;
   font-weight: 500;
 }
+
+/* 各页共用：加载中 / 空数据 / 加载失败 */
+.state {
+  padding: 56px 16px;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 18px;
+  border: 1px solid rgba(180, 35, 24, 0.35);
+  border-radius: var(--radius);
+  background: rgba(180, 35, 24, 0.06);
+  color: #d92d20;
+  font-size: 14px;
+}
+
+.retry {
+  flex-shrink: 0;
+  padding: 6px 14px;
+  border: 1px solid currentColor;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.retry:hover {
+  background: rgba(180, 35, 24, 0.08);
+}

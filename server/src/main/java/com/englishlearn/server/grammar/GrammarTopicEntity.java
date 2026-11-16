@@ -28,8 +28,8 @@ public class GrammarTopicEntity {
     @Column(name = "card_text", length = 500)
     private String cardText;
 
-    /** 详情页导语 */
-    @Column(length = 1000)
+    /** 详情页导语。列名避开 MySQL 保留字 lead，所以用 lead_text */
+    @Column(name = "lead_text", length = 1000)
     private String lead;
 
     @Column(name = "sort_order", nullable = false)

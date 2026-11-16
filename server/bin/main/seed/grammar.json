@@ -3785,5 +3785,392 @@
         "note": "不能写成 Because he was ill, so he didn't come——because 与 so 不能连用。"
       }
     ]
+  },
+  {
+    "topic": "noun-clauses",
+    "id": "nc-basics",
+    "title": "名词性从句入门",
+    "en": "Noun Clauses: Basics",
+    "level": "入门",
+    "sortOrder": 1,
+    "summary": "名词性从句就是「一句话当名词用」，可以在句子里当主语、宾语、表语或同位语。它由连接词引导，从句一律用陈述语序。",
+    "points": [
+      "按在句中的位置分四种：主语从句（What he said is true.）、宾语从句（I know he is right.）、表语从句（The problem is that we have no time.）、同位语从句（The news that he won is true.）。",
+      "连接词分三类：that（不作成分、无词义）；whether/if（是否）；连接代词 what/who/whom/whose/which 和连接副词 when/where/why/how（在从句中作成分）。",
+      "从句一律用陈述语序：I don't know where he lives.（不能写成 where does he live）",
+      "名词性从句在句中的功能相当于名词，能作主语、宾语、表语、同位语；定语从句只能修饰它前面的名词。",
+      "连接词不作成分的只有 that/whether/if，其余都要在从句里担任主语、宾语、定语或状语——这是选词的第一个依据。"
+    ],
+    "examples": [
+      {
+        "en": "What he said is true.",
+        "zh": "他说的话是真的。",
+        "note": "what 引导主语从句，同时在从句中作 said 的宾语。"
+      },
+      {
+        "en": "I don't know where he lives.",
+        "zh": "我不知道他住在哪儿。",
+        "note": "宾语从句用陈述语序 lives，不是 does he live。"
+      },
+      {
+        "en": "The problem is that we have no time.",
+        "zh": "问题是我们没有时间。",
+        "note": "that 引导表语从句，不作任何成分，也没有词义。"
+      },
+      {
+        "en": "The news that he won the game is true.",
+        "zh": "他赢了比赛的消息是真的。",
+        "note": "that 从句作 news 的同位语，说明消息的具体内容。"
+      }
+    ]
+  },
+  {
+    "topic": "noun-clauses",
+    "id": "nc-that",
+    "title": "that 从句的用法",
+    "en": "Clauses with \"that\"",
+    "level": "基础",
+    "sortOrder": 2,
+    "summary": "that 在名词性从句里只起连接作用，不作成分也没有词义。它在宾语从句里常可省略，在主语、表语和同位语从句里一般不省。",
+    "points": [
+      "that 不作成分、不翻译，只把从句「挂」到主句上：I think (that) he is right.",
+      "宾语从句里的 that 常省略；主语从句、表语从句、同位语从句里的 that 一般不省略：The fact is that he lied.",
+      "主语从句用 that 时，习惯用 it 作形式主语，把从句后移：It is clear that he is lying.",
+      "同位语从句的 that 既不能省略，也不能换成 which：the idea that we should leave early。",
+      "区分定语从句：that 引导定语从句时必须在从句中作主语或宾语，引导名词性从句时不作成分。"
+    ],
+    "examples": [
+      {
+        "en": "I think (that) he is right.",
+        "zh": "我认为他是对的。",
+        "note": "宾语从句的 that 可以省略。"
+      },
+      {
+        "en": "The fact is that nobody told him.",
+        "zh": "事实是没人告诉他。",
+        "note": "表语从句的 that 一般不省略。"
+      },
+      {
+        "en": "It is clear that he is lying.",
+        "zh": "很明显他在撒谎。",
+        "note": "主语从句后移，it 作形式主语。"
+      },
+      {
+        "en": "The idea that we should leave early is good.",
+        "zh": "我们早点走的想法不错。",
+        "note": "同位语从句的 that 不能省，也不能换成 which。"
+      }
+    ]
+  },
+  {
+    "topic": "noun-clauses",
+    "id": "nc-whether-if",
+    "title": "whether 与 if",
+    "en": "Whether vs. If",
+    "level": "基础",
+    "sortOrder": 3,
+    "summary": "whether 和 if 都表示「是否」，但 if 只能引导宾语从句，whether 可以引导全部四种名词性从句。介词后面、句首、不定式前面都只能用 whether。",
+    "points": [
+      "引导宾语从句时两者都能用：I wonder whether/if he will come.",
+      "只能用 whether 的四种情况：介词后面（It depends on whether...）、句首（Whether he comes is unknown.）、与 or not 直接连用、后接不定式（whether to go）。",
+      "if 还能引导条件状语从句，whether 不能：If it rains, we'll stay in.（条件状语从句）",
+      "whether 引导主语从句时可用 it 作形式主语：It doesn't matter whether he agrees."
+    ],
+    "examples": [
+      {
+        "en": "I wonder whether he will come.",
+        "zh": "我想知道他是否会来。",
+        "note": "宾语从句里 whether 可以换成 if。"
+      },
+      {
+        "en": "It depends on whether we have enough money.",
+        "zh": "这取决于我们的钱够不够。",
+        "note": "介词 on 后面只能用 whether。"
+      },
+      {
+        "en": "Whether he comes or not doesn't matter.",
+        "zh": "他来不来都无所谓。",
+        "note": "句首的主语从句只能用 whether。"
+      },
+      {
+        "en": "I don't know whether to accept the offer.",
+        "zh": "我不知道是否接受这个职位。",
+        "note": "whether 后可以直接跟不定式，if 不行。"
+      },
+      {
+        "en": "If it rains, we'll stay at home.",
+        "zh": "如果下雨，我们就待在家里。",
+        "note": "这里是条件状语从句，不是名词性从句，不能用 whether。"
+      }
+    ]
+  },
+  {
+    "topic": "noun-clauses",
+    "id": "nc-wh-words",
+    "title": "连接代词",
+    "en": "Wh- Pronouns: what · who · whom · whose · which",
+    "level": "基础",
+    "sortOrder": 4,
+    "summary": "连接代词既连接从句，又在从句里充当主语、宾语或定语。what 最特殊：它自带「先行词」，等于 the thing(s) that。",
+    "points": [
+      "what = the thing(s) that，在从句中作主语或宾语：What he needs is a rest.",
+      "who 指人作主语；whom 指人作宾语（口语常用 who）；whose 作定语，后面直接跟名词。",
+      "which 表示「哪几个」，有范围限制；what 没有范围。",
+      "whatever / whoever / whichever 表示「无论什么/谁/哪个」，引导让步或泛指的名词性从句。",
+      "连接代词本身有词义，从句里不能再出现它所代替的词：What he said it is wrong → 去掉 it。"
+    ],
+    "examples": [
+      {
+        "en": "What he needs is a rest.",
+        "zh": "他需要的是休息。",
+        "note": "what 在从句中作 needs 的宾语，整个从句作主语。"
+      },
+      {
+        "en": "Who will be the next captain is still unknown.",
+        "zh": "谁会成为下一任队长还不清楚。",
+        "note": "who 指人，在从句中作主语。"
+      },
+      {
+        "en": "I don't know which of the two he prefers.",
+        "zh": "我不知道这两个他更喜欢哪个。",
+        "note": "which 有范围限制，这里是「两个中选一个」。"
+      },
+      {
+        "en": "Whoever breaks the rule will be punished.",
+        "zh": "谁违反规定谁受罚。",
+        "note": "whoever 相当于 anyone who，在从句中作主语。"
+      }
+    ]
+  },
+  {
+    "topic": "noun-clauses",
+    "id": "nc-wh-adverbs",
+    "title": "连接副词",
+    "en": "Wh- Adverbs: when · where · why · how",
+    "level": "基础",
+    "sortOrder": 5,
+    "summary": "连接副词在从句中作状语，分别表示时间、地点、原因、方式或程度。判断用代词还是副词，只看从句缺状语还是缺主语、宾语。",
+    "points": [
+      "when、where、why、how 在从句中分别作时间、地点、原因、方式状语：I don't know when he left.",
+      "how 还能与形容词、副词连用表示程度：how fast、how long、how many。",
+      "从句一律陈述语序：Do you know where he lives? 不是 where does he live。",
+      "连接副词引导的从句可以作主语、宾语、表语：Where he went remains a mystery."
+    ],
+    "examples": [
+      {
+        "en": "I don't know when he left.",
+        "zh": "我不知道他什么时候走的。",
+        "note": "when 在从句中作时间状语，从句用陈述语序。"
+      },
+      {
+        "en": "Do you know where he lives?",
+        "zh": "你知道他住在哪儿吗？",
+        "note": "从句是 where he lives，不能倒装成 where does he live。"
+      },
+      {
+        "en": "Tell me why you were late.",
+        "zh": "告诉我你为什么迟到。",
+        "note": "why 作原因状语。"
+      },
+      {
+        "en": "How he finished it in two days is amazing.",
+        "zh": "他两天就完成了，真让人惊讶。",
+        "note": "how 引导主语从句，在从句中作方式状语。"
+      }
+    ]
+  },
+  {
+    "topic": "noun-clauses",
+    "id": "nc-subject",
+    "title": "主语从句与形式主语",
+    "en": "Subject Clauses",
+    "level": "进阶",
+    "sortOrder": 6,
+    "summary": "主语从句放在句首会让句子头重脚轻，英语习惯用 it 占住主语位置，把从句移到后面。it 只是形式主语，不译成「它」。",
+    "points": [
+      "it 作形式主语的常见句型：It is said/reported/believed that...；It seems/appears that...；It doesn't matter whether...",
+      "形容词作表语时也常用 it：It is obvious that...；It is important that...（从句常用 should do，should 可省略）。",
+      "主语从句作主语时，谓语一般用单数：What he said is true. / Whether they agree doesn't matter.",
+      "句首不能用 if 引导主语从句，要用 whether；that 引导时一般不省略。",
+      "what 引导的主语从句不能换成 that：What matters is your attitude.（不是 That matters）"
+    ],
+    "examples": [
+      {
+        "en": "It is said that he has moved abroad.",
+        "zh": "据说他已经搬到国外了。",
+        "note": "it 是形式主语，that 从句才是真正的主语。"
+      },
+      {
+        "en": "It is important that everyone (should) be on time.",
+        "zh": "每个人准时到很重要。",
+        "note": "这类形容词后的从句常用 should do，should 可以省略。"
+      },
+      {
+        "en": "What he said is true.",
+        "zh": "他说的是真的。",
+        "note": "what 从句作主语，谓语用单数 is。"
+      },
+      {
+        "en": "Whether we go or not doesn't matter.",
+        "zh": "我们去不去都无所谓。",
+        "note": "主语从句用 whether，不能用 if。"
+      }
+    ]
+  },
+  {
+    "topic": "noun-clauses",
+    "id": "nc-object",
+    "title": "宾语从句与时态呼应",
+    "en": "Object Clauses",
+    "level": "进阶",
+    "sortOrder": 7,
+    "summary": "宾语从句最常考两件事：主句是过去时的时候，从句要不要跟着后移时态；以及 think、believe 这类词的否定转移。",
+    "points": [
+      "时态呼应：主句是过去时，从句一般要用过去的某个时态：He said he was busy.",
+      "例外：从句表示客观真理、自然规律时，仍用一般现在时：The teacher said the earth moves around the sun.",
+      "否定转移：think、believe、suppose、expect 后接 that 从句时，否定要提到主句：I don't think he is right.",
+      "宾语从句的 that 常省略；whether/if 和连接代词、连接副词都不能省。",
+      "有些动词后接「疑问词 + 不定式」更简洁：I don't know what to do."
+    ],
+    "examples": [
+      {
+        "en": "He said he was busy.",
+        "zh": "他说他很忙。",
+        "note": "主句是过去时，从句用过去时 was。"
+      },
+      {
+        "en": "The teacher said the earth moves around the sun.",
+        "zh": "老师说地球绕着太阳转。",
+        "note": "客观真理不受时态呼应影响，仍用一般现在时。"
+      },
+      {
+        "en": "I don't think he is right.",
+        "zh": "我认为他不对。",
+        "note": "否定转移到主句，是英语的习惯表达。"
+      },
+      {
+        "en": "I don't know what to do.",
+        "zh": "我不知道该怎么办。",
+        "note": "what to do 是宾语从句的简化形式。"
+      }
+    ]
+  },
+  {
+    "topic": "noun-clauses",
+    "id": "nc-predicative",
+    "title": "表语从句",
+    "en": "Predicative Clauses",
+    "level": "进阶",
+    "sortOrder": 8,
+    "summary": "表语从句跟在系动词后面，说明主语是什么或怎么样。最常出现在 The reason is that...、That's why...、It seems that... 这几类句子里。",
+    "points": [
+      "常见系动词后接表语从句：be、seem、look、appear、remain：The trouble is that we are late.",
+      "The reason is that... 用 that 不用 because，否则意思重复。",
+      "That's why...（结果）与 That's because...（原因）要分清。",
+      "表语从句用陈述语序；whether 可以引导，if 一般不行。",
+      "as if / as though 也能引导表语从句：It looks as if it will rain."
+    ],
+    "examples": [
+      {
+        "en": "The trouble is that we are late.",
+        "zh": "麻烦的是我们迟到了。",
+        "note": "that 引导表语从句，不作成分。"
+      },
+      {
+        "en": "The reason is that he didn't prepare.",
+        "zh": "原因是他没有准备。",
+        "note": "不用 because，否则和前面的 reason 重复。"
+      },
+      {
+        "en": "That's why he was late.",
+        "zh": "这就是他迟到的原因。",
+        "note": "why 从句表示结果。"
+      },
+      {
+        "en": "That's because he missed the bus.",
+        "zh": "那是因为他错过了公交车。",
+        "note": "because 从句表示原因，注意与 why 的区别。"
+      },
+      {
+        "en": "It looks as if it will rain.",
+        "zh": "看起来要下雨了。",
+        "note": "as if 引导表语从句。"
+      }
+    ]
+  },
+  {
+    "topic": "noun-clauses",
+    "id": "nc-appositive",
+    "title": "同位语从句",
+    "en": "Appositive Clauses",
+    "level": "进阶",
+    "sortOrder": 9,
+    "summary": "同位语从句跟在抽象名词后面，说明这个名词的具体内容。它和定语从句最大的区别：that 在从句里不作成分。",
+    "points": [
+      "常见先行名词：news、fact、idea、hope、belief、doubt、promise、possibility、evidence。",
+      "同位语从句的 that 不作成分、不能省略；定语从句的 that 要作主语或宾语。",
+      "判断方法：把 that 去掉，从句结构仍完整的是同位语从句；缺主语或宾语的是定语从句。",
+      "同位语从句还可以用 whether、how、when 等引导：the question whether we should go。"
+    ],
+    "examples": [
+      {
+        "en": "The news that our team won is exciting.",
+        "zh": "我们队获胜的消息令人兴奋。",
+        "note": "that 从句结构完整、不作成分，是同位语从句。"
+      },
+      {
+        "en": "The news that he told us is exciting.",
+        "zh": "他告诉我们的那个消息令人兴奋。",
+        "note": "tell 缺宾语，that 在从句中作宾语，是定语从句。"
+      },
+      {
+        "en": "I have no idea when he will come back.",
+        "zh": "我不知道他什么时候回来。",
+        "note": "when 引导同位语从句，说明 idea 的内容。"
+      },
+      {
+        "en": "There is a possibility that he will resign.",
+        "zh": "他有可能辞职。",
+        "note": "that 从句说明 possibility 的具体内容。"
+      }
+    ]
+  },
+  {
+    "topic": "noun-clauses",
+    "id": "nc-differences",
+    "title": "与定语从句辨析",
+    "en": "Noun Clauses vs. Relative Clauses",
+    "level": "提高",
+    "sortOrder": 10,
+    "summary": "名词性从句和定语从句都用 that、what、when 这些词，区别只有一条：引导词在从句里作不作成分、从句前面有没有名词。抓住这条，大半的题都能判断。",
+    "points": [
+      "定语从句前面一定有先行词；名词性从句前面没有（同位语从句除外，它前面的名词是被说明内容的对象）。",
+      "that 在定语从句中作主语或宾语，在名词性从句中不作成分：删掉 that 后从句仍完整的是名词性从句。",
+      "what 只能引导名词性从句，因为它自带先行词，定语从句不需要它。",
+      "名词性从句一律陈述语序，这是最高频的错误：I don't know where he is.（不是 where is he）",
+      "时态呼应、否定转移、whether/if 的选择，是宾语从句的三个固定考点。"
+    ],
+    "examples": [
+      {
+        "en": "I know that he is a teacher.",
+        "zh": "我知道他是老师。",
+        "note": "名词性从句：that 不作成分，删掉后 he is a teacher 仍然完整。"
+      },
+      {
+        "en": "The man that is standing there is my uncle.",
+        "zh": "站在那儿的那个男人是我叔叔。",
+        "note": "定语从句：that 作从句主语，不能删。"
+      },
+      {
+        "en": "What he bought surprised us.",
+        "zh": "他买的东西让我们很惊讶。",
+        "note": "what 引导主语从句，自带「先行词」，不能用 that。"
+      },
+      {
+        "en": "I don't know where he is.",
+        "zh": "我不知道他在哪儿。",
+        "note": "名词性从句用陈述语序，不能写成 where is he。"
+      }
+    ]
   }
 ]

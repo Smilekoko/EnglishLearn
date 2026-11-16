@@ -1,60 +1,88 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router-dom'
-import { fetchGrammarSections, type GrammarSection } from '../api/grammar.ts'
-import { grammarCategories, type GrammarCategory } from '../data/grammarTopics.ts'
-import { grammarTopicMeta, type GrammarTopicMeta } from '../data/grammarTopicMeta.ts'
+import {
+  fetchGrammarCatalog,
+  fetchGrammarSections,
+  type GrammarCategorySummary,
+  type GrammarSection,
+  type GrammarTopicSummary,
+} from '../api/grammar.ts'
 import styles from './GrammarTopic.module.css'
 
-function GrammarTopicView({
-  topic,
-  meta,
-  category,
-}: {
-  topic: string
-  meta: GrammarTopicMeta
-  category: GrammarCategory
-}) {
-  const [sections, setSections] = useState<GrammarSection[]>([])
+interface TopicPage {
+  category: GrammarCategorySummary
+  topic: GrammarTopicSummary
+  sections: GrammarSection[]
+}
+
+function GrammarTopicView({ categoryKey, topicKey }: { categoryKey: string; topicKey: string }) {
+  const [page, setPage] = useState<TopicPage | null>(null)
   const [activeId, setActiveId] = useState<string | null>(null)
   const [loading, setLoading] = useState(true)
+  const [notFound, setNotFound] = useState(false)
   const [error, setError] = useState<string | null>(null)
-
-  const load = useCallback(
-    async (signal?: AbortSignal) => {
-      try {
-        const data = await fetchGrammarSections(topic, signal)
-        if (signal?.aborted) return
-
-        setSections(data)
-        setError(null)
-        setActiveId((current) =>
-          current && data.some((section) => section.id === current) ? current : (data[0]?.id ?? null),
-        )
-      } catch (err) {
-        if (signal?.aborted) return
-        setError(err instanceof Error ? err.message : '加载失败')
-      } finally {
-        if (!signal?.aborted) setLoading(false)
-      }
-    },
-    [topic],
-  )
+  const [reloadKey, setReloadKey] = useState(0)
 
   useEffect(() => {
     const controller = new AbortController()
-    // 数据在 await 之后才落地，不会在渲染期同步触发重渲染
-    // eslint-disable-next-line react/set-state-in-effect
-    void load(controller.signal)
+
+    Promise.all([
+      fetchGrammarCatalog(controller.signal),
+      fetchGrammarSections(topicKey, controller.signal),
+    ])
+      .then(([catalog, sections]) => {
+        if (controller.signal.aborted) return
+        const category = catalog.find((item) => item.key === categoryKey)
+        const topic = category?.topics.find((item) => item.key === topicKey)
+        if (!category || !topic) {
+          setNotFound(true)
+          return
+        }
+        setPage({ category, topic, sections })
+        setActiveId((current) =>
+          current && sections.some((section) => section.id === current) ? current : (sections[0]?.id ?? null),
+        )
+      })
+      .catch((err: unknown) => {
+        if (controller.signal.aborted) return
+        setError(err instanceof Error ? err.message : '加载失败')
+      })
+      .finally(() => {
+        if (!controller.signal.aborted) setLoading(false)
+      })
+
     return () => controller.abort()
-  }, [load])
+  }, [categoryKey, topicKey, reloadKey])
 
   const retry = () => {
     setLoading(true)
     setError(null)
-    void load()
+    setNotFound(false)
+    setReloadKey((key) => key + 1)
   }
 
+  if (loading) {
+    return <div className={styles.state}>正在加载语法数据…</div>
+  }
+
+  if (error) {
+    return (
+      <div className={styles.error}>
+        <p>{error}</p>
+        <button type="button" className={styles.retry} onClick={retry}>
+          重试
+        </button>
+      </div>
+    )
+  }
+
+  if (notFound || !page) {
+    return <Navigate to="/grammar/word" replace />
+  }
+
+  const { category, topic, sections } = page
   const active = sections.find((section) => section.id === activeId) ?? sections[0] ?? null
+  const intro = topic.lead ?? topic.cardText ?? ''
 
   return (
     <section>
@@ -63,30 +91,17 @@ function GrammarTopicView({
         <span aria-hidden="true">/</span>
         <Link to={`/grammar/${category.key}`}>{category.title}</Link>
         <span aria-hidden="true">/</span>
-        <span>{meta.title}</span>
+        <span>{topic.title}</span>
       </nav>
 
-      <h1 className={styles.pageTitle}>{meta.title}</h1>
-      <p className={styles.lead}>
-        {active ? `共 ${sections.length} 个主题。${meta.lead}` : meta.lead}
-      </p>
+      <h1 className={styles.pageTitle}>{topic.title}</h1>
+      <p className={styles.lead}>{active ? `共 ${sections.length} 个主题。${intro}` : intro}</p>
 
-      {loading && <div className={styles.state}>正在加载语法数据…</div>}
+      {!active && <div className={styles.state}>暂无语法数据。</div>}
 
-      {!loading && error && (
-        <div className={styles.error}>
-          <p>{error}</p>
-          <button type="button" className={styles.retry} onClick={retry}>
-            重试
-          </button>
-        </div>
-      )}
-
-      {!loading && !error && !active && <div className={styles.state}>暂无语法数据。</div>}
-
-      {!loading && !error && active && (
+      {active && (
         <div className={styles.layout}>
-          <aside className={styles.sidebar} aria-label={`${meta.title}语法列表`}>
+          <aside className={styles.sidebar} aria-label={`${topic.title}语法列表`}>
             <p className={styles.sidebarTitle}>语法列表</p>
             {sections.map((section, index) => {
               const isActive = section.id === active.id
@@ -147,16 +162,10 @@ function GrammarTopicView({
 }
 
 function GrammarTopic() {
-  const { category: categoryKey = '', topic = '' } = useParams<{ category: string; topic: string }>()
-  const meta = grammarTopicMeta[topic]
-  const category = grammarCategories.find((item) => item.key === categoryKey)
-
-  if (!meta || !category) {
-    return <Navigate to="/grammar/word" replace />
-  }
+  const { category = '', topic = '' } = useParams<{ category: string; topic: string }>()
 
   // key 保证切换主题时重置加载状态和左侧选中项
-  return <GrammarTopicView key={`${category.key}/${topic}`} topic={topic} meta={meta} category={category} />
+  return <GrammarTopicView key={`${category}/${topic}`} categoryKey={category} topicKey={topic} />
 }
 
 export default GrammarTopic
