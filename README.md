@@ -1,6 +1,6 @@
 # EnglishLearn 英语学习项目
 
-> 🌐 网页版入口：[https://smilekoko.github.io/EnglishLearn/](https://smilekoko.github.io/EnglishLearn/)
+> 对外访问走 `webReact` 前端站点（数据由 `server` 提供），部署方式见 [deploy/README.md](deploy/README.md)。
 
 ## 📁 项目结构
 
@@ -8,13 +8,11 @@
   - `android/app/` — Android 应用代码
   - `android/gradle/` — 版本目录与 Gradle Wrapper 配置
   - `android/build.gradle.kts`、`android/settings.gradle.kts` — 构建脚本
-- `webReact/` — 前端站点（React + TypeScript + Vite）
+- `webReact/` — 前端站点（React + TypeScript + Vite），对外访问的入口
 - `webAdmin/` — `webReact` 的管理端 SPA（React + Ant Design，登录与数据暂为前端演示）
 - `server/` — 后端 API（Spring Boot 4 + Java 21 + MySQL 8），给两个前端提供数据
 - `deploy/` — 部署配置（Nginx、systemd、备份脚本、香港服务器部署手册）
-- `grammar/` — 英语语法学习资料
-- `phonetics/` — 英语语音学习资料
-- `index.html` — 网页版入口页（GitHub Pages）
+- `grammar/` — 语法学习资料的 Markdown 原稿（网页版内容已迁移到 `webReact` + `server`）
 
 ## 🔨 Android 构建
 

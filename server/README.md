@@ -136,13 +136,12 @@ server/
 
 ## 跨域
 
-`config/CorsConfig` 放行了三个来源：
+`config/CorsConfig` 只放行两个本地开发来源：
 
 - `http://localhost:5173`（webReact 开发）
 - `http://localhost:5174`（webAdmin 开发）
-- `https://smilekoko.github.io`（线上静态站）
 
-上线换域名后记得收窄这个白名单。
+线上是同域部署（见 `deploy/`：Nginx 把 `/api` 反代到本机 8080），前端与接口同一个域名，不需要额外跨域；GitHub Pages 那套静态站已经下线，对应的白名单也一并去掉了。以后如果前端独立到别的域名，再往 `allowedOrigins` 里加。
 
 ## 还没做
 

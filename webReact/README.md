@@ -131,10 +131,10 @@ webReact/
 ## 约定
 
 - **样式**：组件级样式一律用 `*.module.css`，全局只保留 `index.css` 里的变量和基础排版。
-- **路由**：用 `HashRouter`（地址形如 `/#/grammar`），这样静态托管（GitHub Pages 等）刷新子页面不会 404；若以后改成服务端重写，再换成 `BrowserRouter`。
+- **路由**：用 `HashRouter`（地址形如 `/#/grammar`），刷新子页面不会 404，静态托管也不依赖服务端 rewrite；哪天服务端能统一 rewrite，再换成 `BrowserRouter`。
 - **新增页面**：在 `src/pages/` 下建组件，再到 `App.tsx` 的 `<Routes>` 里注册，并在 `navItems` 中加导航项。
 - **音频**：发音文件放 `public/audio/`，代码里用 `${import.meta.env.BASE_URL}audio/文件名` 拼路径，换部署子路径时不用改代码。播放共用一个 `<audio>`，同一时间只播一条，再次点击同一条即停止。
-- **部署**：默认部署在站点根路径。若要放到子路径（例如 `https://smilekoko.github.io/EnglishLearn/webReact/`），在 `vite.config.ts` 里设置 `base: '/EnglishLearn/webReact/'`。
+- **部署**：对外只部署这一个前端站点（`npm run build` 后把 `dist/` 交给 Nginx，见 [deploy/README.md](../deploy/README.md)），默认在站点根路径；若挂到子路径（例如 `https://example.com/englishlearn/`），在 `vite.config.ts` 里设置 `base: '/englishlearn/'`。GitHub Pages 那套静态站已下线，相关入口页和脚本都已删除。
 
 ## 音频校验
 
