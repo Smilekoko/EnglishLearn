@@ -1,6 +1,15 @@
+# Gradle / 构建产物
 .gradle/
 build/
+bin/
+out/
+*.class
+*.log
+
+# 本地数据
 *.db
 *.sqlite
-.DS_Store
+
+# IDE / 系统
 .idea/
+.DS_Store

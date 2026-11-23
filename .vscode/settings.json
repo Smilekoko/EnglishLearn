@@ -1,3 +1,40 @@
 {
-    "java.compile.nullAnalysis.mode": "automatic"
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-21",
+            "path": "C:\\Program Files\\Java\\jdk-21",
+            "default": true
+        }
+    ],
+    "java.import.gradle.java.home": "C:\\Program Files\\Java\\jdk-21",
+    "java.import.gradle.enabled": true,
+    "java.import.exclusions": [
+        "**/node_modules/**",
+        "**/dist/**",
+        "**/build/**",
+        "**/bin/**",
+        "**/.git/**"
+    ],
+    "files.exclude": {
+        "**/bin": true,
+        "**/build": true,
+        "**/dist": true,
+        "**/node_modules": true,
+        "**/.gradle": true
+    },
+    "search.exclude": {
+        "**/bin": true,
+        "**/build": true,
+        "**/dist": true,
+        "**/node_modules": true,
+        "**/.gradle": true
+    },
+    "files.watcherExclude": {
+        "**/bin/**": true,
+        "**/build/**": true,
+        "**/dist/**": true,
+        "**/node_modules/**": true,
+        "**/.gradle/**": true
+    }
 }

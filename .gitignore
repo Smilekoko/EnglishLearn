@@ -2,10 +2,13 @@
 .gradle/
 .kotlin/
 build/
+bin/
+out/
 captures/
 .externalNativeBuild/
 .cxx/
 *.iml
+*.class
 local.properties
 
 # IDE
@@ -17,6 +20,6 @@ local.properties
 # 本地工具目录
 .workbuddy/
 
-# 前端（webReact/）
+# 前端（webReact/、webAdmin/）
 node_modules/
 dist/
