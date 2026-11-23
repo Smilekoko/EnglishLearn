@@ -5,6 +5,7 @@ import GrammarCategory from './pages/GrammarCategory.tsx'
 import GrammarTopic from './pages/GrammarTopic.tsx'
 import Phonetics from './pages/Phonetics.tsx'
 import Vowels from './pages/Vowels.tsx'
+import Consonants from './pages/Consonants.tsx'
 import Vocabulary from './pages/Vocabulary.tsx'
 import VocabularySeries from './pages/VocabularySeries.tsx'
 import NotFound from './pages/NotFound.tsx'
@@ -54,6 +55,7 @@ function App() {
           <Route path="/grammar/noun" element={<Navigate to="/grammar/word/noun" replace />} />
           <Route path="/phonetics" element={<Phonetics />} />
           <Route path="/phonetics/vowels" element={<Vowels />} />
+          <Route path="/phonetics/consonants" element={<Consonants />} />
           <Route path="/vocabulary" element={<Vocabulary />} />
           <Route path="/vocabulary/:seriesId" element={<VocabularySeries />} />
           <Route path="*" element={<NotFound />} />

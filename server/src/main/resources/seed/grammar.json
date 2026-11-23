@@ -4172,5 +4172,2324 @@
         "note": "名词性从句用陈述语序，不能写成 where is he。"
       }
     ]
+  },
+  {
+    "topic": "subjunctive",
+    "id": "sub-basics",
+    "title": "虚拟语气入门",
+    "en": "Subjunctive: Basics",
+    "level": "入门",
+    "sortOrder": 1,
+    "summary": "虚拟语气不陈述事实，而是表达假设、愿望、建议或与事实相反的情况。它的核心是「时态后移」：用过去的时态表示不真实，用 would/could/might + 动词表示结果。",
+    "points": [
+      "英语有三种语气：陈述（He is ill.）、祈使（Go home.）、虚拟（If he were here, we would ask him.）。",
+      "虚拟的核心是时态后移：与现在相反用一般过去时，与过去相反用过去完成时，与将来相反用 were to do 或 should do。",
+      "主句谓语通常是 would/could/might/should + 动词原形，不用 will/can。",
+      "判断时间只看「假设的内容」发生在什么时候，不看整句；主从时间不一致就分开处理（混合虚拟）。",
+      "虚拟语气的时态不表示时间先后，而表示「与事实的距离」——越远的时态表示越不真实。"
+    ],
+    "examples": [
+      {
+        "en": "If I were you, I would accept the offer.",
+        "zh": "如果我是你，我会接受这个职位。",
+        "note": "与现在事实相反：从句用 were，主句用 would + 动词原形。"
+      },
+      {
+        "en": "If he had studied harder, he would have passed.",
+        "zh": "如果他当时更努力，就通过了。",
+        "note": "与过去事实相反：had done + would have done。"
+      },
+      {
+        "en": "I wish I could fly.",
+        "zh": "我希望能飞。",
+        "note": "wish 后与现在事实相反，用过去时 could。"
+      },
+      {
+        "en": "It is important that everyone (should) be on time.",
+        "zh": "每个人准时到很重要。",
+        "note": "建议类从句用 should do，should 可以省略。"
+      }
+    ]
+  },
+  {
+    "topic": "subjunctive",
+    "id": "sub-if-present",
+    "title": "与现在事实相反",
+    "en": "Present Unreal Conditional",
+    "level": "基础",
+    "sortOrder": 2,
+    "summary": "与现在事实相反：从句用一般过去时（be 一律用 were），主句用 would/could/might/should + 动词原形。记住公式就能直接套。",
+    "points": [
+      "公式：If + 主语 + 动词过去式（be 用 were）, 主语 + would/could/might/should + 动词原形。",
+      "be 动词在虚拟条件句里通常用 were；口语里第一、三人称也可能用 was，写作中建议用 were。",
+      "主句的助动词有分工：would 表结果，could 表能力或可能性，might 表较小的可能，should 表「应该、竟然」。",
+      "从句虽用一般过去时，但不表示过去时间，而是表示「现在不真实」。",
+      "常见搭配：If I were you、If it were not for（要不是）、If only（要是……就好了）。"
+    ],
+    "examples": [
+      {
+        "en": "If I were you, I would tell him the truth.",
+        "zh": "如果我是你，我会告诉他真相。",
+        "note": "与现在相反：were + would do。"
+      },
+      {
+        "en": "If it were not for your help, I would fail.",
+        "zh": "要不是你的帮助，我会失败。",
+        "note": "were not for 是固定搭配，表示与现在事实相反。"
+      },
+      {
+        "en": "If he knew the answer, he would tell us.",
+        "zh": "如果他知道答案，他会告诉我们的。",
+        "note": "从句 knew 表示他现在并不知道。"
+      },
+      {
+        "en": "If I had more time, I could travel around the world.",
+        "zh": "如果我有更多时间，我就能环游世界。",
+        "note": "could 表示能力，had 表过去但指的是现在。"
+      }
+    ]
+  },
+  {
+    "topic": "subjunctive",
+    "id": "sub-if-past",
+    "title": "与过去事实相反",
+    "en": "Past Unreal Conditional",
+    "level": "基础",
+    "sortOrder": 3,
+    "summary": "与过去事实相反：从句用过去完成时 had done，主句用 would/could/might + have done。这是各类考试里出现最多的一种虚拟。",
+    "points": [
+      "公式：If + 主语 + had done, 主语 + would/could/might + have done。",
+      "从句 had done 表示「当时其实没做」，主句 would have done 表示「当时就会……」。",
+      "最常见的错误是主句漏掉 have：写成 would pass 就变成「与现在相反」了。",
+      "否定形式：If he hadn't been ill, he would have come. / If it hadn't been for（要不是当时）。",
+      "条件从句里的 had done 是虚拟，不是「过去的过去」，不要按时间先后去理解。"
+    ],
+    "examples": [
+      {
+        "en": "If I had known the truth, I would have told you.",
+        "zh": "如果我当时知道真相，我会告诉你的。",
+        "note": "与过去相反：had known + would have told。"
+      },
+      {
+        "en": "If she had left earlier, she wouldn't have missed the train.",
+        "zh": "如果她早点出发，就不会错过火车。",
+        "note": "主句用 wouldn't have done，与从句的 had done 配套。"
+      },
+      {
+        "en": "If it hadn't been for the rain, we would have arrived on time.",
+        "zh": "要不是下雨，我们就准时到了。",
+        "note": "hadn't been for 表示与过去事实相反。"
+      },
+      {
+        "en": "He would have passed the exam if he had prepared better.",
+        "zh": "如果他准备得更好，本可以通过考试。",
+        "note": "从句后置也可以，意思完全不变。"
+      }
+    ]
+  },
+  {
+    "topic": "subjunctive",
+    "id": "sub-if-future",
+    "title": "与将来事实相反",
+    "en": "Future Unreal Conditional",
+    "level": "基础",
+    "sortOrder": 4,
+    "summary": "对将来可能性很小的假设：从句用 were to do / should do / 一般过去时，主句用 would/could/might + 动词原形。三种从句形式语气依次减弱。",
+    "points": [
+      "公式：If + 主语 + were to do / should do / did, 主语 + would/could/might + do。",
+      "were to do 表示「万一、假如真的」，可能性最小、最正式；should do 次之；一般过去时最口语。",
+      "主句仍用 would do，不用 would have done（除非整句指向过去）。",
+      "和真实条件句区分：真实条件用一般现在时（If it rains, we'll stay in.），虚拟用上面三种形式。",
+      "常见表达：If you should change your mind, let me know."
+    ],
+    "examples": [
+      {
+        "en": "If it were to rain tomorrow, the match would be cancelled.",
+        "zh": "万一明天下雨，比赛就取消。",
+        "note": "were to do 表示对将来的假设，可能性很小。"
+      },
+      {
+        "en": "If he should come, please tell him to wait.",
+        "zh": "万一他来了，请让他等一会儿。",
+        "note": "should come 的语气比 were to 略轻，主句可以是祈使句。"
+      },
+      {
+        "en": "If I won the lottery, I would buy a house.",
+        "zh": "如果我中了彩票，我就买套房子。",
+        "note": "一般过去时表示对将来的低概率假设，最口语。"
+      },
+      {
+        "en": "If you should change your mind, let me know.",
+        "zh": "万一你改变主意，告诉我一声。",
+        "note": "主句是祈使句，从句仍用 should do。"
+      }
+    ]
+  },
+  {
+    "topic": "subjunctive",
+    "id": "sub-mixed",
+    "title": "混合虚拟与倒装",
+    "en": "Mixed & Inverted Conditionals",
+    "level": "进阶",
+    "sortOrder": 5,
+    "summary": "主句和从句时间不一致时，各自用各自的形式，这叫混合虚拟；把 if 省掉时从句要倒装，把 were/had/should 提到主语前面。",
+    "points": [
+      "混合虚拟：从句指过去、主句指现在（或反过来），分别套各自的公式：If I had taken your advice, I would be a doctor now.",
+      "省略 if 的倒装：Were I you...（= If I were you）、Had I known...（= If I had known）、Should it rain...（= If it should rain）。",
+      "倒装只发生在这三个词上（were / had / should），其他动词不能提前。",
+      "写成倒装后就没有 if，主从句之间仍要用逗号隔开。",
+      "混合虚拟最常见的情况是「过去的因导致现在的果」。"
+    ],
+    "examples": [
+      {
+        "en": "If I had taken your advice, I would be a doctor now.",
+        "zh": "如果我当时听了你的建议，现在就是医生了。",
+        "note": "从句指过去（had taken），主句指现在（would be）。"
+      },
+      {
+        "en": "Were I you, I would apologize at once.",
+        "zh": "我要是你，会马上道歉。",
+        "note": "省略 if 后 were 提到主语前面。"
+      },
+      {
+        "en": "Had I known earlier, I would have helped.",
+        "zh": "我要是早点知道，就会帮忙了。",
+        "note": "had 提前，等于 If I had known。"
+      },
+      {
+        "en": "Should it rain tomorrow, we would stay at home.",
+        "zh": "万一明天下雨，我们就待在家里。",
+        "note": "should 提前，表示对将来的假设。"
+      }
+    ]
+  },
+  {
+    "topic": "subjunctive",
+    "id": "sub-wish",
+    "title": "wish 的用法",
+    "en": "wish · if only",
+    "level": "基础",
+    "sortOrder": 6,
+    "summary": "wish 后面的从句用虚拟语气，表示愿望与现实相反：现在用过去时，过去用过去完成时，将来用 would/could do。if only 用法相同，语气更强。",
+    "points": [
+      "wish + 过去时：与现在事实相反（I wish I knew the answer.）。",
+      "wish + 过去完成时：与过去事实相反（I wish I had studied harder.）。",
+      "wish + would/could do：对将来的愿望，或希望别人改变做法（I wish it would stop raining.）。",
+      "if only 表示「要是……就好了」，三种时间的用法与 wish 相同，语气更强烈。",
+      "wish 后不用 will，也不用一般现在时；hope 才表示「希望（有可能实现）」，用陈述语气。"
+    ],
+    "examples": [
+      {
+        "en": "I wish I knew the answer.",
+        "zh": "我真希望我知道答案。",
+        "note": "与现在相反：wish + 过去时 knew。"
+      },
+      {
+        "en": "I wish I had studied harder at school.",
+        "zh": "我真希望上学时更用功。",
+        "note": "与过去相反：wish + 过去完成时。"
+      },
+      {
+        "en": "I wish it would stop raining.",
+        "zh": "真希望雨能停。",
+        "note": "对将来的愿望：wish + would do。"
+      },
+      {
+        "en": "If only I had listened to you!",
+        "zh": "要是我当时听你的就好了！",
+        "note": "if only 与 wish 同形，语气更强。"
+      },
+      {
+        "en": "I hope you will come tomorrow.",
+        "zh": "我希望你明天来。",
+        "note": "hope 表示可能实现的希望，用陈述语气，不用虚拟。"
+      }
+    ]
+  },
+  {
+    "topic": "subjunctive",
+    "id": "sub-asif",
+    "title": "as if 从句",
+    "en": "as if / as though",
+    "level": "进阶",
+    "sortOrder": 7,
+    "summary": "as if / as though 表示「好像、仿佛」。与事实不符时后面的从句用虚拟：与现在相反用过去时，与过去相反用过去完成时；事实可能成立时用陈述语气。",
+    "points": [
+      "as if / as though + 过去时：与现在事实相反（He talks as if he knew everything.）。",
+      "as if / as though + 过去完成时：与过去事实相反（He looked as if he had seen a ghost.）。",
+      "事实可能成立时用陈述语气：It looks as if it is going to rain.",
+      "从句主语与主句相同时，可以简化成 as if doing 或 as if to do：He nodded as if to say yes.",
+      "口语里 like 可以代替 as if，正式写作仍用 as if / as though。"
+    ],
+    "examples": [
+      {
+        "en": "He talks as if he knew everything.",
+        "zh": "他说话的样子好像什么都知道。",
+        "note": "与现在相反，用过去时 knew。"
+      },
+      {
+        "en": "He looked as if he had seen a ghost.",
+        "zh": "他看上去像见了鬼。",
+        "note": "与过去相反，用过去完成时。"
+      },
+      {
+        "en": "It looks as if it is going to rain.",
+        "zh": "看起来要下雨了。",
+        "note": "事实可能成立，用陈述语气 is going to。"
+      },
+      {
+        "en": "He nodded as if to say yes.",
+        "zh": "他点了点头，好像在说「是」。",
+        "note": "主语一致时可简化成 as if to do。"
+      }
+    ]
+  },
+  {
+    "topic": "subjunctive",
+    "id": "sub-suggest",
+    "title": "建议与要求类",
+    "en": "Suggest, Demand, Insist",
+    "level": "进阶",
+    "sortOrder": 8,
+    "summary": "suggest、insist、demand、order、require 等动词后的宾语从句，以及 It is necessary/important that...，用（should）+ 动词原形，should 可以省略。",
+    "points": [
+      "记忆口诀：一坚持（insist）、二命令（order、command）、三建议（suggest、advise、propose、recommend）、四要求（demand、require、request、ask）后接 (should) do。",
+      "这些动词变被动或名词形式后，从句同样用 should do：It is suggested that... / the suggestion that...",
+      "It is necessary / important / essential / natural / strange that + (should) do。",
+      "should 常省略，所以从句里出现动词原形（be、go）不算语法错误；但动词不能变时态或单复数。",
+      "insist 表示「坚持说」时用陈述语气：He insisted that he was innocent."
+    ],
+    "examples": [
+      {
+        "en": "I suggest that he (should) see a doctor.",
+        "zh": "我建议他去看医生。",
+        "note": "suggest 后的从句用 should do，should 可省。"
+      },
+      {
+        "en": "It is necessary that everyone (should) be present.",
+        "zh": "每个人都要到场。",
+        "note": "It is necessary that 后用 should do，be 用原形。"
+      },
+      {
+        "en": "The manager demanded that the report (should) be finished today.",
+        "zh": "经理要求报告今天完成。",
+        "note": "demand 后的从句用 be done，should 省略。"
+      },
+      {
+        "en": "He insisted that he was innocent.",
+        "zh": "他坚持说自己是无辜的。",
+        "note": "insist 表示「坚持说」时用陈述语气 was。"
+      },
+      {
+        "en": "It was suggested that the meeting (should) be put off.",
+        "zh": "有人建议会议延期。",
+        "note": "被动结构后的从句同样用 should do。"
+      }
+    ]
+  },
+  {
+    "topic": "subjunctive",
+    "id": "sub-fixed",
+    "title": "固定句型",
+    "en": "would rather · It's time · but for",
+    "level": "提高",
+    "sortOrder": 9,
+    "summary": "虚拟语气还藏在几个固定句型里：It is (high) time that...、would rather + 从句、but for / otherwise、lest / for fear that。这些句型记公式最快。",
+    "points": [
+      "It is (high/about) time that + 过去时（也可用 should do）：It is time we went home.",
+      "would rather + 从句：现在或将来用过去时（I'd rather you came tomorrow.），过去用过去完成时（I'd rather you hadn't told him.）；would rather do sth 直接跟原形，不用虚拟。",
+      "but for = 要不是，主句用虚拟：But for your help, I would have failed.",
+      "otherwise / or 表示「否则」，后面的分句用虚拟：I was busy, otherwise I would have come.",
+      "lest / for fear that 引导的从句常用 should do：He ran fast lest he (should) miss the bus."
+    ],
+    "examples": [
+      {
+        "en": "It is high time we went home.",
+        "zh": "我们该回家了。",
+        "note": "It is high time that 后用过去时 went。"
+      },
+      {
+        "en": "I'd rather you came tomorrow.",
+        "zh": "我宁愿你明天来。",
+        "note": "would rather + 从句，指将来用过去时 came。"
+      },
+      {
+        "en": "But for your help, I would have failed.",
+        "zh": "要不是你的帮助，我就失败了。",
+        "note": "but for 相当于 if it had not been for。"
+      },
+      {
+        "en": "I was busy, otherwise I would have come.",
+        "zh": "我当时很忙，否则就来了。",
+        "note": "otherwise 后的分句用虚拟 would have done。"
+      },
+      {
+        "en": "He ran fast lest he should miss the bus.",
+        "zh": "他跑得很快，生怕错过公交车。",
+        "note": "lest 后常用 should do，should 也可省略。"
+      }
+    ]
+  },
+  {
+    "topic": "subjunctive",
+    "id": "sub-mistakes",
+    "title": "易错点与辨析",
+    "en": "Common Mistakes",
+    "level": "提高",
+    "sortOrder": 10,
+    "summary": "虚拟语气的错集中在三处：该用虚拟却用了陈述（漏掉 were / had）、主句时态没跟上从句、以及把「坚持说」当成「坚持要求」。先分清真实条件和不真实条件。",
+    "points": [
+      "真实条件用陈述语气（If it rains, we'll stay in.），与事实相反才用虚拟，两类不能混用。",
+      "与现在相反 be 用 were；与过去相反从句必须 had done、主句必须 would have done，两边要配套。",
+      "建议类从句里 should 可以省略，但动词必须是原形：He suggested that she go（不是 goes / went）。",
+      "insist 表示「坚持说」用陈述语气，表示「坚持要求」才用 should do。",
+      "wish 后不能用 will 或一般现在时；hope 后用陈述语气。"
+    ],
+    "examples": [
+      {
+        "en": "If it rains tomorrow, we will stay at home.",
+        "zh": "如果明天下雨，我们就待在家里。",
+        "note": "真实条件句用陈述语气，不用虚拟形式。"
+      },
+      {
+        "en": "If I were you, I would apologize.",
+        "zh": "如果我是你，我会道歉。",
+        "note": "与现在相反：were + would do，be 不用 was。"
+      },
+      {
+        "en": "If he had left earlier, he would have caught the bus.",
+        "zh": "如果他早点出发，就赶上公交车了。",
+        "note": "had done + would have done，两边要配套，缺一个就错。"
+      },
+      {
+        "en": "She suggested that he (should) take a rest.",
+        "zh": "她建议他休息一下。",
+        "note": "从句动词用原形 take，不能写成 takes 或 took。"
+      },
+      {
+        "en": "I hope he comes tomorrow.",
+        "zh": "我希望他明天来。",
+        "note": "hope 用陈述语气；换成 wish 才需要虚拟。"
+      }
+    ]
+  },
+  {
+    "topic": "inversion",
+    "id": "inv-basics",
+    "title": "倒装入门",
+    "en": "Inversion: Basics",
+    "level": "入门",
+    "sortOrder": 1,
+    "summary": "英语的基本语序是「主语 + 谓语」，把谓语或助动词放到主语前面就是倒装。倒装分两种：整个谓语提前叫完全倒装，只提前助动词或情态动词叫部分倒装。",
+    "points": [
+      "正常语序是主语在前、谓语在后；倒装则把谓语动词或助动词移到主语前面。",
+      "完全倒装：谓语动词整个提前，多见于 here/there 开头、方位状语提前、表语提前（Here comes the bus.）。",
+      "部分倒装：只把助动词、情态动词或 be 动词提前，实义动词仍留在主语后面（Never have I seen such a film.）。",
+      "倒装的三个动机：强调（否定词、only 开头）、平衡句子（主语太长）、固定句型（so do I、as/though 让步）。",
+      "判断方法：看句首是不是否定词、only + 状语、so/neither、方位状语，或虚拟条件句省略了 if——只要沾上其中一条就考虑倒装。"
+    ],
+    "examples": [
+      {
+        "en": "Here comes the bus.",
+        "zh": "公交车来了。",
+        "note": "完全倒装：谓语 comes 整个提前，主语 the bus 在后。"
+      },
+      {
+        "en": "Never have I seen such a beautiful place.",
+        "zh": "我从没见过这么美的地方。",
+        "note": "部分倒装：助动词 have 提前，seen 留在主语后面。"
+      },
+      {
+        "en": "Only then did I realize my mistake.",
+        "zh": "直到那时我才意识到自己的错误。",
+        "note": "only + 状语放句首，助动词 did 提前。"
+      },
+      {
+        "en": "She likes music, and so do I.",
+        "zh": "她喜欢音乐，我也是。",
+        "note": "so + 助动词 + 主语，表示「也一样」。"
+      }
+    ]
+  },
+  {
+    "topic": "inversion",
+    "id": "inv-full",
+    "title": "完全倒装",
+    "en": "Full Inversion",
+    "level": "基础",
+    "sortOrder": 2,
+    "summary": "完全倒装把整个谓语动词放到主语前面，常见于 here/there/now/then 开头、方位介词短语提前和表语提前。谓语多为不及物动词，主语多为名词。",
+    "points": [
+      "here、there、now、then 开头，谓语用 come、go、be 等不及物动词：Here comes the bus. / There goes the bell.",
+      "方位、地点状语提前：On the wall hangs a picture. / In the corner sat an old man.",
+      "表语提前：Happy are those who help others. / Such was his answer.",
+      "主语是代词时不倒装：Here it is.（不是 Here is it.）/ Away he went.",
+      "谓语一般是不及物动词（come、go、stand、lie、sit、hang、be），且多用一般现在时或一般过去时。"
+    ],
+    "examples": [
+      {
+        "en": "Here comes the bus.",
+        "zh": "公交车来了。",
+        "note": "here + 不及物动词，谓语整个提前。"
+      },
+      {
+        "en": "On the wall hangs a map of China.",
+        "zh": "墙上挂着一张中国地图。",
+        "note": "方位状语提前，谓语 hangs 提到主语前。"
+      },
+      {
+        "en": "In the corner sat an old man.",
+        "zh": "角落里坐着一位老人。",
+        "note": "地点状语提前，sat 提到主语前。"
+      },
+      {
+        "en": "Here it is.",
+        "zh": "给你（就在这儿）。",
+        "note": "主语是代词 it，不能倒装成 Here is it。"
+      },
+      {
+        "en": "Such was his answer.",
+        "zh": "他的回答就是这样。",
+        "note": "表语 such 提前，be 动词提到主语前面。"
+      }
+    ]
+  },
+  {
+    "topic": "inversion",
+    "id": "inv-negative",
+    "title": "否定词开头",
+    "en": "Negative Adverb Inversion",
+    "level": "基础",
+    "sortOrder": 3,
+    "summary": "never、seldom、hardly、not until、no sooner...than 等否定或半否定词放句首时要部分倒装：把助动词提到主语前，实义动词留在后面。",
+    "points": [
+      "常见开头词：never、seldom、rarely、hardly、scarcely、little、nowhere、not only、not until、no sooner。",
+      "结构：否定词 + 助动词/情态动词/be + 主语 + 实义动词。",
+      "no sooner...than、hardly/scarcely...when 表示「一……就」，前半句倒装且用过去完成时。",
+      "not only...but also 连接两个分句时，只有 not only 所在的分句倒装。",
+      "not until 提到句首时，主句倒装，until 引导的部分用正常语序。"
+    ],
+    "examples": [
+      {
+        "en": "Never have I heard such a story.",
+        "zh": "我从没听过这样的故事。",
+        "note": "never 开头，助动词 have 提前。"
+      },
+      {
+        "en": "Seldom does he go to the cinema.",
+        "zh": "他很少去看电影。",
+        "note": "seldom 开头，借助动词 does，实义动词用原形。"
+      },
+      {
+        "en": "No sooner had he arrived than it began to rain.",
+        "zh": "他刚到就下起雨来。",
+        "note": "no sooner 开头用过去完成时倒装，than 后面的分句不倒装。"
+      },
+      {
+        "en": "Not only did she sing, but she also danced.",
+        "zh": "她不仅唱歌，还跳了舞。",
+        "note": "not only 所在分句倒装，but also 分句用正常语序。"
+      },
+      {
+        "en": "Not until midnight did he come back.",
+        "zh": "直到半夜他才回来。",
+        "note": "not until 提前，主句倒装。"
+      }
+    ]
+  },
+  {
+    "topic": "inversion",
+    "id": "inv-only",
+    "title": "only 开头",
+    "en": "Only + Adverbial",
+    "level": "基础",
+    "sortOrder": 4,
+    "summary": "only 修饰的状语或状语从句放到句首时，主句要部分倒装。关键是 only 修饰的必须是状语，修饰主语时不倒装。",
+    "points": [
+      "结构：Only + 状语（短语或从句）+ 助动词 + 主语 + 实义动词。",
+      "常见形式：only then、only later、only in this way、only by doing、only when、only if、only after。",
+      "only 修饰主语时不倒装：Only he knows the answer.",
+      "only + 从句放句首时，从句本身用正常语序，倒装的是主句。",
+      "与强调句 It is only... that... 区分：那是强调句，不改变语序。"
+    ],
+    "examples": [
+      {
+        "en": "Only then did I understand what he meant.",
+        "zh": "直到那时我才明白他的意思。",
+        "note": "only + then，主句助动词 did 提前。"
+      },
+      {
+        "en": "Only in this way can we solve the problem.",
+        "zh": "只有这样我们才能解决问题。",
+        "note": "only + 介词短语，情态动词 can 提前。"
+      },
+      {
+        "en": "Only when he left did I know the truth.",
+        "zh": "直到他离开我才知道真相。",
+        "note": "从句 when he left 用正常语序，主句倒装。"
+      },
+      {
+        "en": "Only he knows the answer.",
+        "zh": "只有他知道答案。",
+        "note": "only 修饰主语 he，句子不倒装。"
+      },
+      {
+        "en": "It was only then that I understood.",
+        "zh": "正是在那时我才明白。",
+        "note": "这是强调句 It was...that...，不是倒装。"
+      }
+    ]
+  },
+  {
+    "topic": "inversion",
+    "id": "inv-so-neither",
+    "title": "so 与 neither",
+    "en": "so / neither / nor",
+    "level": "基础",
+    "sortOrder": 5,
+    "summary": "so 表示「……也是」，neither/nor 表示「……也不」，结构是「so/neither + 助动词 + 主语」，助动词要和前一句保持一致。",
+    "points": [
+      "肯定附和：so + 助动词 + 主语（She can swim. — So can I.）。",
+      "否定附和：neither/nor + 助动词 + 主语（I don't like it. — Neither do I.）。",
+      "助动词必须与前一句一致：be 用 be，完成时用 have，一般现在时用 do/does。",
+      "前一句谓语类型不同时，可用 So it is with sb / It is the same with sb 统一处理。",
+      "注意区分「so + 主语 + 助动词」表示「确实如此」的正常语序：— She is tired. — So she is."
+    ],
+    "examples": [
+      {
+        "en": "She can swim, and so can I.",
+        "zh": "她会游泳，我也会。",
+        "note": "so + can + 主语，助动词与前句一致。"
+      },
+      {
+        "en": "I don't like coffee. — Neither do I.",
+        "zh": "我不喜欢咖啡。——我也不喜欢。",
+        "note": "否定附和用 neither + do + 主语。"
+      },
+      {
+        "en": "He has finished, and so have they.",
+        "zh": "他完成了，他们也完成了。",
+        "note": "前句用 have，附和句也用 have。"
+      },
+      {
+        "en": "— It's raining. — So it is.",
+        "zh": "——下雨了。——确实在下。",
+        "note": "so + 主语 + 助动词表示「确实如此」，是正常语序，不是倒装。"
+      }
+    ]
+  },
+  {
+    "topic": "inversion",
+    "id": "inv-conditional",
+    "title": "虚拟条件倒装",
+    "en": "Inverted Conditionals",
+    "level": "进阶",
+    "sortOrder": 6,
+    "summary": "虚拟条件句省略 if 时，把 were、had、should 提到主语前面。这三种倒装是考试里最常考的倒装形式之一。",
+    "points": [
+      "Were + 主语 + 表语：Were I you, I would apologize.（= If I were you）",
+      "Had + 主语 + 过去分词：Had I known, I would have helped.（= If I had known）",
+      "Should + 主语 + 动词原形：Should it rain, we would stay in.（= If it should rain）",
+      "只有 were、had、should 能这样提前，其他动词不行。",
+      "省略 if 后不再有 if，主句和从句之间照常加逗号。"
+    ],
+    "examples": [
+      {
+        "en": "Were I you, I would accept the offer.",
+        "zh": "我要是你，就接受这个职位。",
+        "note": "were 提前，相当于 If I were you。"
+      },
+      {
+        "en": "Had he studied harder, he would have passed.",
+        "zh": "他要是当时更用功，就通过了。",
+        "note": "had 提前，相当于 If he had studied harder。"
+      },
+      {
+        "en": "Should you need help, call me.",
+        "zh": "万一你需要帮助，给我打电话。",
+        "note": "should 提前，主句可以是祈使句。"
+      },
+      {
+        "en": "Had it not been for your help, I would have failed.",
+        "zh": "要不是你的帮助，我就失败了。",
+        "note": "否定式：had it not been for，注意 not 的位置。"
+      }
+    ]
+  },
+  {
+    "topic": "inversion",
+    "id": "inv-concession",
+    "title": "让步倒装",
+    "en": "as / though Concession",
+    "level": "进阶",
+    "sortOrder": 7,
+    "summary": "as 引导让步状语从句时必须倒装，把表语、状语或动词原形提到句首；though 也可以这样用，但更常见的是正常语序。",
+    "points": [
+      "as 让步倒装：表语/副词/动词原形 + as + 主语 + 谓语（Young as he is, he knows a lot.）。",
+      "名词提前时不带冠词：Child as he is, he knows a lot.（不是 A child as he is）",
+      "though 也能这样倒装，语气更书面：Hard as he tried, he failed. = Though he tried hard, he failed.",
+      "动词原形提前时，从句谓语常用 may/might/would：Try as he might, he couldn't open it.",
+      "as 引导原因或时间状语时不倒装，只有让步用法才倒装。"
+    ],
+    "examples": [
+      {
+        "en": "Young as he is, he knows a lot.",
+        "zh": "尽管他年轻，他懂得很多。",
+        "note": "表语 young 提前，as 引导让步。"
+      },
+      {
+        "en": "Child as he is, he can solve the problem.",
+        "zh": "虽然他还是个孩子，却能解决这个问题。",
+        "note": "名词提前时不带冠词，不能说 a child as he is。"
+      },
+      {
+        "en": "Hard as he tried, he failed.",
+        "zh": "尽管他很努力，还是失败了。",
+        "note": "副词 hard 提前，相当于 Though he tried hard。"
+      },
+      {
+        "en": "Try as he might, he couldn't open the door.",
+        "zh": "无论他怎么使劲，也打不开门。",
+        "note": "动词原形 try 提前，后面用 might。"
+      }
+    ]
+  },
+  {
+    "topic": "inversion",
+    "id": "inv-sosuch",
+    "title": "so 与 such 开头",
+    "en": "so / such + that",
+    "level": "进阶",
+    "sortOrder": 8,
+    "summary": "结果状语从句里，把 so + 形容词/副词 或 such + 名词提到句首时，主句要倒装，句式是「So + adj + be/助动词 + 主语 + that 从句」。",
+    "points": [
+      "结构：So + 形容词/副词 + 助动词/be + 主语 + that 从句。",
+      "名词形式：Such + (a/an) + 形容词 + 名词 + be + 主语 + that 从句。",
+      "so 修饰形容词或副词，such 修饰名词，两者不能互换。",
+      "倒装只发生在主句，that 从句用正常语序。",
+      "这类倒装多用于书面语，语气比正常语序强。"
+    ],
+    "examples": [
+      {
+        "en": "So tired was he that he fell asleep at once.",
+        "zh": "他太累了，马上就睡着了。",
+        "note": "so + 形容词提前，be 动词 was 提到主语前。"
+      },
+      {
+        "en": "So loudly did he speak that everyone turned around.",
+        "zh": "他声音太大，大家都转过头来。",
+        "note": "so + 副词提前，借助动词 did。"
+      },
+      {
+        "en": "Such was his anger that he couldn't speak.",
+        "zh": "他气得说不出话来。",
+        "note": "such 作表语提前，be 动词提到主语前。"
+      },
+      {
+        "en": "Such a good boy is he that everyone likes him.",
+        "zh": "他是个好孩子，大家都喜欢他。",
+        "note": "such + a + 形容词 + 名词提前，is 提到主语前。"
+      }
+    ]
+  },
+  {
+    "topic": "inversion",
+    "id": "inv-mistakes",
+    "title": "易错点与辨析",
+    "en": "Common Mistakes",
+    "level": "提高",
+    "sortOrder": 9,
+    "summary": "倒装的错集中在三处：该倒装的没倒、倒了却漏掉助动词、以及把倒装和强调句搞混。判断时先看句首是什么成分。",
+    "points": [
+      "否定词或 only + 状语放在句首时必须倒装；只把词放到句首却不倒装，是最常见的中式英语。",
+      "部分倒装必须借助助动词：Never I saw 要改成 Never did I see。",
+      "主语是代词时，here/there 开头也不倒装：Here you are.（不是 Here are you.）",
+      "not only 所在分句倒装，but also 分句不倒装；not until 只倒装主句。",
+      "倒装不等于强调句：It was...that... 是强调句，句子语序不变；倒装改变的是语序。"
+    ],
+    "examples": [
+      {
+        "en": "Never did I see such a thing.",
+        "zh": "我从没见过这样的事。",
+        "note": "否定词开头必须倒装，借助动词 did，实义动词用原形。"
+      },
+      {
+        "en": "Here you are.",
+        "zh": "给你。",
+        "note": "主语是代词 you，here 开头也不倒装。"
+      },
+      {
+        "en": "Not only is he a teacher, but he is also a writer.",
+        "zh": "他不仅是老师，还是作家。",
+        "note": "前半句倒装 is，后半句用正常语序。"
+      },
+      {
+        "en": "Young as he is, he is very capable.",
+        "zh": "尽管他年轻，却很能干。",
+        "note": "as 引导让步必须倒装，把表语 young 提到句首。"
+      },
+      {
+        "en": "It was in 2020 that he came here.",
+        "zh": "他是 2020 年来到这里的。",
+        "note": "这是强调句，不是倒装，不能把 came 提到 he 前面。"
+      }
+    ]
+  },
+  {
+    "topic": "cleft",
+    "id": "cleft-basics",
+    "title": "强调句入门",
+    "en": "Cleft Sentences: Basics",
+    "level": "入门",
+    "sortOrder": 1,
+    "summary": "强调句用 It is/was ... that ... 把句子里想突出的部分夹在中间，其余部分照原样放在 that 后面。判断方法：去掉 It is/was 和 that，剩下的能不能还原成一个完整句子。",
+    "points": [
+      "基本结构：It is/was + 被强调部分 + that/who + 句子其余部分。",
+      "能强调的成分：主语、宾语、状语（时间、地点、原因、方式等）；谓语动词不能这样强调。",
+      "强调主语且指人时，that 可以换成 who；强调宾语或状语时一般只用 that。",
+      "判断方法（还原法）：去掉 It is/was 和 that 后，剩下的词能拼成完整句子，就是强调句。",
+      "强调句不改变原句的意思，只改变信息重心。"
+    ],
+    "examples": [
+      {
+        "en": "It is Tom that/who broke the window.",
+        "zh": "是汤姆打破了窗户。",
+        "note": "强调主语 Tom，指人时可以用 who。"
+      },
+      {
+        "en": "It was a new bike that he bought yesterday.",
+        "zh": "他昨天买的是一辆新自行车。",
+        "note": "强调宾语 a new bike。"
+      },
+      {
+        "en": "It was in the park that they met.",
+        "zh": "他们是在公园里见面的。",
+        "note": "强调地点状语 in the park。"
+      },
+      {
+        "en": "It was because he was ill that he didn't come.",
+        "zh": "他没来是因为生病。",
+        "note": "强调原因状语从句，还原后是 He didn't come because he was ill."
+      }
+    ]
+  },
+  {
+    "topic": "cleft",
+    "id": "cleft-it",
+    "title": "强调句的构成",
+    "en": "It is/was ... that",
+    "level": "基础",
+    "sortOrder": 2,
+    "summary": "强调句用 is 还是 was 取决于原句时态；被强调部分放在 It is/was 后面，that 后面保持原句的正常语序，不倒装。",
+    "points": [
+      "原句是现在时或将来时用 It is...；原句是过去时用 It was...。",
+      "强调主语时，that/who 后面直接接谓语，谓语的数与被强调的名词一致。",
+      "强调宾语或状语时，that 后面先出现原句的主语，再接谓语。",
+      "that 后面必须是陈述语序，不能因为强调就把助动词提到主语前面。",
+      "强调时间、地点、原因、方式状语一律用 that，不用 when、where、why。"
+    ],
+    "examples": [
+      {
+        "en": "It is my mother who cooks for us every day.",
+        "zh": "每天给我们做饭的是我妈妈。",
+        "note": "原句现在时用 is；强调主语，指人用 who。"
+      },
+      {
+        "en": "It was in 2015 that he joined the company.",
+        "zh": "他是 2015 年加入公司的。",
+        "note": "原句过去时用 was；强调时间状语用 that，不用 when。"
+      },
+      {
+        "en": "It was the book that she gave me.",
+        "zh": "她给我的是那本书。",
+        "note": "强调宾语，that 后面是 she gave me 的正常语序。"
+      },
+      {
+        "en": "It is not money that makes people happy.",
+        "zh": "使人幸福的不是钱。",
+        "note": "否定形式：not 放在 is/was 后面。"
+      }
+    ]
+  },
+  {
+    "topic": "cleft",
+    "id": "cleft-tense",
+    "title": "时态与一致",
+    "en": "Tense & Agreement",
+    "level": "基础",
+    "sortOrder": 3,
+    "summary": "强调句的 be 动词跟着原句时态走；被强调部分作主语时，that/who 后面的谓语要和它保持一致——这一点最容易和定语从句混淆。",
+    "points": [
+      "一般现在时、现在完成时、将来时用 It is；一般过去时、过去完成时用 It was。",
+      "强调主语时，从句谓语的数由被强调的名词决定：It is the students who are late.",
+      "强调宾语时，that 后面主语的数与谓语的一致关系保持不变。",
+      "原句有 always、often 等频度副词时，副词位置保持原样。",
+      "强调句不能同时强调两个成分，需要时用两个句子分别强调。"
+    ],
+    "examples": [
+      {
+        "en": "It is the students who are working hard.",
+        "zh": "是学生们在努力学习。",
+        "note": "强调复数主语，从句谓语用 are。"
+      },
+      {
+        "en": "It was his parents that helped him out.",
+        "zh": "是他父母帮他渡过难关的。",
+        "note": "原句过去时，用 was。"
+      },
+      {
+        "en": "It is I who am to blame.",
+        "zh": "该受责备的是我。",
+        "note": "正式文体里强调主语 I，从句谓语用 am。"
+      },
+      {
+        "en": "It was yesterday that we finished the work.",
+        "zh": "我们是昨天完成这项工作的。",
+        "note": "强调时间状语，用 that。"
+      }
+    ]
+  },
+  {
+    "topic": "cleft",
+    "id": "cleft-not",
+    "title": "否定与疑问",
+    "en": "Negatives & Questions",
+    "level": "进阶",
+    "sortOrder": 4,
+    "summary": "强调句的否定形式是 It is not ... that ...；一般疑问句把 is/was 提前；特殊疑问句用「疑问词 + is/was it that ...」。",
+    "points": [
+      "否定：It is not + 被强调部分 + that ...；口语里也可以缩写 It isn't ...",
+      "一般疑问：Is/Was it + 被强调部分 + that ...? 答语用 Yes, it is/was.",
+      "特殊疑问：疑问词 + is/was it that ...?（Who was it that...? / When was it that...?）",
+      "特殊疑问句里 that 一般不改写；疑问词本身作主语时，用 who 更自然。",
+      "not until 的强调有固定格式，见下一节。"
+    ],
+    "examples": [
+      {
+        "en": "It was not Tom that broke the window.",
+        "zh": "打破窗户的不是汤姆。",
+        "note": "否定形式：not 放在 is/was 后面。"
+      },
+      {
+        "en": "Was it in 2010 that you met her?",
+        "zh": "你是在 2010 年遇见她的吗？",
+        "note": "一般疑问句把 was 提到句首。"
+      },
+      {
+        "en": "When was it that you moved here?",
+        "zh": "你是什么时候搬来的？",
+        "note": "特殊疑问句用「疑问词 + was it that」。"
+      },
+      {
+        "en": "Who was it that called me?",
+        "zh": "刚才打电话的是谁？",
+        "note": "疑问词作主语，用 who 更自然。"
+      }
+    ]
+  },
+  {
+    "topic": "cleft",
+    "id": "cleft-not-until",
+    "title": "not until 强调",
+    "en": "It was not until ... that",
+    "level": "进阶",
+    "sortOrder": 5,
+    "summary": "强调「直到……才」用 It was not until ... that ...，此时 not 与 until 一起提前，that 后面用肯定语序，不能再倒装。",
+    "points": [
+      "结构：It was not until + 时间/从句 + that + 主语 + 谓语（肯定形式）。",
+      "not 必须和 until 一起提前，不能写成 It was until ... not ...。",
+      "that 后面的部分用正常语序，不倒装——这是和 Not until ... did ... 倒装句的关键区别。",
+      "be 动词用 is 还是 was 由原句时态决定，过去的事用 was。",
+      "两种句式可以互换：It was not until he came that I left. = Not until he came did I leave."
+    ],
+    "examples": [
+      {
+        "en": "It was not until midnight that he came back.",
+        "zh": "直到半夜他才回来。",
+        "note": "not until 一起提前，that 后用肯定语序 came back。"
+      },
+      {
+        "en": "It was not until he explained it that I understood.",
+        "zh": "直到他解释了我才明白。",
+        "note": "until 后面接的是从句。"
+      },
+      {
+        "en": "It was not until 2019 that they met again.",
+        "zh": "直到 2019 年他们才再次见面。",
+        "note": "强调时间点，注意 not 与 until 不能拆开。"
+      },
+      {
+        "en": "Not until he came did I leave.",
+        "zh": "直到他来我才离开。",
+        "note": "这是倒装句，与强调句可以互相改写。"
+      }
+    ]
+  },
+  {
+    "topic": "cleft",
+    "id": "cleft-what",
+    "title": "what 强调",
+    "en": "What-cleft",
+    "level": "进阶",
+    "sortOrder": 6,
+    "summary": "除了 It is...that...，还可以用 what 从句把要强调的内容提到句子前面：What I need is a rest. 这种结构强调的是「……的东西/事情」。",
+    "points": [
+      "结构：What + 主语 + 谓语 + is/was + 被强调的名词或动作。",
+      "强调动作时常用 do：What he did was (to) tell the truth. / All he did was ...",
+      "what 从句作主语，is 后面的名词是单数还是复数会影响谓语形式，两种说法都常见。",
+      "也可以用 The thing that ... / All that ... 替代 what。",
+      "和 It is...that... 的分工：what 强调「事物/内容」，It is...that 可以强调任何成分。"
+    ],
+    "examples": [
+      {
+        "en": "What I need is a good rest.",
+        "zh": "我需要的是好好休息。",
+        "note": "what 从句作主语，is 后面是强调的内容。"
+      },
+      {
+        "en": "What he did was (to) apologize.",
+        "zh": "他所做的就是道歉。",
+        "note": "强调动作，不定式前的 to 可以省略。"
+      },
+      {
+        "en": "All (that) she wants is a quiet life.",
+        "zh": "她想要的只是安静的生活。",
+        "note": "All that 相当于 what，口语里 that 常省略。"
+      },
+      {
+        "en": "What surprised me was his attitude.",
+        "zh": "让我吃惊的是他的态度。",
+        "note": "what 从句表示「让我吃惊的那件事」。"
+      }
+    ]
+  },
+  {
+    "topic": "cleft",
+    "id": "cleft-vs-relative",
+    "title": "与定语从句辨析",
+    "en": "Cleft vs. Relative Clauses",
+    "level": "进阶",
+    "sortOrder": 7,
+    "summary": "强调句、定语从句、主语从句都可能出现 It is ... that ...，区分方法是还原法：去掉 It is 和 that 后能还原成完整句子的是强调句。",
+    "points": [
+      "强调句：去掉 It is/was 和 that 后，剩下的词能拼成完整句子（It was in the park that they met. → They met in the park.）。",
+      "定语从句：去掉 It is 后剩下「先行词 + 从句」，从句不能独立成句（It is the park that we visited.）。",
+      "主语从句：It 是形式主语，that 从句本身结构完整（It is true that he lied. → That he lied is true.）。",
+      "再看 that 的作用：强调句的 that 不作成分，定语从句的 that 要作主语或宾语。",
+      "还原后时态、语序都能对上，是最可靠的检验。"
+    ],
+    "examples": [
+      {
+        "en": "It was in the park that they met.",
+        "zh": "他们是在公园见面的。",
+        "note": "还原成 They met in the park.，是强调句。"
+      },
+      {
+        "en": "It is the park that we visited last year.",
+        "zh": "这就是我们去年参观的那个公园。",
+        "note": "去掉 It is 后剩 the park (that) we visited，是定语从句。"
+      },
+      {
+        "en": "It is true that he lied.",
+        "zh": "他撒谎是真的。",
+        "note": "it 是形式主语，that 从句才是真正的主语。"
+      },
+      {
+        "en": "It was because he was ill that he stayed at home.",
+        "zh": "他待在家里是因为生病。",
+        "note": "还原成 He stayed at home because he was ill.，强调原因状语。"
+      }
+    ]
+  },
+  {
+    "topic": "cleft",
+    "id": "cleft-other",
+    "title": "其它强调手段",
+    "en": "Other Ways to Emphasize",
+    "level": "提高",
+    "sortOrder": 8,
+    "summary": "强调不只有 It is...that。do/does/did 可以强调谓语动词，very/only 可以强调名词或状语，倒装、反问和感叹也能起强调作用。",
+    "points": [
+      "do/does/did + 动词原形强调谓语：I do like it. / He did come.",
+      "only、very、just 等放在被强调的词前：He is the very person I want.",
+      "倒装表强调：Never have I seen such a thing.",
+      "反问句表强调：Isn't it beautiful? / Who doesn't know that?",
+      "感叹句和重复也能加强语气：What a pity! / It's very, very important."
+    ],
+    "examples": [
+      {
+        "en": "I do hope you can come.",
+        "zh": "我确实希望你能来。",
+        "note": "do 强调谓语动词 hope。"
+      },
+      {
+        "en": "He did finish the work on time.",
+        "zh": "他确实按时完成了工作。",
+        "note": "did 强调过去时的谓语，后面用动词原形。"
+      },
+      {
+        "en": "She is the very person we are looking for.",
+        "zh": "她正是我们要找的人。",
+        "note": "very 强调「正是、就是」。"
+      },
+      {
+        "en": "Never have I seen such a beautiful sunset.",
+        "zh": "我从没见过这么美的日落。",
+        "note": "否定词开头的倒装起强调作用。"
+      }
+    ]
+  },
+  {
+    "topic": "cleft",
+    "id": "cleft-mistakes",
+    "title": "易错点与辨析",
+    "en": "Common Mistakes",
+    "level": "提高",
+    "sortOrder": 9,
+    "summary": "强调句的错集中在四处：that 后面擅自改语序、该用 that 却用了 when/where、not until 位置放错、以及和定语从句混淆。",
+    "points": [
+      "that 后面必须是原句的正常语序，不能倒装：It was he that did it（不是 did he）。",
+      "强调时间、地点、原因状语用 that，不用 when、where、why。",
+      "not until 的强调句里 not 必须与 until 一起提前，that 后用肯定语序。",
+      "强调主语时，that/who 后面谓语的数与被强调的名词一致。",
+      "拿不准就用还原法：去掉 It is/was 和 that，能还原成完整句子才是强调句。"
+    ],
+    "examples": [
+      {
+        "en": "It was Tom that broke the window.",
+        "zh": "是汤姆打破了窗户。",
+        "note": "that 后面用正常语序 broke the window，不能写成 did Tom break。"
+      },
+      {
+        "en": "It was in 2015 that he came to Beijing.",
+        "zh": "他是 2015 年来到北京的。",
+        "note": "强调时间用 that，不用 when。"
+      },
+      {
+        "en": "It was not until he left that I knew the truth.",
+        "zh": "直到他走我才知道真相。",
+        "note": "not 与 until 一起提前，that 后是 I knew 的肯定语序。"
+      },
+      {
+        "en": "It is the students who are late.",
+        "zh": "迟到的是那些学生。",
+        "note": "强调复数主语，从句谓语用 are。"
+      }
+    ]
+  },
+  {
+    "topic": "ellipsis",
+    "id": "ell-basics",
+    "title": "省略与替代入门",
+    "en": "Ellipsis & Substitution: Basics",
+    "level": "入门",
+    "sortOrder": 1,
+    "summary": "英语不喜欢重复。把前面已经出现过的词删掉叫省略，用一个短词顶替它叫替代。两者都是为了简洁，但删掉的部分必须能从上下文补回来。",
+    "points": [
+      "省略是删掉重复的词：She can sing and (she can) dance.",
+      "替代是用 do、so、one、that 等词顶替重复内容：She can sing, and so can he.",
+      "省略后句子仍要语法完整、意思清楚；补不回来的成分不能省。",
+      "常见省略位置：并列句、状语从句、定语从句、不定式、口语问答。",
+      "常见替代词：do / do so、so / not、one / ones、that / those、the same。"
+    ],
+    "examples": [
+      {
+        "en": "She can sing and dance.",
+        "zh": "她会唱歌，也会跳舞。",
+        "note": "并列谓语中重复的 she can 被省略。"
+      },
+      {
+        "en": "I asked him to stay, but he didn't want to.",
+        "zh": "我让他留下，但他不想。",
+        "note": "want to 后面省略了 stay，属于「保留 to」的省略。"
+      },
+      {
+        "en": "He likes coffee, and so do I.",
+        "zh": "他喜欢咖啡，我也是。",
+        "note": "so do I 用 so 替代「喜欢咖啡」这件事。"
+      },
+      {
+        "en": "I'd like a red apple, not a green one.",
+        "zh": "我想要个红苹果，不是绿的。",
+        "note": "one 替代前面的可数名词 apple。"
+      }
+    ]
+  },
+  {
+    "topic": "ellipsis",
+    "id": "ell-verb",
+    "title": "谓语省略",
+    "en": "Verb Phrase Ellipsis",
+    "level": "基础",
+    "sortOrder": 2,
+    "summary": "并列句里，后一分句与前面重复的谓语或助动词部分可以省略；也可以保留助动词、省掉实义动词，避免同一个动作说两遍。",
+    "points": [
+      "并列谓语重复的部分可以省：He opened the door and (he) walked in.",
+      "保留助动词、省略实义动词：She can play the piano, and her sister can too.",
+      "助动词不同时不能省：He has finished, but she hasn't.",
+      "省略的部分仍按前面的时态和语态理解。",
+      "疑问句的简短回答也属于省略：— Can he swim? — Yes, he can."
+    ],
+    "examples": [
+      {
+        "en": "He opened the door and walked in.",
+        "zh": "他打开门走了进去。",
+        "note": "两个谓语共用一个主语 he，第二个 he 省略。"
+      },
+      {
+        "en": "She can play the piano, and her sister can too.",
+        "zh": "她会弹钢琴，她妹妹也会。",
+        "note": "can 后面省略 play the piano。"
+      },
+      {
+        "en": "He has finished his work, but she hasn't.",
+        "zh": "他完成了工作，她还没有。",
+        "note": "两个分句助动词不同，各自保留。"
+      },
+      {
+        "en": "— Can he swim? — Yes, he can.",
+        "zh": "——他会游泳吗？——会。",
+        "note": "简短回答省略了 swim。"
+      }
+    ]
+  },
+  {
+    "topic": "ellipsis",
+    "id": "ell-subject-object",
+    "title": "主语宾语省略",
+    "en": "Omitting Subject & Object",
+    "level": "基础",
+    "sortOrder": 3,
+    "summary": "并列句中后一分句与前一分句主语相同时可以省略主语；祈使句的主语 you 本来就不出现；口语里主语、宾语也常省略。",
+    "points": [
+      "并列句主语相同，可省第二个主语：She came in and (she) sat down.",
+      "主语不同则不能省：She came in and he sat down.",
+      "祈使句主语 you 一律省略：Open the door.",
+      "口语里可省主语：— Want some coffee?（省略 Do you want）",
+      "宾语省略多见于口语，正式回答常改用替代词：— Do you like it? — Yes, I do."
+    ],
+    "examples": [
+      {
+        "en": "She came in and sat down.",
+        "zh": "她进来坐下。",
+        "note": "第二个分句的 she 省略。"
+      },
+      {
+        "en": "She came in and he sat down.",
+        "zh": "她进来，他坐下。",
+        "note": "两个分句主语不同，任何一个都不能省。"
+      },
+      {
+        "en": "Open the door, please.",
+        "zh": "请开门。",
+        "note": "祈使句主语 you 不出现。"
+      },
+      {
+        "en": "— Want some coffee? — No, thanks.",
+        "zh": "——要咖啡吗？——不用，谢谢。",
+        "note": "口语省略了 Do you。"
+      },
+      {
+        "en": "— Do you like it? — Yes, I do.",
+        "zh": "——你喜欢吗？——喜欢。",
+        "note": "用 do 替代 like it，属于替代而不是单纯省略。"
+      }
+    ]
+  },
+  {
+    "topic": "ellipsis",
+    "id": "ell-infinitive",
+    "title": "不定式与 to",
+    "en": "Infinitive Ellipsis",
+    "level": "基础",
+    "sortOrder": 4,
+    "summary": "前面已经出现过的动词，后面再用不定式时可以只保留 to、省掉动词；但如果 to 是介词，后面就必须跟名词或动名词，不能省。",
+    "points": [
+      "保留 to、省略动词：I asked him to stay, but he didn't want to.",
+      "常见搭配：want to、hope to、try to、would like to、be glad to、be afraid to。",
+      "并列不定式可省第二个 to：I want to sit down and (to) rest.",
+      "to 作介词时（look forward to、be used to）后面必须跟名词或动名词。",
+      "有些结构必须省略 to：make/let/have sb do、had better do、why not do。"
+    ],
+    "examples": [
+      {
+        "en": "I asked him to stay, but he didn't want to.",
+        "zh": "我让他留下，但他不想。",
+        "note": "want 后省略 stay，只保留 to。"
+      },
+      {
+        "en": "— Would you like to come? — I'd love to.",
+        "zh": "——你愿意来吗？——我很愿意。",
+        "note": "I'd love to 后面省略 come。"
+      },
+      {
+        "en": "I want to sit down and rest.",
+        "zh": "我想坐下来休息一下。",
+        "note": "并列不定式省略第二个 to。"
+      },
+      {
+        "en": "I'm looking forward to seeing you.",
+        "zh": "我期待见到你。",
+        "note": "to 是介词，后面必须跟动名词 seeing。"
+      },
+      {
+        "en": "Let me help you.",
+        "zh": "让我帮你。",
+        "note": "let sb do 中 to 必须省略。"
+      }
+    ]
+  },
+  {
+    "topic": "ellipsis",
+    "id": "ell-clause",
+    "title": "状语从句省略",
+    "en": "Ellipsis in Adverbial Clauses",
+    "level": "进阶",
+    "sortOrder": 5,
+    "summary": "时间、条件、让步从句里，如果从句主语与主句主语一致、谓语又含 be，可以省掉主语和 be，只留分词、形容词或介词短语。",
+    "points": [
+      "省略的前提：从句主语 = 主句主语，且从句谓语含有 be。",
+      "保留分词：When (he was) young, he lived in the country. / While (I was) walking, I met him.",
+      "保留形容词、介词短语：If (it is) necessary, call me. / Though (he was) in danger, he stayed calm.",
+      "主语不一致时不能省略，否则就成了悬垂分词。",
+      "before、after、until 等从句同样适用：After (he had) finished the work, he left."
+    ],
+    "examples": [
+      {
+        "en": "When young, he lived in the countryside.",
+        "zh": "他年轻时住在乡下。",
+        "note": "省略 he was，只留形容词 young。"
+      },
+      {
+        "en": "While walking in the park, I met an old friend.",
+        "zh": "在公园散步时，我遇到一位老朋友。",
+        "note": "主动关系用现在分词 walking。"
+      },
+      {
+        "en": "If necessary, call me.",
+        "zh": "如果有必要，给我打电话。",
+        "note": "省略 it is，只留形容词 necessary。"
+      },
+      {
+        "en": "After finishing the work, he left.",
+        "zh": "完成工作后他就走了。",
+        "note": "主动关系用动名词 finishing，主语与主句一致。"
+      },
+      {
+        "en": "When he came in, I was reading.",
+        "zh": "他进来时我正在看书。",
+        "note": "主从句主语不同，不能省略成 When coming in。"
+      }
+    ]
+  },
+  {
+    "topic": "ellipsis",
+    "id": "ell-relative",
+    "title": "定语从句省略",
+    "en": "Ellipsis in Relative Clauses",
+    "level": "进阶",
+    "sortOrder": 6,
+    "summary": "关系代词在定语从句中作宾语时可以省略，作主语时不能省；关系副词和「介词 + 关系代词」结构一般也不能省。",
+    "points": [
+      "关系代词作宾语可省：The book (that/which) I bought is interesting.",
+      "关系代词作主语不能省：The man who called you is my uncle.",
+      "「介词 + 关系代词」结构里不能省：the pen with which he writes。",
+      "关系副词 when、where、why 一般不能省：the day when we met。",
+      "非限制性定语从句的关系词一律不能省：He passed the exam, which surprised us."
+    ],
+    "examples": [
+      {
+        "en": "The book I bought yesterday is interesting.",
+        "zh": "我昨天买的那本书很有意思。",
+        "note": "省略了作宾语的关系代词 that / which。"
+      },
+      {
+        "en": "The man who called you is my uncle.",
+        "zh": "给你打电话的那个人是我叔叔。",
+        "note": "关系代词作主语，不能省略。"
+      },
+      {
+        "en": "This is the pen with which he writes.",
+        "zh": "这就是他写字用的那支笔。",
+        "note": "介词 + which 结构不能省略。"
+      },
+      {
+        "en": "He passed the exam, which surprised us.",
+        "zh": "他通过了考试，这让我们很惊讶。",
+        "note": "非限制性定语从句的关系词不能省略。"
+      }
+    ]
+  },
+  {
+    "topic": "ellipsis",
+    "id": "ell-do-so",
+    "title": "do so 替代",
+    "en": "do so / do it / do that",
+    "level": "进阶",
+    "sortOrder": 7,
+    "summary": "do so 替代前面提到的「动词 + 宾语」这个动作，避免重复；do it、do that 更具体，指代某个已知的动作或事情。",
+    "points": [
+      "do so 替代动词短语：He asked me to leave, and I did so.（= I left）",
+      "do so 多用于正式或书面语，口语里常用 do that / do it。",
+      "do it 中的 it 指具体事物：— Please open the window. — I'll do it.",
+      "do that 指「那样做」，常带对比或不满：Don't do that again.",
+      "so 也能替代整个从句内容：I think so. / I hope not."
+    ],
+    "examples": [
+      {
+        "en": "He asked me to leave, and I did so.",
+        "zh": "他让我离开，我就离开了。",
+        "note": "did so 替代 left。"
+      },
+      {
+        "en": "— Please open the window. — I'll do it.",
+        "zh": "——请开一下窗。——好的。",
+        "note": "it 指开窗这件事。"
+      },
+      {
+        "en": "Don't do that again.",
+        "zh": "别再那样做了。",
+        "note": "do that 指前面提到的行为。"
+      },
+      {
+        "en": "I think so.",
+        "zh": "我想是这样。",
+        "note": "so 替代前文整个从句的内容。"
+      }
+    ]
+  },
+  {
+    "topic": "ellipsis",
+    "id": "ell-so-not",
+    "title": "so 与 not",
+    "en": "so / not",
+    "level": "进阶",
+    "sortOrder": 8,
+    "summary": "在 think、hope、believe、suppose、be afraid 等词后，用 so 代替肯定的从句、用 not 代替否定的从句，避免把整句再说一遍。",
+    "points": [
+      "肯定用 so：I think so. / I hope so. / I'm afraid so.",
+      "否定用 not：I hope not. / I'm afraid not. / I suppose not.",
+      "只适用于少数动词和说法（think、believe、hope、suppose、expect、guess、be afraid），不能随便套。",
+      "so 也可放在句首表示「也确实如此」：— He is tired. — So he is.",
+      "I don't think so 与 I think not 都对，前者更常见。"
+    ],
+    "examples": [
+      {
+        "en": "— Will it rain? — I hope not.",
+        "zh": "——会下雨吗？——希望不会。",
+        "note": "not 替代 it won't rain。"
+      },
+      {
+        "en": "— Is he coming? — I think so.",
+        "zh": "——他会来吗？——我想会。",
+        "note": "so 替代 he is coming。"
+      },
+      {
+        "en": "— Are you sure? — I'm afraid so.",
+        "zh": "——你确定吗？——恐怕是的。",
+        "note": "be afraid so 是固定说法。"
+      },
+      {
+        "en": "— He is tired. — So he is.",
+        "zh": "——他累了。——确实累了。",
+        "note": "so 提前表示「确实如此」，注意和倒装的 so do I 区分。"
+      }
+    ]
+  },
+  {
+    "topic": "ellipsis",
+    "id": "ell-one-that",
+    "title": "one 与 that",
+    "en": "one / ones / that / those",
+    "level": "进阶",
+    "sortOrder": 9,
+    "summary": "one/ones 替代可数名词，that/those 替代前面出现的名词（多带后置修饰），the same 替代相同的事物。选择看名词可数不可数、有没有后置修饰。",
+    "points": [
+      "one/ones 替代可数名词：a red apple → a green one；these books → the new ones。",
+      "that/those 替代名词，常带 of 短语或定语从句：The weather here is better than that in Beijing.",
+      "those 常用于 those who ... 结构：Those who work hard will succeed.",
+      "the same 表示「同样的事物」：— I'll have a coffee. — The same for me.",
+      "不可数名词不能用 one 替代，要用 that 或直接重复。"
+    ],
+    "examples": [
+      {
+        "en": "I'd like a red apple, not a green one.",
+        "zh": "我要红苹果，不要绿苹果。",
+        "note": "one 替代可数名词 apple。"
+      },
+      {
+        "en": "These shoes are too small; I need bigger ones.",
+        "zh": "这双鞋太小了，我需要大一点的。",
+        "note": "ones 替代复数 shoes。"
+      },
+      {
+        "en": "The weather in Kunming is better than that in Beijing.",
+        "zh": "昆明的天气比北京好。",
+        "note": "that 替代不可数名词 weather。"
+      },
+      {
+        "en": "Those who work hard will succeed.",
+        "zh": "努力的人会成功。",
+        "note": "those 替代 people，后面接定语从句。"
+      },
+      {
+        "en": "— I'll have a coffee. — The same for me.",
+        "zh": "——我要一杯咖啡。——我也一样。",
+        "note": "the same 替代同样的东西。"
+      }
+    ]
+  },
+  {
+    "topic": "ellipsis",
+    "id": "ell-mistakes",
+    "title": "易错点与辨析",
+    "en": "Common Mistakes",
+    "level": "提高",
+    "sortOrder": 10,
+    "summary": "省略的错集中在三处：省掉了补不回来的成分、该保留 to 的时候漏掉、以及主语不一致还硬省造成悬垂分词。替代的错主要是 one / that / those 选错。",
+    "points": [
+      "省略后必须能补回来：I like it more than he 有歧义，要写成 than he does。",
+      "不定式省略动词时要保留 to：I didn't want to（不是 I didn't want）。",
+      "状语从句省略要求主语一致，否则就是悬垂分词。",
+      "one 只替代可数名词；不可数名词用 that。",
+      "比较句里省略要避免歧义，必要时补上助动词。"
+    ],
+    "examples": [
+      {
+        "en": "I like coffee more than he does.",
+        "zh": "我比他更喜欢咖啡。",
+        "note": "省略谓语后要补 does，否则会误解成「比他这个人」。"
+      },
+      {
+        "en": "— Would you like to join us? — I'd love to.",
+        "zh": "——你愿意加入我们吗？——我很愿意。",
+        "note": "省略 join us，但 to 必须保留。"
+      },
+      {
+        "en": "While waiting for the bus, I read a book.",
+        "zh": "等公交时我看书。",
+        "note": "主语一致，省略 I was 是正确的。"
+      },
+      {
+        "en": "Looking out of the window, I found the garden beautiful.",
+        "zh": "从窗户望出去，我发现花园很美。",
+        "note": "原句写成 the garden was beautiful 就主语不一致，成了悬垂分词。"
+      },
+      {
+        "en": "The water here is cleaner than that in the river.",
+        "zh": "这里的水比河里的干净。",
+        "note": "water 不可数，用 that 替代，不能用 one。"
+      }
+    ]
+  },
+  {
+    "topic": "reported-speech",
+    "id": "rs-basics",
+    "title": "引语入门",
+    "en": "Reported Speech: Basics",
+    "level": "入门",
+    "sortOrder": 1,
+    "summary": "直接引语是原话加引号；间接引语是把原话转述进自己的句子，不加引号。转述时要同时处理三件事：人称、时态、时间地点状语。",
+    "points": [
+      "直接引语照抄原话并加引号：He said, \"I am busy.\"",
+      "间接引语用从句转述，不加引号：He said (that) he was busy.",
+      "转述三要素：人称跟着转述者变、时态往后移一步、时间地点状语换说法。",
+      "引导词按句型选：陈述句用 that（可省）、一般疑问句用 if/whether、特殊疑问句保留疑问词、祈使句用 to do。",
+      "转述动词：say、tell、ask、order、advise 等；tell 后面必须跟人。"
+    ],
+    "examples": [
+      {
+        "en": "He said, \"I am busy.\" → He said (that) he was busy.",
+        "zh": "他说他很忙。",
+        "note": "去掉引号，时态后移，人称改成 he。"
+      },
+      {
+        "en": "She said to me, \"I'll call you.\" → She told me she would call me.",
+        "zh": "她对我说她会给我打电话。",
+        "note": "say to sb 转述时通常改成 tell sb。"
+      },
+      {
+        "en": "He asked, \"Are you ready?\" → He asked if I was ready.",
+        "zh": "他问我准备好了没有。",
+        "note": "一般疑问句用 if 引导，语序变陈述。"
+      },
+      {
+        "en": "\"Open the door,\" he said. → He told me to open the door.",
+        "zh": "他让我开门。",
+        "note": "祈使句转述用 tell sb to do。"
+      }
+    ]
+  },
+  {
+    "topic": "reported-speech",
+    "id": "rs-tense",
+    "title": "时态后移",
+    "en": "Tense Backshift",
+    "level": "基础",
+    "sortOrder": 2,
+    "summary": "主句是过去时（said、told、asked）时，间接引语里的时态一般要往后移一步：现在变过去，过去变过去完成，将来变过去将来。",
+    "points": [
+      "一般现在时 → 一般过去时：am/is/are → was/were，do → did。",
+      "现在进行时 → 过去进行时；现在完成时 → 过去完成时。",
+      "一般过去时 → 过去完成时；过去完成时保持不变。",
+      "will → would；can → could；may → might；表「必须」的 must → had to。",
+      "主句是现在时（says、tells）时，从句时态不必后移。"
+    ],
+    "examples": [
+      {
+        "en": "\"I work here,\" he said. → He said he worked there.",
+        "zh": "他说他在那里工作。",
+        "note": "work → worked，here → there。"
+      },
+      {
+        "en": "\"I am reading,\" she said. → She said she was reading.",
+        "zh": "她说她正在看书。",
+        "note": "现在进行时 → 过去进行时。"
+      },
+      {
+        "en": "\"I have finished,\" he said. → He said he had finished.",
+        "zh": "他说他已经完成了。",
+        "note": "现在完成时 → 过去完成时。"
+      },
+      {
+        "en": "\"I will help you,\" she said. → She said she would help me.",
+        "zh": "她说她会帮我。",
+        "note": "will → would，you → me。"
+      },
+      {
+        "en": "He says he is busy.",
+        "zh": "他说他很忙。",
+        "note": "主句是现在时 says，从句时态不变。"
+      }
+    ]
+  },
+  {
+    "topic": "reported-speech",
+    "id": "rs-pronouns",
+    "title": "人称与指示词",
+    "en": "Pronouns & Demonstratives",
+    "level": "基础",
+    "sortOrder": 3,
+    "summary": "转述时人称按「谁在说、说给谁」调整：第一人称跟着说话人变，第二人称跟着听话人变，第三人称一般不变。指示词 this/these 通常变成 that/those。",
+    "points": [
+      "第一人称 I/we/my/our → 说话人：He said, \"I lost my key.\" → He said he had lost his key.",
+      "第二人称 you/your → 听话人：She said to me, \"You are right.\" → She told me I was right.",
+      "第三人称一般不变，但所有格要跟着变：Tom said, \"She is my sister.\" → Tom said she was his sister.",
+      "this → that，these → those；指代很清楚时也可以不变。",
+      "my → his/her、your → my 这类所有格变化最容易漏。"
+    ],
+    "examples": [
+      {
+        "en": "He said, \"I lost my key.\" → He said he had lost his key.",
+        "zh": "他说他丢了钥匙。",
+        "note": "I → he，my → his，lost → had lost。"
+      },
+      {
+        "en": "She said to me, \"You are right.\" → She told me I was right.",
+        "zh": "她对我说我是对的。",
+        "note": "you → I，因为听话人是「我」。"
+      },
+      {
+        "en": "Tom said, \"She is my sister.\" → Tom said she was his sister.",
+        "zh": "汤姆说她是他的妹妹。",
+        "note": "第三人称 she 不变，my → his。"
+      },
+      {
+        "en": "He said, \"This is my book.\" → He said that was his book.",
+        "zh": "他说那是他的书。",
+        "note": "this → that，my → his。"
+      }
+    ]
+  },
+  {
+    "topic": "reported-speech",
+    "id": "rs-time-place",
+    "title": "时间地点变化",
+    "en": "Time & Place Changes",
+    "level": "基础",
+    "sortOrder": 4,
+    "summary": "转述发生在事后，原来的时间地点词往往要换：now→then、today→that day、tomorrow→the next day、here→there。若转述就在原地当天说，也可以不改。",
+    "points": [
+      "时间：now → then；today → that day；tonight → that night。",
+      "时间：yesterday → the day before；tomorrow → the next day；last week → the week before；next week → the following week。",
+      "ago → before；this morning → that morning。",
+      "地点与指示：here → there；this → that；these → those。",
+      "转述地点没变、时间就是当天时，here / today 等可以保持不变。"
+    ],
+    "examples": [
+      {
+        "en": "\"I'll see you tomorrow,\" he said. → He said he would see me the next day.",
+        "zh": "他说他第二天见我。",
+        "note": "tomorrow → the next day，will → would。"
+      },
+      {
+        "en": "\"I saw her yesterday,\" she said. → She said she had seen her the day before.",
+        "zh": "她说她前一天见过她。",
+        "note": "yesterday → the day before，saw → had seen。"
+      },
+      {
+        "en": "\"Come here,\" he said. → He told me to go there.",
+        "zh": "他让我过去。",
+        "note": "here → there，come → go。"
+      },
+      {
+        "en": "\"We are busy today,\" they said. → They said they were busy that day.",
+        "zh": "他们说他们那天很忙。",
+        "note": "today → that day，are → were。"
+      },
+      {
+        "en": "He said, \"I'm coming now.\" → He said he was coming then.",
+        "zh": "他说他当时就过来。",
+        "note": "now → then，现在进行 → 过去进行。"
+      }
+    ]
+  },
+  {
+    "topic": "reported-speech",
+    "id": "rs-statements",
+    "title": "陈述句转述",
+    "en": "Reporting Statements",
+    "level": "基础",
+    "sortOrder": 5,
+    "summary": "陈述句转述用 say/tell + that 从句，从句一律用陈述语序；say 后面不直接接人，tell 后面必须接人。",
+    "points": [
+      "句型：say (that) + 从句；tell sb (that) + 从句。",
+      "tell 后面必须跟人，不能直接说 tell that ...。",
+      "that 在口语里常省略，书面语可以保留。",
+      "从句用陈述语序，不能保留原来的疑问语序。",
+      "转述动词可按语义换成 believe、think、admit、explain、complain 等。"
+    ],
+    "examples": [
+      {
+        "en": "He said, \"I am tired.\" → He said (that) he was tired.",
+        "zh": "他说他累了。",
+        "note": "say + that 从句，that 可省略。"
+      },
+      {
+        "en": "He said to me, \"I am tired.\" → He told me (that) he was tired.",
+        "zh": "他告诉我他累了。",
+        "note": "say to sb 转述时改写成 tell sb。"
+      },
+      {
+        "en": "She said, \"I don't know him.\" → She said she didn't know him.",
+        "zh": "她说她不认识他。",
+        "note": "否定句直接放进 that 从句，时态后移。"
+      },
+      {
+        "en": "He admitted, \"I made a mistake.\" → He admitted that he had made a mistake.",
+        "zh": "他承认自己犯了错。",
+        "note": "转述动词可换成 admit，时态照样后移。"
+      }
+    ]
+  },
+  {
+    "topic": "reported-speech",
+    "id": "rs-questions",
+    "title": "疑问句转述",
+    "en": "Reporting Questions",
+    "level": "基础",
+    "sortOrder": 6,
+    "summary": "疑问句转述用 ask 引导：一般疑问句用 if/whether，特殊疑问句保留原疑问词。两种情况都要改成陈述语序，句末用句号。",
+    "points": [
+      "一般疑问句：ask (sb) if/whether + 陈述语序从句。",
+      "特殊疑问句：ask (sb) + 疑问词 + 陈述语序从句。",
+      "转述后不再倒装：不能写成 he asked where did I live。",
+      "疑问句里的 do/does/did 在转述时去掉。",
+      "选择疑问句用 whether ... or ...，不用 if。"
+    ],
+    "examples": [
+      {
+        "en": "\"Do you like it?\" he asked. → He asked if I liked it.",
+        "zh": "他问我是否喜欢它。",
+        "note": "一般疑问句用 if，助动词 do 去掉。"
+      },
+      {
+        "en": "\"Where do you live?\" she asked. → She asked where I lived.",
+        "zh": "她问我住在哪里。",
+        "note": "保留 where，改成陈述语序 lived。"
+      },
+      {
+        "en": "\"Did you see him?\" he asked. → He asked whether I had seen him.",
+        "zh": "他问我是否见过他。",
+        "note": "whether 也可以，did 去掉，时态后移到 had seen。"
+      },
+      {
+        "en": "\"Are you coming or not?\" she asked. → She asked whether I was coming or not.",
+        "zh": "她问我到底来不来。",
+        "note": "选择疑问句用 whether ... or not。"
+      },
+      {
+        "en": "\"Why are you late?\" he asked. → He asked why I was late.",
+        "zh": "他问我为什么迟到。",
+        "note": "are you late 改成陈述语序 I was late。"
+      }
+    ]
+  },
+  {
+    "topic": "reported-speech",
+    "id": "rs-commands",
+    "title": "祈使句转述",
+    "en": "Reporting Commands",
+    "level": "进阶",
+    "sortOrder": 7,
+    "summary": "祈使句转述用 tell/ask/order/advise + sb + to do；否定祈使用 not to do；let's 转述用 suggest doing 或 suggest that ...。",
+    "points": [
+      "肯定祈使：tell/ask sb to do。",
+      "否定祈使：tell/ask sb not to do（不是 to not do）。",
+      "按语气选动词：order（命令）、ask（请求）、advise（建议）、warn（警告）、remind（提醒）。",
+      "let's 转述：suggest doing，或 suggest that we (should) do。",
+      "祈使句转述不用 that 从句，注意别写成 He told me that sit down。"
+    ],
+    "examples": [
+      {
+        "en": "\"Sit down,\" he said. → He told me to sit down.",
+        "zh": "他让我坐下。",
+        "note": "肯定祈使用 tell sb to do。"
+      },
+      {
+        "en": "\"Don't be late,\" she said. → She told me not to be late.",
+        "zh": "她让我别迟到。",
+        "note": "否定祈使用 not to do。"
+      },
+      {
+        "en": "\"Please help me,\" he said. → He asked me to help him.",
+        "zh": "他请我帮他。",
+        "note": "请求用 ask，不用 tell。"
+      },
+      {
+        "en": "\"Let's go swimming,\" he said. → He suggested going swimming.",
+        "zh": "他建议去游泳。",
+        "note": "let's 转述用 suggest doing。"
+      },
+      {
+        "en": "\"Remember to lock the door,\" she said. → She reminded me to lock the door.",
+        "zh": "她提醒我锁门。",
+        "note": "按语义换成 remind sb to do。"
+      }
+    ]
+  },
+  {
+    "topic": "reported-speech",
+    "id": "rs-special",
+    "title": "特殊句式转述",
+    "en": "Reporting Exclamations & Offers",
+    "level": "进阶",
+    "sortOrder": 8,
+    "summary": "感叹句、祝愿、提议、请求许可没有统一公式，关键是选对转述动词：感叹用 say/exclaim，提议用 offer，祝愿用 wish。",
+    "points": [
+      "感叹句转述常用 say 或 exclaim：She said, \"What a clever boy you are!\" → She said what a clever boy I was.",
+      "祝愿：He said, \"Good luck!\" → He wished me good luck.",
+      "提议：He said, \"Shall I carry it?\" → He offered to carry it.",
+      "请求许可：She said, \"May I use your phone?\" → She asked if she might use my phone.",
+      "转述保留原意、按句意重写句式，不要逐字硬翻。"
+    ],
+    "examples": [
+      {
+        "en": "\"What a clever boy you are!\" she said. → She said what a clever boy I was.",
+        "zh": "她说我真聪明。",
+        "note": "感叹句保留感叹形式，时态和人称照常变。"
+      },
+      {
+        "en": "\"Good luck!\" he said. → He wished me good luck.",
+        "zh": "他祝我好运。",
+        "note": "祝愿用 wish sb sth。"
+      },
+      {
+        "en": "\"Shall I help you?\" he said. → He offered to help me.",
+        "zh": "他提出要帮我。",
+        "note": "主动提议用 offer to do。"
+      },
+      {
+        "en": "\"May I use your phone?\" she said. → She asked if she might use my phone.",
+        "zh": "她问她能否用我的手机。",
+        "note": "may → might，疑问用 if，your → my。"
+      }
+    ]
+  },
+  {
+    "topic": "reported-speech",
+    "id": "rs-no-change",
+    "title": "不变时态的情况",
+    "en": "When Tenses Stay",
+    "level": "进阶",
+    "sortOrder": 9,
+    "summary": "时态后移不是绝对的：客观真理、引语内容现在仍成立、主句是现在时、以及虚拟语气，都可以保持不变。",
+    "points": [
+      "客观真理、自然规律不变：He said the earth moves around the sun.",
+      "引语内容现在仍然成立时也可以不变：She said she is only 20.",
+      "主句是现在时、现在完成时或将来时时不变：He says he will come.",
+      "虚拟语气不后移：He said, \"If I were you, I would go.\" → He said if he were me, he would go.",
+      "过去完成时本身就是「过去的过去」，不再往后移。"
+    ],
+    "examples": [
+      {
+        "en": "He said the earth moves around the sun.",
+        "zh": "他说地球绕着太阳转。",
+        "note": "客观真理保持一般现在时。"
+      },
+      {
+        "en": "She said she is only 20.",
+        "zh": "她说她只有 20 岁。",
+        "note": "转述时她仍然是 20 岁，可以不变时态。"
+      },
+      {
+        "en": "He says he will come tomorrow.",
+        "zh": "他说他明天来。",
+        "note": "主句是现在时，从句不必后移。"
+      },
+      {
+        "en": "He said if he were me, he would go.",
+        "zh": "他说如果是我，他就去。",
+        "note": "虚拟语气保持原形，不再后移。"
+      }
+    ]
+  },
+  {
+    "topic": "reported-speech",
+    "id": "rs-mistakes",
+    "title": "易错点与辨析",
+    "en": "Common Mistakes",
+    "level": "提高",
+    "sortOrder": 10,
+    "summary": "转述的错集中在四处：只改时态忘了人称、疑问句仍用倒装、tell 后面漏人、以及把本来不用改的状语也改了。",
+    "points": [
+      "三要素要一起改：时态、人称、时间地点状语，只改一样就会出问题。",
+      "疑问句转述后必须是陈述语序：He asked where did I live（错）→ He asked where I lived.",
+      "tell 后面必须跟人：He told that ...（错）→ He said that ... 或 He told me that ...",
+      "here、today 在原地说时可以不改，不要机械替换。",
+      "祈使句转述用 to do，不要写成 that 从句。"
+    ],
+    "examples": [
+      {
+        "en": "\"I am leaving for London tomorrow,\" he said. → He said he was leaving for London the next day.",
+        "zh": "他说他第二天要去伦敦。",
+        "note": "时态、人称、时间状语三处都改了。"
+      },
+      {
+        "en": "He asked me where I lived.",
+        "zh": "他问我住在哪里。",
+        "note": "疑问句转述必须用陈述语序，不能倒装成 where did I live。"
+      },
+      {
+        "en": "He told me that he was busy.",
+        "zh": "他告诉我他很忙。",
+        "note": "tell 后面要跟人，不能只说 tell that。"
+      },
+      {
+        "en": "She told me not to be late.",
+        "zh": "她让我别迟到。",
+        "note": "否定祈使用 not to do，既不是 to not do，也不是 that 从句。"
+      }
+    ]
+  },
+  {
+    "topic": "questions-negation",
+    "id": "qn-basics",
+    "title": "疑问与否定入门",
+    "en": "Questions & Negation: Basics",
+    "level": "入门",
+    "sortOrder": 1,
+    "summary": "疑问句和否定句都要借助助动词：疑问句把助动词提到主语前，否定句在助动词后面加 not。句子里没有助动词时，用 do/does/did 补出来。",
+    "points": [
+      "四种疑问句：一般疑问句（Yes/No）、特殊疑问句（疑问词开头）、选择疑问句（or）、反义疑问句（附加问句）。",
+      "疑问句的基本操作：把 be 动词、助动词或情态动词提到主语前面。",
+      "没有助动词时用 do/does/did 帮忙：Do you like it? / Did he come?",
+      "否定句的基本操作：在第一个助动词后面加 not；没有助动词就用 do/does/did + not。",
+      "一旦用了 do/does/did，后面的实义动词一律用原形。"
+    ],
+    "examples": [
+      {
+        "en": "Are you a student?",
+        "zh": "你是学生吗？",
+        "note": "be 动词直接提到主语前。"
+      },
+      {
+        "en": "Do you like music?",
+        "zh": "你喜欢音乐吗？",
+        "note": "句子里没有助动词，用 do 帮忙。"
+      },
+      {
+        "en": "He didn't come yesterday.",
+        "zh": "他昨天没来。",
+        "note": "过去时用 didn't，后面接原形 come。"
+      },
+      {
+        "en": "Where do you live?",
+        "zh": "你住在哪里？",
+        "note": "疑问词 + do + 主语 + 原形。"
+      }
+    ]
+  },
+  {
+    "topic": "questions-negation",
+    "id": "qn-yesno",
+    "title": "一般疑问句",
+    "en": "Yes/No Questions",
+    "level": "基础",
+    "sortOrder": 2,
+    "summary": "一般疑问句把 be、助动词或情态动词提到主语前，回答用 Yes/No；这些词都没有时用 do/does/did。",
+    "points": [
+      "be 动词提前：Is he your brother? / Were they at home?",
+      "助动词或情态动词提前：Have you finished? / Can she swim?",
+      "实义动词用 do/does/did：Do they know? / Did you see him?",
+      "简短回答的助动词要与问句一致：— Do you like it? — Yes, I do.",
+      "否定回答用 No + 否定形式：No, I don't. / No, he isn't."
+    ],
+    "examples": [
+      {
+        "en": "Is she at home? — Yes, she is.",
+        "zh": "她在家吗？——在。",
+        "note": "be 动词提前，回答也用 is。"
+      },
+      {
+        "en": "Have you finished your work?",
+        "zh": "你的工作做完了吗？",
+        "note": "完成时把 have 提到主语前。"
+      },
+      {
+        "en": "Do they live here? — No, they don't.",
+        "zh": "他们住这儿吗？——不。",
+        "note": "实义动词用 do，回答保持一致。"
+      },
+      {
+        "en": "Did he call you? — Yes, he did.",
+        "zh": "他给你打电话了吗？——打了。",
+        "note": "过去时用 did，回答也用 did。"
+      }
+    ]
+  },
+  {
+    "topic": "questions-negation",
+    "id": "qn-wh",
+    "title": "特殊疑问句",
+    "en": "Wh- Questions",
+    "level": "基础",
+    "sortOrder": 3,
+    "summary": "特殊疑问句以疑问词开头，结构是「疑问词 + 助动词 + 主语 + 实义动词」；但疑问词本身作主语时，语序和陈述句一样，不倒装。",
+    "points": [
+      "常见疑问词：what、who、whom、whose、which、when、where、why、how。",
+      "结构：疑问词 + 助动词/be + 主语 + 主要动词（Where did you go?）。",
+      "疑问词作主语时不倒装，也不加 do：Who broke the window? / What happened?",
+      "how 可与形容词、副词搭配：how long、how often、how far、how much。",
+      "疑问词可以带介词：With whom did you go?（口语常把介词放句末）"
+    ],
+    "examples": [
+      {
+        "en": "Where did you go last night?",
+        "zh": "你昨晚去哪儿了？",
+        "note": "疑问词 + did + 主语 + 原形。"
+      },
+      {
+        "en": "Who broke the window?",
+        "zh": "谁打破了窗户？",
+        "note": "who 作主语，语序与陈述句相同，不加 did。"
+      },
+      {
+        "en": "What happened to him?",
+        "zh": "他怎么了？",
+        "note": "what 作主语，直接用 happened。"
+      },
+      {
+        "en": "How often do you exercise?",
+        "zh": "你多久锻炼一次？",
+        "note": "how often 问频率。"
+      },
+      {
+        "en": "Whose book is this?",
+        "zh": "这是谁的书？",
+        "note": "whose 作定语，is 提到主语前。"
+      }
+    ]
+  },
+  {
+    "topic": "questions-negation",
+    "id": "qn-tag",
+    "title": "反义疑问句",
+    "en": "Tag Questions",
+    "level": "基础",
+    "sortOrder": 4,
+    "summary": "反义疑问句由「陈述句 + 简短问句」构成：前肯后否、前否后肯，问句部分的助动词、时态和人称都要与前句一致。",
+    "points": [
+      "前肯后否：You are a teacher, aren't you?",
+      "前否后肯：He doesn't like it, does he?",
+      "前句含 never、hardly、few、little、nothing 等否定词时，按否定处理，问句用肯定形式。",
+      "特殊主语：I am ... → aren't I；Let's ... → shall we；祈使句 → will you。",
+      "回答看事实，不看问句形式：— You didn't come, did you? — Yes, I did.（来了）"
+    ],
+    "examples": [
+      {
+        "en": "You are a teacher, aren't you?",
+        "zh": "你是老师，对吧？",
+        "note": "前肯后否，助动词与主语都与前句一致。"
+      },
+      {
+        "en": "He doesn't like coffee, does he?",
+        "zh": "他不喜欢咖啡，对吧？",
+        "note": "前否后肯，用 does。"
+      },
+      {
+        "en": "Let's go, shall we?",
+        "zh": "我们走吧，好吗？",
+        "note": "Let's 开头用 shall we。"
+      },
+      {
+        "en": "Open the window, will you?",
+        "zh": "打开窗户，好吗？",
+        "note": "祈使句用 will you。"
+      },
+      {
+        "en": "— You didn't come yesterday, did you? — Yes, I did.",
+        "zh": "——你昨天没来，对吧？——不，我来了。",
+        "note": "回答看事实：Yes 表示「来了」。"
+      }
+    ]
+  },
+  {
+    "topic": "questions-negation",
+    "id": "qn-choice",
+    "title": "选择与否定疑问",
+    "en": "Choice & Negative Questions",
+    "level": "基础",
+    "sortOrder": 5,
+    "summary": "选择疑问句用 or 提供两个选项，回答不能再用 Yes/No；否定疑问句（Isn't it...?）常表示期待对方同意或惊讶。",
+    "points": [
+      "选择疑问句：一般疑问句 + or + 另一个选项（Do you want tea or coffee?）。",
+      "回答选择疑问句要直接选一个，不能用 Yes/No。",
+      "也有特殊疑问句形式的选择：Which do you prefer, tea or coffee?",
+      "否定疑问句：Isn't she beautiful? / Don't you know him? 常含「我以为你……」的语气。",
+      "回答否定疑问句时 Yes 表示肯定事实：— Isn't he your brother? — Yes, he is."
+    ],
+    "examples": [
+      {
+        "en": "Do you want tea or coffee? — Coffee, please.",
+        "zh": "你要茶还是咖啡？——咖啡。",
+        "note": "选择疑问句不能答 Yes/No。"
+      },
+      {
+        "en": "Which do you prefer, tea or coffee?",
+        "zh": "你更喜欢哪个，茶还是咖啡？",
+        "note": "特殊疑问句形式的选择疑问句。"
+      },
+      {
+        "en": "Isn't she beautiful?",
+        "zh": "她是不是很美？",
+        "note": "否定疑问句常表示赞叹或期待同意。"
+      },
+      {
+        "en": "— Don't you know him? — Yes, I do.",
+        "zh": "——你不认识他吗？——不，我认识。",
+        "note": "Yes 表示肯定事实，与问句形式无关。"
+      }
+    ]
+  },
+  {
+    "topic": "questions-negation",
+    "id": "qn-negation",
+    "title": "否定句构成",
+    "en": "Forming Negatives",
+    "level": "基础",
+    "sortOrder": 6,
+    "summary": "否定句在第一个助动词后加 not；没有助动词时用 do/does/did + not，be 动词直接加 not。",
+    "points": [
+      "be 动词 + not：He is not a doctor.",
+      "助动词或情态动词 + not：She has not finished. / You must not go.",
+      "实义动词用 do/does/did + not，后接原形：He doesn't know. / They didn't come.",
+      "否定词固定在第一个助动词之后：has not been、will not have。",
+      "常见缩写：isn't、aren't、don't、doesn't、didn't、won't、can't。"
+    ],
+    "examples": [
+      {
+        "en": "He is not a doctor.",
+        "zh": "他不是医生。",
+        "note": "be 动词后直接加 not。"
+      },
+      {
+        "en": "She hasn't finished her work.",
+        "zh": "她还没完成工作。",
+        "note": "完成时在 has 后面加 not。"
+      },
+      {
+        "en": "They didn't come to the party.",
+        "zh": "他们没来参加聚会。",
+        "note": "过去时用 didn't，后面用原形 come。"
+      },
+      {
+        "en": "You must not smoke here.",
+        "zh": "你不能在这里吸烟。",
+        "note": "情态动词后直接加 not。"
+      }
+    ]
+  },
+  {
+    "topic": "questions-negation",
+    "id": "qn-negative-words",
+    "title": "否定词",
+    "en": "Negative Words",
+    "level": "进阶",
+    "sortOrder": 7,
+    "summary": "no、none、never、hardly、few、little 本身含否定意义，用了它们就不再另加 not；两个否定词同时出现通常表示肯定。",
+    "points": [
+      "no = not any，直接修饰名词：There is no water. = There isn't any water.",
+      "none 指三者以上「一个也没有」，常与 of 连用：None of them came.",
+      "never 表示「从不」，本身是否定，不再加 not。",
+      "hardly、scarcely、seldom、rarely、few、little 是半否定词，按否定理解，反义疑问句用肯定形式。",
+      "双重否定表示肯定：He never fails to help.（他总是帮忙）"
+    ],
+    "examples": [
+      {
+        "en": "There is no water in the bottle.",
+        "zh": "瓶子里没有水。",
+        "note": "no = not any，直接修饰名词。"
+      },
+      {
+        "en": "None of them came to the meeting.",
+        "zh": "他们谁都没来开会。",
+        "note": "none 指三者以上「一个也没有」。"
+      },
+      {
+        "en": "He never tells lies.",
+        "zh": "他从不说谎。",
+        "note": "never 本身是否定，不再加 not。"
+      },
+      {
+        "en": "He hardly knows her, does he?",
+        "zh": "他几乎不认识她，对吧？",
+        "note": "hardly 是半否定，附加问句用肯定形式。"
+      },
+      {
+        "en": "He never fails to help others.",
+        "zh": "他总是帮助别人。",
+        "note": "双重否定表示肯定。"
+      }
+    ]
+  },
+  {
+    "topic": "questions-negation",
+    "id": "qn-transfer",
+    "title": "否定转移与部分否定",
+    "en": "Negation Transfer & Partial Negation",
+    "level": "进阶",
+    "sortOrder": 8,
+    "summary": "think、believe、suppose 后的否定习惯提到主句；not all、not both、not every 表示部分否定，意思是「并非都」。",
+    "points": [
+      "否定转移：I don't think he is right.（= I think he isn't right.）",
+      "适用动词：think、believe、suppose、expect、imagine、feel。",
+      "not all / not every / not both 是部分否定：Not all students passed.（不是所有都及格）",
+      "全部否定用 none、neither、no one、nothing：None of the students passed.",
+      "not ... and ... 与 not ... or ... 含义不同，注意语境。"
+    ],
+    "examples": [
+      {
+        "en": "I don't think he will come.",
+        "zh": "我认为他不会来。",
+        "note": "否定转移到主句，比 I think he won't come 更自然。"
+      },
+      {
+        "en": "Not all the students passed the exam.",
+        "zh": "并不是所有学生都通过了考试。",
+        "note": "部分否定，不能理解成「全都没过」。"
+      },
+      {
+        "en": "None of the students passed the exam.",
+        "zh": "所有学生都没通过考试。",
+        "note": "全部否定用 none。"
+      },
+      {
+        "en": "Not both of them came.",
+        "zh": "他们俩没都来（只来了一个）。",
+        "note": "not both 是部分否定。"
+      },
+      {
+        "en": "Neither of them came.",
+        "zh": "他们俩都没来。",
+        "note": "全部否定用 neither。"
+      }
+    ]
+  },
+  {
+    "topic": "questions-negation",
+    "id": "qn-special",
+    "title": "特殊否定结构",
+    "en": "Special Negative Patterns",
+    "level": "提高",
+    "sortOrder": 9,
+    "summary": "有些否定结构不能按字面理解：too...to、not...until、no sooner...than、cannot...too 都是固定含义。",
+    "points": [
+      "too ... to do 表示「太……以至于不能」：He is too tired to walk.",
+      "not ... until 表示「直到……才」：He didn't leave until midnight.",
+      "no sooner ... than / hardly ... when 表示「一……就」，前半句用过去完成时。",
+      "cannot ... too 表示「再……也不过分」：You cannot be too careful.",
+      "not a little = very much；not a few = many，这两个要单独记。"
+    ],
+    "examples": [
+      {
+        "en": "He is too tired to walk.",
+        "zh": "他太累了走不动。",
+        "note": "too...to 表示否定的结果。"
+      },
+      {
+        "en": "He didn't leave until midnight.",
+        "zh": "他直到半夜才离开。",
+        "note": "not...until 表示「直到……才」。"
+      },
+      {
+        "en": "No sooner had he sat down than the phone rang.",
+        "zh": "他刚坐下电话就响了。",
+        "note": "no sooner...than，前半句用过去完成时并倒装。"
+      },
+      {
+        "en": "You cannot be too careful.",
+        "zh": "你再小心也不过分。",
+        "note": "cannot...too 表示「越……越好」。"
+      },
+      {
+        "en": "Not a few students failed.",
+        "zh": "不少学生没通过。",
+        "note": "not a few = many，不是「没几个」。"
+      }
+    ]
+  },
+  {
+    "topic": "questions-negation",
+    "id": "qn-mistakes",
+    "title": "易错点与辨析",
+    "en": "Common Mistakes",
+    "level": "提高",
+    "sortOrder": 10,
+    "summary": "疑问句和否定句的错集中在助动词上：该用 do 时漏掉、用了 do 又没还原动词、反义疑问句的助动词与前句不一致。",
+    "points": [
+      "实义动词的疑问句和否定句必须用 do/does/did：Do you like it?（不是 You like it?）",
+      "用了 do/does/did 后，实义动词用原形：Did he went（错）→ Did he go.",
+      "疑问词作主语时不加 do：Who did break the window（错）→ Who broke the window.",
+      "反义疑问句的助动词、时态、人称要与前句一致；前句含 hardly/never 时用肯定问句。",
+      "否定转移只用于少数动词，别把 I think he isn't right 当成唯一正确说法。"
+    ],
+    "examples": [
+      {
+        "en": "Do you like music?",
+        "zh": "你喜欢音乐吗？",
+        "note": "实义动词的疑问句要加 do。"
+      },
+      {
+        "en": "Did he go to the party?",
+        "zh": "他去参加聚会了吗？",
+        "note": "did 后面用原形 go，不能用 went。"
+      },
+      {
+        "en": "Who broke the window?",
+        "zh": "谁打破了窗户？",
+        "note": "疑问词作主语，不用 did。"
+      },
+      {
+        "en": "He hardly knows her, does he?",
+        "zh": "他几乎不认识她，对吧？",
+        "note": "前句含 hardly，视为否定，问句用肯定形式。"
+      },
+      {
+        "en": "I don't think he is right.",
+        "zh": "我认为他不对。",
+        "note": "否定转移到主句，是英语的惯用说法。"
+      }
+    ]
   }
 ]

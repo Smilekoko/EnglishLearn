@@ -55,9 +55,9 @@ JAVA_HOME=/path/to/jdk-21 ./gradlew bootRun
 
 启动后 <http://localhost:8080>。
 
-启动时会把 `src/main/resources/seed/*.json` 灌进数据库（20 个元音含发音要点与例词、2 个语法大类、23 个语法主题、110 条语法、3 个词库共 251 个词）。灌数据的策略分两种：
+启动时会把 `src/main/resources/seed/*.json` 灌进数据库（20 个元音 + 28 个辅音，含发音要点与例词；2 个语法大类、23 个语法主题（词法 13 + 句法 10，全部有内容）、168 条语法；3 个词库共 251 个词）。灌数据的策略分两种：
 
-- **语法目录**（`grammar-categories.json` / `grammar-topics.json`）按 id、**元音**按符号 upsert：每次启动都会用种子文件覆盖成最新值
+- **语法目录**（`grammar-categories.json` / `grammar-topics.json`）按 id、**元音与辅音**按符号 upsert：每次启动都会用种子文件覆盖成最新值
 - **语法条目**（`grammar.json`）和**词库**按 id 增量插入：库里没有的补进去，已有的不覆盖，所以新增主题不用清库
 
 ## 接口
@@ -66,14 +66,15 @@ JAVA_HOME=/path/to/jdk-21 ./gradlew bootRun
 |------|------|------|
 | GET | `/api/health` | 健康检查，返回 `{"status":"ok"}` |
 | GET | `/api/vowels` | 20 个元音，含单元音/双元音分类、音频文件名、主例词、发音要点与补充例词 |
-| GET | `/api/grammar` | 全部语法条目（共 110 条：词法 12 个主题各 5 节 + 时态 14 节 + 句法 36 节） |
+| GET | `/api/consonants` | 28 个辅音，含爆破音/摩擦音/破擦音/鼻音/边音/半元音分组、主例词、发音要点与补充例词（暂未配音频，音频字段为空） |
+| GET | `/api/grammar` | 全部语法条目（共 168 条：词法 12 个主题各 5 节 + 时态 14 节 + 句法 94 节） |
 | GET | `/api/grammar/topics` | 语法目录：大类、主题、每个主题已收录的节数（前端目录页只读这个接口） |
 | GET | `/api/grammar?topic=articles` | 按主题过滤，主题见下表 |
 | GET | `/api/grammar/{id}` | 单条语法，如 `/api/grammar/plural`，不存在返回 404 |
 | GET | `/api/vocabulary/series` | 词库系列列表，含每个系列的词数 |
 | GET | `/api/vocabulary/series/{id}` | 某系列的词条，按分类分组 |
 
-`topic` 可选值（时态 14 节，句法 `sentence` 7 节、`relative-clauses` 9 节、`adverbial-clauses` 10 节、`noun-clauses` 10 节，其余各 5 节）：
+`topic` 可选值（时态 14 节，句法 `sentence` 7 节、`relative-clauses` 9 节、`adverbial-clauses` 10 节、`noun-clauses` 10 节、`subjunctive` 10 节、`inversion` 9 节、`cleft` 9 节、`ellipsis` 10 节、`reported-speech` 10 节、`questions-negation` 10 节，其余各 5 节）：
 
 | topic | 主题 | topic | 主题 |
 |-------|------|-------|------|
@@ -87,6 +88,12 @@ JAVA_HOME=/path/to/jdk-21 ./gradlew bootRun
 | | | `relative-clauses` | 定语从句（句法） |
 | | | `adverbial-clauses` | 状语从句（句法） |
 | | | `noun-clauses` | 名词性从句（句法） |
+| | | `subjunctive` | 虚拟语气（句法） |
+| | | `inversion` | 倒装（句法） |
+| | | `cleft` | 强调句（句法） |
+| | | `ellipsis` | 省略与替代（句法） |
+| | | `reported-speech` | 直接引语与间接引语（句法） |
+| | | `questions-negation` | 疑问句与否定句（句法） |
 
 示例：
 
@@ -118,10 +125,11 @@ server/
 │   ├── config/                 # CORS、健康检查、种子数据
 │   ├── grammar/                # 语法大类 / 主题目录 / 条目（实体 / 仓库 / 控制器 / DTO）
 │   ├── vocabulary/             # 词库系列与词条（实体 / 仓库 / 控制器 / DTO）
-│   └── vowel/                  # 元音与补充例词（实体 / 仓库 / 控制器 / DTO）
+│   ├── vowel/                  # 元音与补充例词（实体 / 仓库 / 控制器 / DTO）
+│   └── consonant/              # 辅音与补充例词（实体 / 仓库 / 控制器 / DTO）
 ├── src/main/resources/
 │   ├── application.yml         # 端口、数据源、JPA
-│   └── seed/                   # 启动时灌入的 JSON：语法大纲、主题目录、语法条目、元音、词库
+│   └── seed/                   # 启动时灌入的 JSON：语法大纲、主题目录、语法条目、元音、辅音、词库
 └── db/init.sql                 # 建库脚本（只需执行一次）
 ```
 

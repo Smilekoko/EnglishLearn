@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Page.module.css'
 import { fetchVowels } from '../api/vowels.ts'
+import { fetchConsonants } from '../api/consonants.ts'
 
 interface VowelStats {
   total: number
@@ -11,9 +12,11 @@ interface VowelStats {
 
 function Phonetics() {
   const [stats, setStats] = useState<VowelStats | null>(null)
+  const [consonantCount, setConsonantCount] = useState<number | null>(null)
 
   useEffect(() => {
     const controller = new AbortController()
+
     fetchVowels(controller.signal)
       .then((vowels) => {
         if (controller.signal.aborted) return
@@ -25,6 +28,14 @@ function Phonetics() {
       })
       // 计数只是辅助信息，接口挂了就退化成不带数字的文案
       .catch(() => undefined)
+
+    fetchConsonants(controller.signal)
+      .then((consonants) => {
+        if (controller.signal.aborted) return
+        setConsonantCount(consonants.length)
+      })
+      .catch(() => undefined)
+
     return () => controller.abort()
   }, [])
 
@@ -38,8 +49,10 @@ function Phonetics() {
       action: stats ? `查看 ${stats.total} 个元音 →` : '查看元音 →',
     },
     {
-      title: '辅音（28 个）',
-      text: '按爆破音、摩擦音、破擦音、鼻音、边音和半元音分组练习。',
+      title: consonantCount === null ? '辅音' : `辅音（${consonantCount} 个）`,
+      text: '按爆破音、摩擦音、破擦音、鼻音、边音和半元音分组，逐个给出例词与发音要点。',
+      to: '/phonetics/consonants',
+      action: consonantCount === null ? '查看辅音 →' : `查看 ${consonantCount} 个辅音 →`,
     },
   ]
 

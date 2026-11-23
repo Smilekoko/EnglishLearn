@@ -76,6 +76,7 @@ webReact/
     │   ├── client.ts       # fetch 封装、baseURL、错误处理
     │   ├── grammar.ts      # 语法接口：目录（/api/grammar/topics）与条目（/api/grammar）
     │   ├── vowels.ts       # 元音接口（/api/vowels）
+    │   ├── consonants.ts   # 辅音接口（/api/consonants）
     │   └── vocabulary.ts   # 词库接口的类型与请求函数
     └── pages/
         ├── Home.tsx        # 首页（条目数、元音数来自接口）
@@ -84,8 +85,9 @@ webReact/
         ├── GrammarTopic.tsx # 语法详情页（词法、句法主题共用），目录与条目都来自接口
         ├── Vocabulary.tsx  # 词汇首页：词库系列卡片，数据来自 /api/vocabulary/series
         ├── VocabularySeries.tsx # 系列词库：按分类展示词条
-        ├── Phonetics.tsx   # 音标（元音 / 辅音入口，元音数来自接口）
+        ├── Phonetics.tsx   # 音标（元音 / 辅音入口，数量来自接口）
         ├── Vowels.tsx      # 元音：卡片 + 播放按钮，数据来自 /api/vowels
+        ├── Consonants.tsx  # 辅音：按六类分组展示，数据来自 /api/consonants（暂无音频）
         ├── NotFound.tsx    # 404
         └── Page.module.css # 各页面共用样式
 ```
@@ -97,16 +99,23 @@ webReact/
 | `/#/` | 首页 |
 | `/#/grammar` | 语法（词法 / 句法两个入口） |
 | `/#/grammar/word` | 词法 · 13 个条目（全部已上线） |
-| `/#/grammar/:category/:topic` | 语法详情，`category` 为 `word` / `syntax`，`topic` 为 `noun`、`tenses`、`sentence`、`relative-clauses`、`adverbial-clauses`、`noun-clauses` 等 |
+| `/#/grammar/:category/:topic` | 语法详情，`category` 为 `word` / `syntax`，`topic` 为 `noun`、`tenses`、`sentence`、`relative-clauses`、`adverbial-clauses`、`noun-clauses`、`subjunctive`、`inversion`、`cleft`、`ellipsis`、`reported-speech`、`questions-negation` 等 |
 | `/#/grammar/word/noun` | 名词语法（5 个主题） |
 | `/#/grammar/word/articles` | 冠词语法（5 个主题） |
-| `/#/grammar/syntax` | 句法 · 10 个条目（已上线「句子成分与基本句型」「定语从句」「状语从句」「名词性从句」） |
+| `/#/grammar/syntax` | 句法 · 10 个条目（全部已上线） |
 | `/#/grammar/syntax/sentence` | 句子成分与基本句型（7 个主题：五种基本句型、主谓语、表语、宾语、宾补、定状、成分划分） |
 | `/#/grammar/syntax/relative-clauses` | 定语从句（9 个主题：先行词与关系词、关系代词、关系副词、that/which、介词提前、限制性、一致性、as、易错辨析） |
 | `/#/grammar/syntax/adverbial-clauses` | 状语从句（10 个主题：时间、地点、条件、原因、目的与结果、让步、比较方式、省略简化、易错辨析） |
 | `/#/grammar/syntax/noun-clauses` | 名词性从句（10 个主题：入门、that、whether/if、连接代词、连接副词、主语、宾语、表语、同位语、与定语从句辨析） |
+| `/#/grammar/syntax/subjunctive` | 虚拟语气（10 个主题：入门、与现在/过去/将来相反、混合与倒装、wish、as if、建议类、固定句型、易错辨析） |
+| `/#/grammar/syntax/inversion` | 倒装（9 个主题：入门、完全倒装、否定词开头、only 开头、so/neither、虚拟条件倒装、让步倒装、so...that 倒装、易错辨析） |
+| `/#/grammar/syntax/cleft` | 强调句（9 个主题：入门、构成、时态一致、否定疑问、not until、what 强调、与定语从句辨析、其它强调手段、易错辨析） |
+| `/#/grammar/syntax/ellipsis` | 省略与替代（10 个主题：入门、谓语省略、主宾省略、不定式与 to、状语从句省略、定语从句省略、do so、so/not、one/that、易错辨析） |
+| `/#/grammar/syntax/reported-speech` | 直接引语与间接引语（10 个主题：入门、时态后移、人称指示词、时间地点、陈述句、疑问句、祈使句、特殊句式、不变时态、易错辨析） |
+| `/#/grammar/syntax/questions-negation` | 疑问句与否定句（10 个主题：入门、一般疑问句、特殊疑问句、反义疑问句、选择与否定疑问、否定构成、否定词、否定转移、特殊否定结构、易错辨析） |
 | `/#/phonetics` | 音标 |
 | `/#/phonetics/vowels` | 元音（20 个，来自 `/api/vowels`） |
+| `/#/phonetics/consonants` | 辅音（28 个，来自 `/api/consonants`，按六类分组） |
 | `/#/vocabulary` | 词汇 · 词库系列 |
 | `/#/vocabulary/:seriesId` | 系列词库，如 `dates-numbers-units`（日期数字单位） |
 
@@ -114,9 +123,10 @@ webReact/
 
 - **语法**：`GET /api/grammar/topics` 返回大类（词法 / 句法）、主题、每个主题已收录的节数；`GET /api/grammar?topic=xxx` 返回该主题的条目（标题、要点、例句）。目录文案、导语、条目全部存在 MySQL，前端不写死任何一条
 - **元音**：`GET /api/vowels` 返回音标、单元音/双元音分类、音频文件名、主例词、发音要点与补充例词
+- **辅音**：`GET /api/consonants` 返回音标、六类分组（爆破音/摩擦音/破擦音/鼻音/边音/半元音）、主例词、发音要点与补充例词；音频字段暂为空，页面不显示播放按钮
 - **词汇**：系列列表来自 `/api/vocabulary/series`，系列详情来自 `/api/vocabulary/series/{id}`，词条按 `category` 分组渲染
 - 都走 `src/api/client.ts` 的 `apiGet`，统一处理 baseURL、非 2xx 和网络错误；页面都有加载中 / 失败重试 / 空数据三种状态
-- 首页和音标页只额外取「条目数 / 元音数」做展示，接口挂了会退化成不带数字的文案，不挡住入口
+- 首页和音标页只额外取「条目数 / 元音数 / 辅音数」做展示，接口挂了会退化成不带数字的文案，不挡住入口
 
 ## 约定
 

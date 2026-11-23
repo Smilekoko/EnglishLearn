@@ -1,5 +1,8 @@
 package com.englishlearn.server.config;
 
+import com.englishlearn.server.consonant.Consonant;
+import com.englishlearn.server.consonant.ConsonantExample;
+import com.englishlearn.server.consonant.ConsonantRepository;
 import com.englishlearn.server.grammar.GrammarCategoryEntity;
 import com.englishlearn.server.grammar.GrammarCategoryRepository;
 import com.englishlearn.server.grammar.GrammarExample;
@@ -24,13 +27,14 @@ import tools.jackson.databind.ObjectMapper;
 /**
  * 启动时把 seed/*.json 灌进 MySQL，前端不再保存任何内容数据。
  *
- * <p>元音按符号、语法目录按 id upsert（可以先在库里改，重启会被文件覆盖回种子值）；
+ * <p>元音、辅音按符号、语法目录按 id upsert（可以先在库里改，重启会被文件覆盖回种子值）；
  * 语法条目和词库按 id 增量插入，已有条目不会被覆盖。
  */
 @Component
 public class DataSeeder implements CommandLineRunner {
 
     private final VowelRepository vowels;
+    private final ConsonantRepository consonants;
     private final GrammarSectionRepository grammar;
     private final GrammarCategoryRepository grammarCategories;
     private final GrammarTopicRepository grammarTopics;
@@ -39,12 +43,14 @@ public class DataSeeder implements CommandLineRunner {
 
     public DataSeeder(
             VowelRepository vowels,
+            ConsonantRepository consonants,
             GrammarSectionRepository grammar,
             GrammarCategoryRepository grammarCategories,
             GrammarTopicRepository grammarTopics,
             VocabSeriesRepository vocabulary,
             ObjectMapper mapper) {
         this.vowels = vowels;
+        this.consonants = consonants;
         this.grammar = grammar;
         this.grammarCategories = grammarCategories;
         this.grammarTopics = grammarTopics;
@@ -56,6 +62,7 @@ public class DataSeeder implements CommandLineRunner {
     @Transactional
     public void run(String... args) throws Exception {
         seedVowels();
+        seedConsonants();
         seedGrammarCatalog();
         seedGrammar();
         seedVocabulary();
@@ -80,6 +87,30 @@ public class DataSeeder implements CommandLineRunner {
                     .map(example -> new VowelExample(example.word(), example.ipa()))
                     .toList());
             vowels.save(vowel);
+        }
+    }
+
+    private void seedConsonants() throws Exception {
+        List<ConsonantSeed> seeds =
+                read("seed/consonants.json", new TypeReference<List<ConsonantSeed>>() {
+                });
+
+        for (ConsonantSeed seed : seeds) {
+            Consonant consonant = consonants
+                    .findBySymbol(seed.symbol())
+                    .orElseGet(() -> new Consonant(seed.symbol()));
+            consonant.update(
+                    seed.kind(),
+                    seed.label(),
+                    seed.word(),
+                    seed.wordIpa(),
+                    seed.audioFile(),
+                    seed.tip(),
+                    seed.sortOrder());
+            consonant.replaceExamples(seed.examples().stream()
+                    .map(example -> new ConsonantExample(example.word(), example.ipa()))
+                    .toList());
+            consonants.save(consonant);
         }
     }
 
@@ -174,6 +205,21 @@ public class DataSeeder implements CommandLineRunner {
             String tip,
             int sortOrder,
             List<VowelWordSeed> examples) {
+    }
+
+    private record ConsonantWordSeed(String word, String ipa) {
+    }
+
+    private record ConsonantSeed(
+            String symbol,
+            String kind,
+            String label,
+            String word,
+            String wordIpa,
+            String audioFile,
+            String tip,
+            int sortOrder,
+            List<ConsonantWordSeed> examples) {
     }
 
     private record ExampleSeed(String en, String zh, String note) {

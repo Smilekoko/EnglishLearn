@@ -144,7 +144,8 @@
     "category": "syntax",
     "title": "虚拟语气",
     "en": "Subjunctive Mood",
-    "cardText": "与现在/过去/将来事实相反、wish、建议与要求。",
+    "cardText": "与现在/过去/将来事实相反、wish、建议与要求、固定句型。",
+    "lead": "虚拟语气的核心是「时态后移」：用过去表示不真实。从三类条件句的公式入手，再看混合时间与 if 省略倒装，最后收拾 wish、as if、建议类从句和几个固定句型。",
     "sortOrder": 5
   },
   {
@@ -152,7 +153,8 @@
     "category": "syntax",
     "title": "倒装",
     "en": "Inversion",
-    "cardText": "完全倒装、部分倒装、only 与否定词开头的倒装。",
+    "cardText": "完全倒装、否定词与 only 开头、so/neither、虚拟条件与让步倒装、so...that 倒装。",
+    "lead": "倒装分两种：整个谓语提前的完全倒装，和只提前助动词的部分倒装。按「句首是什么」逐个记：here/there、否定词、only、so/neither、虚拟条件、as 让步、so...that。",
     "sortOrder": 6
   },
   {
@@ -160,7 +162,8 @@
     "category": "syntax",
     "title": "强调句",
     "en": "Cleft Sentences",
-    "cardText": "It is ... that 结构、what 从句强调。",
+    "cardText": "It is ... that 结构、not until 强调、what 从句强调、与定语从句辨析。",
+    "lead": "强调句用 It is/was ... that ... 把想突出的部分夹在中间。先记能强调哪些成分和时态一致，再处理否定疑问、not until、what 强调，最后用还原法分清它和定语从句。",
     "sortOrder": 7
   },
   {
@@ -168,7 +171,8 @@
     "category": "syntax",
     "title": "省略与替代",
     "en": "Ellipsis & Substitution",
-    "cardText": "并列句中的省略、so/neither、do so。",
+    "cardText": "并列句与从句省略、保留 to、do so、so/not、one/that 替代。",
+    "lead": "英语不喜欢重复：删掉重复的词叫省略，用短词顶替叫替代。按位置过一遍——并列句、状语从句、定语从句、不定式，再看 do so、so/not、one/that 这几组替代词。",
     "sortOrder": 8
   },
   {
@@ -176,7 +180,8 @@
     "category": "syntax",
     "title": "直接引语与间接引语",
     "en": "Reported Speech",
-    "cardText": "时态后移、人称与时间状语的变化。",
+    "cardText": "时态后移、人称与时间地点变化、陈述/疑问/祈使句转述、不用变时态的情况。",
+    "lead": "转述原话要同时处理三件事：人称、时态、时间地点状语。然后按句型选引导词——陈述句用 that，疑问句用 if/whether 或疑问词，祈使句用 to do。",
     "sortOrder": 9
   },
   {
@@ -184,7 +189,8 @@
     "category": "syntax",
     "title": "疑问句与否定句",
     "en": "Questions & Negation",
-    "cardText": "特殊疑问句、反义疑问句、否定转移。",
+    "cardText": "四种疑问句、反义疑问句、否定构成、否定词、否定转移与特殊否定结构。",
+    "lead": "疑问句和否定句都靠助动词：疑问句把助动词提前，否定句在助动词后加 not，没有就借 do/does/did。先过四种疑问句，再收拾否定词、否定转移和 too...to 这类固定结构。",
     "sortOrder": 10
   }
 ]

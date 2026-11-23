@@ -2,12 +2,14 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { fetchGrammarCatalog } from '../api/grammar.ts'
 import { fetchVowels } from '../api/vowels.ts'
+import { fetchConsonants } from '../api/consonants.ts'
 import styles from './Home.module.css'
 
 interface Counts {
   word?: number
   syntax?: number
   vowels?: number
+  consonants?: number
 }
 
 function Home() {
@@ -15,13 +17,18 @@ function Home() {
 
   useEffect(() => {
     const controller = new AbortController()
-    Promise.all([fetchGrammarCatalog(controller.signal), fetchVowels(controller.signal)])
-      .then(([catalog, vowels]) => {
+    Promise.all([
+      fetchGrammarCatalog(controller.signal),
+      fetchVowels(controller.signal),
+      fetchConsonants(controller.signal),
+    ])
+      .then(([catalog, vowels, consonants]) => {
         if (controller.signal.aborted) return
         setCounts({
           word: catalog.find((category) => category.key === 'word')?.topics.length,
           syntax: catalog.find((category) => category.key === 'syntax')?.topics.length,
           vowels: vowels.length,
+          consonants: consonants.length,
         })
       })
       // 首页统计只是装饰，接口挂了就退化成「查看」文案，不挡住入口
@@ -29,13 +36,18 @@ function Home() {
     return () => controller.abort()
   }, [])
 
+  const phoneticMeta =
+    counts.vowels === undefined || counts.consonants === undefined
+      ? '查看音标 →'
+      : `${counts.vowels} 个元音 + ${counts.consonants} 个辅音 →`
+
   const sections = [
     {
       to: '/phonetics',
       title: '音标',
       en: 'Phonetics',
-      text: '元音与辅音逐个拆解，配合示例单词和发音，练准口型和舌位。',
-      meta: counts.vowels === undefined ? '查看音标 →' : `${counts.vowels} 个元音 →`,
+      text: '元音与辅音逐个拆解，配合示例单词，练准口型和舌位。',
+      meta: phoneticMeta,
     },
     {
       to: '/grammar/word',
