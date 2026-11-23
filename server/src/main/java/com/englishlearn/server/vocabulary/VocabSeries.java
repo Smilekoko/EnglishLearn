@@ -1,12 +1,16 @@
 package com.englishlearn.server.vocabulary;
 
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OrderBy;
+import jakarta.persistence.OrderColumn;
 import jakarta.persistence.Table;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +40,12 @@ public class VocabSeries {
     @OrderBy("sortOrder ASC")
     private List<VocabWord> words = new ArrayList<>();
 
+    /** 关联的语法主题，用于详情页的「相关语法」跳转；可以为空 */
+    @ElementCollection(fetch = FetchType.EAGER)
+    @CollectionTable(name = "vocab_series_related", joinColumns = @JoinColumn(name = "series_id"))
+    @OrderColumn(name = "pos")
+    private List<VocabRelatedTopic> related = new ArrayList<>();
+
     protected VocabSeries() {
         // JPA
     }
@@ -51,6 +61,12 @@ public class VocabSeries {
     public void addWord(VocabWord word) {
         word.setSeries(this);
         this.words.add(word);
+    }
+
+    /** 整组替换关联主题（种子数据重启时刷新） */
+    public void replaceRelated(List<VocabRelatedTopic> next) {
+        this.related.clear();
+        this.related.addAll(next);
     }
 
     public String getId() {
@@ -75,5 +91,9 @@ public class VocabSeries {
 
     public List<VocabWord> getWords() {
         return words;
+    }
+
+    public List<VocabRelatedTopic> getRelated() {
+        return related;
     }
 }

@@ -194,6 +194,20 @@
   color: var(--accent);
 }
 
+/* 「相关词库」链接列表 */
+.relatedList {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding-left: 20px;
+  font-size: 14.5px;
+  line-height: 1.7;
+}
+
+.relatedLink {
+  color: var(--accent);
+}
+
 .examples {
   display: grid;
   gap: 10px;

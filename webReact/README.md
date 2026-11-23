@@ -84,7 +84,7 @@ webReact/
         ├── GrammarCategory.tsx # 词法、句法共用的条目列表页
         ├── GrammarTopic.tsx # 语法详情页（词法、句法主题共用），目录与条目都来自接口
         ├── Vocabulary.tsx  # 词汇首页：词库系列卡片，数据来自 /api/vocabulary/series
-        ├── VocabularySeries.tsx # 系列词库：按分类展示词条
+        ├── VocabularySeries.tsx # 系列词库：按分类展示词条，底部「相关语法」可跳到对应语法页
         ├── Phonetics.tsx   # 音标（元音 / 辅音入口，数量来自接口）
         ├── Vowels.tsx      # 元音：卡片 + 播放按钮，数据来自 /api/vowels
         ├── Consonants.tsx  # 辅音：按六类分组展示，数据来自 /api/consonants（暂无音频）
@@ -116,15 +116,15 @@ webReact/
 | `/#/phonetics` | 音标 |
 | `/#/phonetics/vowels` | 元音（20 个，来自 `/api/vowels`） |
 | `/#/phonetics/consonants` | 辅音（28 个，来自 `/api/consonants`，按六类分组） |
-| `/#/vocabulary` | 词汇 · 词库系列 |
-| `/#/vocabulary/:seriesId` | 系列词库，如 `dates-numbers-units`（日期数字单位） |
+| `/#/vocabulary` | 词汇 · 词库系列（4 个：日期数字单位、计算机、动物、不规则动词） |
+| `/#/vocabulary/:seriesId` | 系列词库，如 `dates-numbers-units`（日期数字单位）、`irregular-verbs`（不规则动词 120 个） |
 
 ## 数据来源
 
 - **语法**：`GET /api/grammar/topics` 返回大类（词法 / 句法）、主题、每个主题已收录的节数；`GET /api/grammar?topic=xxx` 返回该主题的条目（标题、要点、例句）。目录文案、导语、条目全部存在 MySQL，前端不写死任何一条
 - **元音**：`GET /api/vowels` 返回音标、单元音/双元音分类、音频文件名、主例词、发音要点与补充例词
 - **辅音**：`GET /api/consonants` 返回音标、六类分组（爆破音/摩擦音/破擦音/鼻音/边音/半元音）、主例词、发音要点与补充例词；音频字段暂为空，页面不显示播放按钮
-- **词汇**：系列列表来自 `/api/vocabulary/series`，系列详情来自 `/api/vocabulary/series/{id}`，词条按 `category` 分组渲染
+- **词汇**：系列列表来自 `/api/vocabulary/series`，系列详情来自 `/api/vocabulary/series/{id}`，词条按 `category` 分组渲染；「不规则动词」系列用 `note` 字段放「过去式 / 过去分词」，按 AAA / ABA / ABB / ABC / 特殊变化五类分组，详情页底部的「相关语法」用 `related` 跳到时态、被动语态、非谓语动词、虚拟语气等页面；反过来，这些语法页的底部也有「相关词库」链接（来自 `/api/vocabulary/related?topic=xxx`）指回词表
 - 都走 `src/api/client.ts` 的 `apiGet`，统一处理 baseURL、非 2xx 和网络错误；页面都有加载中 / 失败重试 / 空数据三种状态
 - 首页和音标页只额外取「条目数 / 元音数 / 辅音数」做展示，接口挂了会退化成不带数字的文案，不挡住入口
 

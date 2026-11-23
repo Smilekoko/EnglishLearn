@@ -17,8 +17,18 @@ public record VocabularyDto() {
     public record CategoryGroup(String category, List<WordItem> words) {
     }
 
+    /** 关联的语法主题：前端据此渲染「相关语法」跳转 */
+    public record RelatedItem(String topic, String category, String title, String reason) {
+    }
+
     public record SeriesDetail(
-            String id, String title, String en, String summary, int wordCount, List<CategoryGroup> categories) {
+            String id,
+            String title,
+            String en,
+            String summary,
+            int wordCount,
+            List<CategoryGroup> categories,
+            List<RelatedItem> related) {
     }
 
     public static SeriesSummary summary(VocabSeries series) {
@@ -39,12 +49,16 @@ public record VocabularyDto() {
         List<CategoryGroup> categories = grouped.entrySet().stream()
                 .map(entry -> new CategoryGroup(entry.getKey(), entry.getValue()))
                 .toList();
+        List<RelatedItem> related = series.getRelated().stream()
+                .map(item -> new RelatedItem(item.getTopic(), item.getCategory(), item.getTitle(), item.getReason()))
+                .toList();
         return new SeriesDetail(
                 series.getId(),
                 series.getTitle(),
                 series.getEn(),
                 series.getSummary(),
                 series.getWords().size(),
-                categories);
+                categories,
+                related);
     }
 }

@@ -7,12 +7,14 @@ import {
   type GrammarSection,
   type GrammarTopicSummary,
 } from '../api/grammar.ts'
+import { fetchVocabSeriesByTopic, type VocabSeriesSummary } from '../api/vocabulary.ts'
 import styles from './GrammarTopic.module.css'
 
 interface TopicPage {
   category: GrammarCategorySummary
   topic: GrammarTopicSummary
   sections: GrammarSection[]
+  relatedSeries: VocabSeriesSummary[]
 }
 
 function GrammarTopicView({ categoryKey, topicKey }: { categoryKey: string; topicKey: string }) {
@@ -29,8 +31,10 @@ function GrammarTopicView({ categoryKey, topicKey }: { categoryKey: string; topi
     Promise.all([
       fetchGrammarCatalog(controller.signal),
       fetchGrammarSections(topicKey, controller.signal),
+      // 「相关词库」只是锦上添花，接口挂了不影响正文
+      fetchVocabSeriesByTopic(topicKey, controller.signal).catch(() => []),
     ])
-      .then(([catalog, sections]) => {
+      .then(([catalog, sections, relatedSeries]) => {
         if (controller.signal.aborted) return
         const category = catalog.find((item) => item.key === categoryKey)
         const topic = category?.topics.find((item) => item.key === topicKey)
@@ -38,7 +42,7 @@ function GrammarTopicView({ categoryKey, topicKey }: { categoryKey: string; topi
           setNotFound(true)
           return
         }
-        setPage({ category, topic, sections })
+        setPage({ category, topic, sections, relatedSeries })
         setActiveId((current) =>
           current && sections.some((section) => section.id === current) ? current : (sections[0]?.id ?? null),
         )
@@ -80,7 +84,7 @@ function GrammarTopicView({ categoryKey, topicKey }: { categoryKey: string; topi
     return <Navigate to="/grammar/word" replace />
   }
 
-  const { category, topic, sections } = page
+  const { category, topic, sections, relatedSeries } = page
   const active = sections.find((section) => section.id === activeId) ?? sections[0] ?? null
   const intro = topic.lead ?? topic.cardText ?? ''
 
@@ -154,6 +158,21 @@ function GrammarTopicView({ categoryKey, topicKey }: { categoryKey: string; topi
                 ))}
               </ol>
             </section>
+
+            {relatedSeries.length > 0 && (
+              <section className={styles.block}>
+                <h3 className={styles.blockTitle}>相关词库</h3>
+                <ul className={styles.relatedList}>
+                  {relatedSeries.map((series) => (
+                    <li key={series.id}>
+                      <Link to={`/vocabulary/${series.id}`} className={styles.relatedLink}>
+                        {series.title}（{series.wordCount} 词）
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
           </article>
         </div>
       )}

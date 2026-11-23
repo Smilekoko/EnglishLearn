@@ -10,6 +10,7 @@ import com.englishlearn.server.grammar.GrammarSection;
 import com.englishlearn.server.grammar.GrammarSectionRepository;
 import com.englishlearn.server.grammar.GrammarTopicEntity;
 import com.englishlearn.server.grammar.GrammarTopicRepository;
+import com.englishlearn.server.vocabulary.VocabRelatedTopic;
 import com.englishlearn.server.vocabulary.VocabSeries;
 import com.englishlearn.server.vocabulary.VocabSeriesRepository;
 import com.englishlearn.server.vocabulary.VocabWord;
@@ -170,9 +171,23 @@ public class DataSeeder implements CommandLineRunner {
                 });
 
         for (VocabSeriesSeed seed : seeds) {
-            if (vocabulary.existsById(seed.id())) {
+            List<VocabRelatedTopic> related = seed.related() == null
+                    ? List.of()
+                    : seed.related().stream()
+                            .map(item -> new VocabRelatedTopic(
+                                    item.topic(), item.category(), item.title(), item.reason()))
+                            .toList();
+
+            VocabSeries existing = vocabulary.findById(seed.id()).orElse(null);
+            if (existing != null) {
+                // 词条按系列增量插入、不覆盖；只刷新「相关语法」这类展示用元数据
+                if (!related.isEmpty()) {
+                    existing.replaceRelated(related);
+                    vocabulary.save(existing);
+                }
                 continue;
             }
+
             VocabSeries series =
                     new VocabSeries(seed.id(), seed.title(), seed.en(), seed.summary(), seed.sortOrder());
             int order = 1;
@@ -184,6 +199,7 @@ public class DataSeeder implements CommandLineRunner {
                         word.note() == null ? "" : word.note(),
                         order++));
             }
+            series.replaceRelated(related);
             vocabulary.save(series);
         }
     }
@@ -253,7 +269,16 @@ public class DataSeeder implements CommandLineRunner {
     private record VocabWordSeed(String category, String en, String zh, String note) {
     }
 
+    private record VocabRelatedSeed(String topic, String category, String title, String reason) {
+    }
+
     private record VocabSeriesSeed(
-            String id, String title, String en, String summary, int sortOrder, List<VocabWordSeed> words) {
+            String id,
+            String title,
+            String en,
+            String summary,
+            int sortOrder,
+            List<VocabRelatedSeed> related,
+            List<VocabWordSeed> words) {
     }
 }

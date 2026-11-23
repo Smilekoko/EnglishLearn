@@ -71,6 +71,25 @@ function VocabularySeriesView({ seriesId }: { seriesId: string }) {
             {detail.wordCount} 个词 · {detail.categories.length} 个分类
           </p>
 
+          {detail.related.length > 0 && (
+            <section className={styles.related}>
+              <h2 className={styles.relatedTitle}>相关语法</h2>
+              <p className={styles.relatedLead}>
+                这组词的变化形式主要用在下面这些语法点里，点进去可以看具体规则和例句。
+              </p>
+              <ul className={styles.relatedList}>
+                {detail.related.map((item) => (
+                  <li key={item.topic} className={styles.relatedItem}>
+                    <Link to={`/grammar/${item.category}/${item.topic}`} className={styles.relatedLink}>
+                      {item.title} →
+                    </Link>
+                    {item.reason ? <p className={styles.relatedReason}>{item.reason}</p> : null}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+
           <div className={styles.categories}>
             {detail.categories.map((group) => (
               <section key={group.category} className={styles.category}>
@@ -80,8 +99,8 @@ function VocabularySeriesView({ seriesId }: { seriesId: string }) {
                 </header>
 
                 <div className={styles.words}>
-                  {group.words.map((word) => (
-                    <div key={`${group.category}-${word.en}`} className={styles.word}>
+                  {group.words.map((word, index) => (
+                    <div key={`${group.category}-${word.en}-${index}`} className={styles.word}>
                       <span className={styles.wordEn}>{word.en}</span>
                       <span className={styles.wordZh}>{word.zh}</span>
                       {word.note ? <span className={styles.wordNote}>{word.note}</span> : null}
