@@ -1630,6 +1630,168 @@
     "sortOrder": 5
   },
   {
+    "topic": "verbs",
+    "id": "verb-stative-dynamic",
+    "title": "状态动词与动作动词",
+    "en": "Stative vs. Dynamic Verbs",
+    "level": "进阶",
+    "sortOrder": 6,
+    "summary": "动词分两类：动作动词表示「做」，可以用进行时；状态动词表示「是、有、知道」这类状态，一般不用进行时。分不清就会写出 I am knowing 这样的句子。",
+    "points": [
+      "常见状态动词：be、have（拥有）、know、believe、understand、like、love、hate、want、need、seem、belong、contain、cost。",
+      "状态动词一般不用进行时：I know the answer（不是 I am knowing）。",
+      "有些动词有两种含义：have（拥有，状态）/ have lunch（吃，动作）；think（认为，状态）/ think about（考虑，动作）。",
+      "要表示「暂时表现出某种样子」，状态动词可以临时动作化：He is being rude today.",
+      "口语里广告式的用法（I'm loving it）不算标准书面语，正式写作仍按状态动词处理。"
+    ],
+    "examples": [
+      {
+        "en": "I know the answer.",
+        "zh": "我知道答案。",
+        "note": "know 是状态动词，不用进行时。"
+      },
+      {
+        "en": "She is having lunch.",
+        "zh": "她正在吃午饭。",
+        "note": "have 表示「吃」时是动作，可以用进行时。"
+      },
+      {
+        "en": "I'm thinking about it.",
+        "zh": "我正在考虑这件事。",
+        "note": "think about 是动作；think 表示「认为」时才是状态。"
+      },
+      {
+        "en": "He is being rude today.",
+        "zh": "他今天表现得有点无礼。",
+        "note": "be 的进行时表示「暂时表现出某种样子」。"
+      }
+    ]
+  },
+  {
+    "topic": "verbs",
+    "id": "verb-verb-patterns",
+    "title": "动词后的搭配模式",
+    "en": "Verb Patterns",
+    "level": "进阶",
+    "sortOrder": 7,
+    "summary": "一个动词后面接什么是有固定模式的：接 to do、接 doing、接 sb to do，还是接 sb do。模式记不住，句子结构就会散。",
+    "points": [
+      "V + to do：want、hope、decide、plan、refuse、expect、manage、afford。",
+      "V + doing：enjoy、finish、mind、avoid、suggest、practise、consider。",
+      "V + sb + to do：ask、tell、want、expect、advise、allow、persuade。",
+      "V + sb + do（省略 to）：make、let、have、see、hear、watch、notice。",
+      "V + that 从句：say、think、believe、know、hope；有的动词两种都能接（tell sb that / tell sb to do）。"
+    ],
+    "examples": [
+      {
+        "en": "I decided to leave early.",
+        "zh": "我决定早点走。",
+        "note": "decide 后接 to do。"
+      },
+      {
+        "en": "She enjoys reading.",
+        "zh": "她喜欢阅读。",
+        "note": "enjoy 后接 doing，不能接 to do。"
+      },
+      {
+        "en": "He asked me to wait.",
+        "zh": "他让我等。",
+        "note": "ask sb to do 是常见模式。"
+      },
+      {
+        "en": "Let me try.",
+        "zh": "让我试试。",
+        "note": "let sb do 不带 to。"
+      },
+      {
+        "en": "I think that he is right.",
+        "zh": "我认为他是对的。",
+        "note": "think 后接 that 从句。"
+      }
+    ]
+  },
+  {
+    "topic": "verbs",
+    "id": "verb-duration-punctual",
+    "title": "瞬间动词与持续动词",
+    "en": "Punctual vs. Durative Verbs",
+    "level": "进阶",
+    "sortOrder": 8,
+    "summary": "有些动词表示一瞬间完成的动作（buy、die、join），有些表示持续的状态（have、be、know）。和「一段时间」连用时，瞬间动词要换成持续表达。",
+    "points": [
+      "瞬间动词：buy、borrow、die、join、leave、arrive、start、finish、marry。",
+      "它们不能直接跟 for + 一段时间：I have bought it for two years 是错的。",
+      "要换成对应持续表达：buy → have；borrow → keep；die → be dead；join → be in / be a member of；leave → be away。",
+      "持续动词：live、work、study、know、have、wait、stay。",
+      "瞬间动词的否定式可以表示「一直没」：I haven't seen him for years."
+    ],
+    "examples": [
+      {
+        "en": "I have had this bike for two years.",
+        "zh": "这辆自行车我买了两年了。",
+        "note": "buy 是瞬间动词，完成时要用 have 表示持续。"
+      },
+      {
+        "en": "He has been dead for ten years.",
+        "zh": "他去世十年了。",
+        "note": "die → be dead，才能和一段时间连用。"
+      },
+      {
+        "en": "She has kept my book for a week.",
+        "zh": "她把我的书借了一周。",
+        "note": "borrow → keep。"
+      },
+      {
+        "en": "I haven't seen him for years.",
+        "zh": "我好几年没见过他了。",
+        "note": "否定式 + 一段时间是允许的。"
+      }
+    ]
+  },
+  {
+    "topic": "verbs",
+    "id": "verb-linking",
+    "title": "系动词",
+    "en": "Linking Verbs",
+    "level": "基础",
+    "sortOrder": 9,
+    "summary": "系动词不表示动作，而是把主语和表语连起来，说明主语「是什么、怎么样」。除了 be，还有 become、get、turn、look、sound、seem 这些。",
+    "points": [
+      "be 是最典型的系动词：He is a teacher. / She is tired.",
+      "变化类：become、get、grow、turn、go（go bad）；保持类：stay、keep、remain。",
+      "感官类：look、sound、smell、taste、feel，后面直接接形容词。",
+      "表象类：seem、appear，常与 to do 或 that 从句搭配。",
+      "系动词后接形容词，不接副词：The soup tastes good（不是 tastes well）。"
+    ],
+    "examples": [
+      {
+        "en": "He became a doctor.",
+        "zh": "他成了医生。",
+        "note": "become 是变化类系动词，后接名词。"
+      },
+      {
+        "en": "The milk went bad.",
+        "zh": "牛奶变质了。",
+        "note": "go + 形容词表示变坏。"
+      },
+      {
+        "en": "It sounds great.",
+        "zh": "听起来不错。",
+        "note": "sound 是感官系动词，后接形容词。"
+      },
+      {
+        "en": "She seems to know the answer.",
+        "zh": "她似乎知道答案。",
+        "note": "seem 后接 to do。"
+      },
+      {
+        "en": "Please keep quiet.",
+        "zh": "请保持安静。",
+        "note": "keep 表示保持，后接形容词。"
+      }
+    ]
+  },
+  {
     "id": "passive-form",
     "title": "被动语态的构成",
     "en": "Forming the Passive",
@@ -1815,6 +1977,158 @@
     "sortOrder": 5
   },
   {
+    "topic": "passive",
+    "id": "passive-modal",
+    "title": "情态动词与不定式的被动",
+    "en": "Passive with Modals",
+    "level": "进阶",
+    "sortOrder": 6,
+    "summary": "情态动词后面的被动是「情态动词 + be + 过去分词」；不定式的被动是 to be done，表示「将要被」或「应该被」。",
+    "points": [
+      "情态动词被动：can / must / should / may + be + 过去分词：The work must be finished today.",
+      "否定与疑问照常处理：It can't be done. / Should it be sent now?",
+      "不定式被动：to be done：The report is to be sent tomorrow.",
+      "完成式被动：must have been done / should have been done。",
+      "不定式被动常表示「有待处理」：There is a lot to be done."
+    ],
+    "examples": [
+      {
+        "en": "The work must be finished today.",
+        "zh": "这项工作今天必须完成。",
+        "note": "must + be + done。"
+      },
+      {
+        "en": "This cannot be done in one day.",
+        "zh": "这不可能一天做完。",
+        "note": "情态动词否定 + be done。"
+      },
+      {
+        "en": "The report is to be sent tomorrow.",
+        "zh": "报告明天发出。",
+        "note": "be to do 的被动形式 to be sent。"
+      },
+      {
+        "en": "He must have been told the news.",
+        "zh": "他一定已经被告知这个消息了。",
+        "note": "must have been done，对过去的推测 + 被动。"
+      }
+    ]
+  },
+  {
+    "topic": "passive",
+    "id": "passive-get",
+    "title": "get 被动",
+    "en": "Get-passive",
+    "level": "进阶",
+    "sortOrder": 7,
+    "summary": "除了 be + 过去分词，get + 过去分词也能表示被动，多用于口语，强调「状态变化」或「意外发生」。",
+    "points": [
+      "常见说法：get hurt、get married、get lost、get fired、get paid。",
+      "get 被动更口语，强调变化或意外：He got hit by a car.",
+      "be + 过去分词既可表动作也可表状态；get 多表示「变成某种状态」。",
+      "并非所有动词都能用 get 被动，正式写作仍以 be 被动为主。",
+      "be + 过去分词作系表结构时表示状态：The door was closed.（门是关着的）"
+    ],
+    "examples": [
+      {
+        "en": "He got hurt in the game.",
+        "zh": "他在比赛中受伤了。",
+        "note": "get + 过去分词表示意外受伤。"
+      },
+      {
+        "en": "They got married last year.",
+        "zh": "他们去年结婚了。",
+        "note": "get married 是固定说法。"
+      },
+      {
+        "en": "He got fired for being late.",
+        "zh": "他因为迟到被解雇了。",
+        "note": "get fired 是口语化的被动。"
+      },
+      {
+        "en": "The door was closed when I arrived.",
+        "zh": "我到的时候门是关着的。",
+        "note": "be + 过去分词可表示状态。"
+      }
+    ]
+  },
+  {
+    "topic": "passive",
+    "id": "passive-it",
+    "title": "it 作形式主语的被动",
+    "en": "It is said that ...",
+    "level": "进阶",
+    "sortOrder": 8,
+    "summary": "把「据说、据报道、人们认为」这类说法变成被动，常用 It is said / reported / believed that...，或者 sb is said to do。",
+    "points": [
+      "常用句型：It is said that... / It is reported that... / It is believed that... / It is thought that...",
+      "同义改写：People say that he is rich. → He is said to be rich.",
+      "时态对应：is said to do（现在）/ is said to have done（过去）。",
+      "同类还有 It is hoped / expected / suggested that...",
+      "这一步和主语从句的 it 形式主语是同一个思路。"
+    ],
+    "examples": [
+      {
+        "en": "It is said that he has moved abroad.",
+        "zh": "据说他搬到国外了。",
+        "note": "It is said that + 从句。"
+      },
+      {
+        "en": "He is said to be very rich.",
+        "zh": "据说他很有钱。",
+        "note": "sb is said to do 是同一意思的另一种说法。"
+      },
+      {
+        "en": "She is said to have left the country.",
+        "zh": "据说她已经离开这个国家了。",
+        "note": "to have done 表示动作已经发生。"
+      },
+      {
+        "en": "It is reported that the meeting was cancelled.",
+        "zh": "据报道会议被取消了。",
+        "note": "It is reported that 是新闻里的高频句型。"
+      }
+    ]
+  },
+  {
+    "topic": "passive",
+    "id": "passive-verb-patterns",
+    "title": "特殊动词的被动",
+    "en": "Passive with Special Verbs",
+    "level": "提高",
+    "sortOrder": 9,
+    "summary": "双宾语动词、短语动词，以及「不及物动词 + 介词」结构变被动时各有规则，不能直接把宾语搬到主语位置了事。",
+    "points": [
+      "双宾语动词有两种被动：He was given a book. / A book was given to him.",
+      "短语动词是一个整体，被动时介词不能丢：The children are looked after by her.",
+      "不及物动词 + 介词：The problem was talked about.",
+      "有些动词没有被动：happen、occur、belong 只能说主动。",
+      "感官动词、使役动词的被动要还原 to：He was made to work."
+    ],
+    "examples": [
+      {
+        "en": "He was given a second chance.",
+        "zh": "他得到了第二次机会。",
+        "note": "双宾语动词把间接宾语提到主语位置。"
+      },
+      {
+        "en": "A second chance was given to him.",
+        "zh": "第二次机会给了他。",
+        "note": "也可以把直接宾语提前，保留 to him。"
+      },
+      {
+        "en": "The children are looked after by their grandmother.",
+        "zh": "孩子们由奶奶照看。",
+        "note": "短语动词被动时 after 不能丢。"
+      },
+      {
+        "en": "The accident happened at midnight.",
+        "zh": "事故发生在午夜。",
+        "note": "happen 没有被动语态。"
+      }
+    ]
+  },
+  {
     "id": "infinitives",
     "title": "不定式",
     "en": "Infinitives",
@@ -1998,6 +2312,216 @@
     ],
     "topic": "nonfinite",
     "sortOrder": 5
+  },
+  {
+    "topic": "nonfinite",
+    "id": "infinitive-functions",
+    "title": "不定式的句法功能",
+    "en": "Infinitive Functions",
+    "level": "基础",
+    "sortOrder": 6,
+    "summary": "不定式除了作宾语，还能作主语、表语、定语、状语和宾语补足语。它的好处是「一个形式，多种位置」。",
+    "points": [
+      "作主语，常用 it 作形式主语：To learn a language takes time. / It is hard to say.",
+      "作表语：My job is to teach English.",
+      "作定语，表示「将要、应该」：I have a lot of work to do.",
+      "作目的状语：She went out to buy milk.",
+      "作宾语补足语：He asked me to stay."
+    ],
+    "examples": [
+      {
+        "en": "It is hard to learn Japanese.",
+        "zh": "日语很难学。",
+        "note": "it 是形式主语，真正的主语是 to learn Japanese。"
+      },
+      {
+        "en": "My job is to teach English.",
+        "zh": "我的工作是教英语。",
+        "note": "不定式作表语。"
+      },
+      {
+        "en": "I have a lot of work to do.",
+        "zh": "我有很多工作要做。",
+        "note": "不定式作定语，修饰 work，含「待做」的意思。"
+      },
+      {
+        "en": "She went out to buy milk.",
+        "zh": "她出去买牛奶。",
+        "note": "不定式作目的状语。"
+      },
+      {
+        "en": "He asked me to stay.",
+        "zh": "他让我留下。",
+        "note": "不定式作宾语补足语。"
+      }
+    ]
+  },
+  {
+    "topic": "nonfinite",
+    "id": "gerund-vs-infinitive",
+    "title": "动名词还是不定式",
+    "en": "Gerund vs. Infinitive",
+    "level": "进阶",
+    "sortOrder": 7,
+    "summary": "有些动词后面只能接动名词，有些只能接不定式，还有些两种都接但意思不同——最后这一类最容易错。",
+    "points": [
+      "只接 doing：enjoy、finish、mind、avoid、practise、consider、suggest、keep。",
+      "只接 to do：decide、hope、plan、refuse、expect、manage、afford。",
+      "意思不同：remember/forget doing（做过）vs to do（要做）；stop doing（停止做）vs stop to do（停下来去做）；try doing（试试）vs try to do（努力做）。",
+      "mean doing（意味着）vs mean to do（打算）；regret doing（后悔做过）vs regret to do（遗憾要告知）。",
+      "介词后面一律用动名词：good at singing、interested in reading。"
+    ],
+    "examples": [
+      {
+        "en": "I remember locking the door.",
+        "zh": "我记得锁了门。",
+        "note": "remember doing 表示「做过」。"
+      },
+      {
+        "en": "Remember to lock the door.",
+        "zh": "记得锁门。",
+        "note": "remember to do 表示「要做」。"
+      },
+      {
+        "en": "He stopped smoking.",
+        "zh": "他戒烟了。",
+        "note": "stop doing 是停止某个动作本身。"
+      },
+      {
+        "en": "He stopped to smoke.",
+        "zh": "他停下来抽烟。",
+        "note": "stop to do 是停下另一件事去做。"
+      },
+      {
+        "en": "She is good at singing.",
+        "zh": "她擅长唱歌。",
+        "note": "介词 at 后面必须用动名词。"
+      }
+    ]
+  },
+  {
+    "topic": "nonfinite",
+    "id": "participle-adverbial",
+    "title": "分词作状语",
+    "en": "Participles as Adverbials",
+    "level": "进阶",
+    "sortOrder": 8,
+    "summary": "分词可以代替状语从句，表示时间、原因、条件、让步或伴随。主动用 -ing，被动用 -ed，动作有先后用完成式。",
+    "points": [
+      "主动、同时：Walking in the park, I met an old friend.（= When I was walking）",
+      "被动：Seen from the hill, the city looks beautiful.",
+      "完成式 having done：Having finished the work, he went home.",
+      "分词的主语必须与主句主语一致，否则就是悬垂分词。",
+      "分词前可加 when/while/if/though，让逻辑关系更明确：When asked, she said nothing."
+    ],
+    "examples": [
+      {
+        "en": "Walking in the park, I met an old friend.",
+        "zh": "在公园散步时，我遇到一位老朋友。",
+        "note": "主动关系用现在分词。"
+      },
+      {
+        "en": "Seen from the hill, the city looks beautiful.",
+        "zh": "从山上看，这座城市很美。",
+        "note": "被动关系用过去分词。"
+      },
+      {
+        "en": "Having finished the work, he went home.",
+        "zh": "完成工作后他回家了。",
+        "note": "having done 表示先完成、后回家。"
+      },
+      {
+        "en": "When asked about it, she said nothing.",
+        "zh": "被问及此事时，她什么也没说。",
+        "note": "过去分词前加 when，逻辑更清楚。"
+      }
+    ]
+  },
+  {
+    "topic": "nonfinite",
+    "id": "absolute-construction",
+    "title": "独立主格与 with 结构",
+    "en": "Absolute Construction",
+    "level": "提高",
+    "sortOrder": 9,
+    "summary": "当分词的主语和主句主语不一致时，可以自带一个主语，这就是独立主格；with 复合结构是它最常见的形式。",
+    "points": [
+      "独立主格：名词/代词 + 分词：The work finished, he went home.",
+      "with 复合结构：with + 宾语 + 分词/形容词/介词短语：With the work finished, he went home.",
+      "主动关系用 -ing，被动关系用 -ed：With the boy leading the way, we found the house.",
+      "补语还可以是形容词、副词、介词短语：His eyes wide open, he stared at me.",
+      "独立主格多用于书面语，口语里常用 with 结构代替。"
+    ],
+    "examples": [
+      {
+        "en": "The work finished, he went home.",
+        "zh": "工作完成后他回家了。",
+        "note": "独立主格：The work + finished。"
+      },
+      {
+        "en": "With the work finished, he went home.",
+        "zh": "工作完成后他回家了。",
+        "note": "同样的意思，with 结构更口语。"
+      },
+      {
+        "en": "With the boy leading the way, we found the house.",
+        "zh": "男孩带路，我们找到了那栋房子。",
+        "note": "主动关系用现在分词 leading。"
+      },
+      {
+        "en": "His eyes wide open, he stared at me.",
+        "zh": "他睁大眼睛盯着我。",
+        "note": "独立主格的补语可以是形容词。"
+      },
+      {
+        "en": "Weather permitting, we'll go out.",
+        "zh": "天气允许的话我们就出去。",
+        "note": "独立主格也可以表示条件。"
+      }
+    ]
+  },
+  {
+    "topic": "nonfinite",
+    "id": "nonfinite-passive",
+    "title": "非谓语的时态与语态",
+    "en": "Tense & Voice of Non-finitives",
+    "level": "提高",
+    "sortOrder": 10,
+    "summary": "非谓语也有时态和语态：to do / to be doing / to have done / to be done / having done / having been done。选错就表达不出「先后」和「被动」。",
+    "points": [
+      "不定式：to do（将来/一般）、to be doing（进行）、to have done（先发生）、to be done（被动）。",
+      "动名词：doing（一般）、having done（先发生）、being done（被动）、having been done（先发生且被动）。",
+      "分词：doing / having done / done / being done。",
+      "判断顺序：先看主被动（主动用 -ing，被动用 -ed 或 being done），再看先后（先发生用完成式）。",
+      "完成式非谓语常表示动作先于谓语：Having finished, he left."
+    ],
+    "examples": [
+      {
+        "en": "He seems to have finished the work.",
+        "zh": "他似乎已经完成了工作。",
+        "note": "to have done 表示动作先于谓语 seems。"
+      },
+      {
+        "en": "The building being built is our library.",
+        "zh": "正在建的那栋楼是我们的图书馆。",
+        "note": "being done 表示正在被。"
+      },
+      {
+        "en": "Having been told twice, he still forgot.",
+        "zh": "虽然被告知过两次，他还是忘了。",
+        "note": "having been done：先发生且被动。"
+      },
+      {
+        "en": "I want to be told the truth.",
+        "zh": "我想被告知真相。",
+        "note": "to be done 是不定式的被动形式。"
+      },
+      {
+        "en": "She is said to have left.",
+        "zh": "据说她已经离开了。",
+        "note": "to have done 表示已完成。"
+      }
+    ]
   },
   {
     "id": "subject-verb-basic",
@@ -2368,6 +2892,178 @@
     ],
     "topic": "prepositions",
     "sortOrder": 5
+  },
+  {
+    "topic": "prepositions",
+    "id": "prepositions-cause-purpose",
+    "title": "原因、目的与对象",
+    "en": "Cause, Purpose & Reference",
+    "level": "进阶",
+    "sortOrder": 6,
+    "summary": "除了时间和地点，介词还能表示原因（because of、due to）、目的（for）、对象（to、with、about）和所属（of）。",
+    "points": [
+      "原因：because of + 名词/doing；due to、owing to、thanks to 更书面。",
+      "目的与对象：for + 名词（a gift for you）；不定式 in order to / so as to 表目的。",
+      "对象分工：to（give it to me）、with（talk with sb）、about（talk about sth）、on（depend on）。",
+      "所属与范围：of（a friend of mine）、in（the best in the world）。",
+      "语气差别：thanks to 表示「多亏」，due to 偏正式，because of 最通用。"
+    ],
+    "examples": [
+      {
+        "en": "He was late because of the traffic.",
+        "zh": "他因为交通堵塞迟到了。",
+        "note": "because of 后面接名词，不接从句。"
+      },
+      {
+        "en": "Thanks to your help, we finished on time.",
+        "zh": "多亏你帮忙，我们按时完成了。",
+        "note": "thanks to 表示「多亏」，带正面语气。"
+      },
+      {
+        "en": "This is a gift for you.",
+        "zh": "这是给你的礼物。",
+        "note": "for 表示对象/目的。"
+      },
+      {
+        "en": "She is talking with her teacher about the exam.",
+        "zh": "她正在和老师谈考试的事。",
+        "note": "with 表对象，about 表内容。"
+      },
+      {
+        "en": "He is a friend of mine.",
+        "zh": "他是我的一个朋友。",
+        "note": "of 表示所属，双重所有格。"
+      }
+    ]
+  },
+  {
+    "topic": "prepositions",
+    "id": "prepositions-adjective",
+    "title": "形容词 + 介词",
+    "en": "Adjective + Preposition",
+    "level": "进阶",
+    "sortOrder": 7,
+    "summary": "形容词后面跟哪个介词是固定搭配，没有规律可推，只能成组记。先按「对人、对事、擅长什么」分类，记忆负担会小很多。",
+    "points": [
+      "情绪与态度：afraid of、proud of、fond of、tired of、worried about。",
+      "能力与兴趣：good at、bad at、interested in、experienced in、successful in。",
+      "关系与比较：kind to、polite to、friendly to、similar to、different from。",
+      "原因与评价：angry with sb / about sth、sorry for、famous for、responsible for。",
+      "有的形容词后接 to do 表示意愿：glad to、ready to、sorry to（hear）。"
+    ],
+    "examples": [
+      {
+        "en": "She is afraid of dogs.",
+        "zh": "她怕狗。",
+        "note": "afraid of + 名词或动名词。"
+      },
+      {
+        "en": "He is good at maths.",
+        "zh": "他擅长数学。",
+        "note": "good at 后面接名词或 doing。"
+      },
+      {
+        "en": "This shirt is similar to mine.",
+        "zh": "这件衬衫和我的很像。",
+        "note": "similar to 表示相似。"
+      },
+      {
+        "en": "I'm worried about the exam.",
+        "zh": "我担心考试。",
+        "note": "worried about 表担心的事。"
+      },
+      {
+        "en": "He is famous for his novels.",
+        "zh": "他因小说而出名。",
+        "note": "famous for 表示出名的原因。"
+      }
+    ]
+  },
+  {
+    "topic": "prepositions",
+    "id": "prepositions-verb",
+    "title": "动词 + 介词与动词 + 副词",
+    "en": "Verb + Preposition vs. Adverb",
+    "level": "进阶",
+    "sortOrder": 8,
+    "summary": "look at、look after 里的 at、after 是介词，后面必须跟宾语；look up、turn on 里的 up、on 是副词，宾语是名词时可以放到中间。",
+    "points": [
+      "介词型（及物）：look at、listen to、depend on、wait for、belong to，后面必须有宾语。",
+      "副词型（可分开）：turn on the light = turn the light on；但代词必须放中间：turn it on。",
+      "判断方法：把宾语放中间，意思不变的是副词型，不能拆的是介词型。",
+      "同一个动词配不同的小词意思不同：look after（照顾）、look for（寻找）、look up（查阅）。",
+      "介词型短语的宾语不能省略：I'm looking for 是病句。"
+    ],
+    "examples": [
+      {
+        "en": "Please turn on the light.",
+        "zh": "请开灯。",
+        "note": "on 是副词，宾语可以放在后面。"
+      },
+      {
+        "en": "Turn it on, please.",
+        "zh": "请把它打开。",
+        "note": "代词作宾语时必须放中间。"
+      },
+      {
+        "en": "She looks after her sister.",
+        "zh": "她照顾她妹妹。",
+        "note": "after 是介词，不能拆开。"
+      },
+      {
+        "en": "I'm looking for my keys.",
+        "zh": "我在找钥匙。",
+        "note": "look for 是介词型，必须有宾语。"
+      },
+      {
+        "en": "It depends on the weather.",
+        "zh": "这要看天气。",
+        "note": "depend on 是固定搭配，on 不能省。"
+      }
+    ]
+  },
+  {
+    "topic": "prepositions",
+    "id": "prepositions-phrases",
+    "title": "介词短语的句法功能",
+    "en": "Prepositional Phrases",
+    "level": "提高",
+    "sortOrder": 9,
+    "summary": "介词短语不只是「时间地点」，它在句子里可以作状语、定语、表语，还能构成大量固定短语。",
+    "points": [
+      "作状语：He left in a hurry. / She spoke with confidence.",
+      "作定语（后置）：the man in the car / the book on the desk。",
+      "作表语：The meeting is on Monday. / He is in trouble.",
+      "固定短语：in charge of、on behalf of、in spite of、by means of、at the cost of。",
+      "判断功能看位置：修饰动词是状语，紧跟名词是定语，跟在系动词后是表语。"
+    ],
+    "examples": [
+      {
+        "en": "He left in a hurry.",
+        "zh": "他匆忙离开了。",
+        "note": "in a hurry 作方式状语。"
+      },
+      {
+        "en": "The man in the car is my uncle.",
+        "zh": "车里那个人是我叔叔。",
+        "note": "in the car 后置作定语。"
+      },
+      {
+        "en": "The meeting is on Monday.",
+        "zh": "会议在星期一。",
+        "note": "介词短语作表语。"
+      },
+      {
+        "en": "She is in charge of the project.",
+        "zh": "她负责这个项目。",
+        "note": "in charge of 是固定短语。"
+      },
+      {
+        "en": "In spite of the rain, we went out.",
+        "zh": "尽管下雨，我们还是出去了。",
+        "note": "in spite of 表示让步。"
+      }
+    ]
   },
   {
     "id": "coordinating",
