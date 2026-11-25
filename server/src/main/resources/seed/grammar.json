@@ -3729,6 +3729,178 @@
     ]
   },
   {
+    "topic": "sentence",
+    "id": "sentence-structure",
+    "title": "句子结构",
+    "en": "Simple, Compound & Complex",
+    "level": "基础",
+    "sortOrder": 8,
+    "summary": "英语句子按「有几个主谓」分三级：一个主谓是简单句，两个对等分句用并列连词连起来是并列句，一个主句带从句是复合句。先分清这一层，后面学从句才有坐标。",
+    "points": [
+      "简单句：一个主谓结构，可以是五种基本句型中的任意一种。",
+      "并列句：两个对等分句，用 and / but / or / so / for 连接：He is tired, but he keeps working.",
+      "复合句：一个主句 + 一个或多个从句，从句由从属连词或关系词引导（because、when、if、that、which）。",
+      "逗号不能连接两个独立句子：I was tired, I went to bed 是错的，要加 and 或改成从句。",
+      "从句里还能再套从句；分析时先找主句的主谓，再逐层拆从句。"
+    ],
+    "examples": [
+      {
+        "en": "He opened the door.",
+        "zh": "他打开了门。",
+        "note": "只有一个主谓，是简单句。"
+      },
+      {
+        "en": "He opened the door, and we went in.",
+        "zh": "他打开门，我们走了进去。",
+        "note": "两个对等分句用 and 连接，是并列句。"
+      },
+      {
+        "en": "He opened the door because it was hot.",
+        "zh": "他打开门，因为天太热。",
+        "note": "主句 + because 引导的原因状语从句，是复合句。"
+      },
+      {
+        "en": "The book that he lent me is interesting.",
+        "zh": "他借给我的那本书很有意思。",
+        "note": "主句里嵌了定语从句，也是复合句。"
+      },
+      {
+        "en": "I was tired, so I went to bed.",
+        "zh": "我累了，所以去睡了。",
+        "note": "用 so 连接两个分句，是并列句。"
+      }
+    ]
+  },
+  {
+    "topic": "sentence",
+    "id": "appositive",
+    "title": "同位语",
+    "en": "Appositives",
+    "level": "进阶",
+    "sortOrder": 9,
+    "summary": "同位语紧跟在一个名词后面，用名词、短语或从句说明它「具体是谁、是什么内容」，两者指的是同一个人或物。",
+    "points": [
+      "同位语和被说明的名词是同一个东西：My friend Tom is a doctor.（Tom = my friend）",
+      "常见形式：名词（Tom）、名词短语（the capital of China）、代词、从句（the news that he won）。",
+      "同位语从句的 that 不作成分、也不能省略；定语从句的 that 必须作主语或宾语——这是区分两者的关键。",
+      "同位语紧跟在名词后面，有限制性（不加逗号）和非限制性（加逗号）两种。",
+      "常见先行名词：news、fact、idea、hope、belief、possibility、evidence。"
+    ],
+    "examples": [
+      {
+        "en": "My friend Tom is a doctor.",
+        "zh": "我朋友汤姆是医生。",
+        "note": "Tom 是 my friend 的同位语，两者是同一人。"
+      },
+      {
+        "en": "We visited Beijing, the capital of China.",
+        "zh": "我们参观了北京——中国的首都。",
+        "note": "名词短语作同位语，用逗号隔开。"
+      },
+      {
+        "en": "The news that he won the game is true.",
+        "zh": "他赢了比赛的消息是真的。",
+        "note": "同位语从句，that 不作成分。"
+      },
+      {
+        "en": "The news that he told me is true.",
+        "zh": "他告诉我的那个消息是真的。",
+        "note": "定语从句，that 作 told 的宾语。"
+      },
+      {
+        "en": "The idea that we should leave early is good.",
+        "zh": "我们早点走的想法不错。",
+        "note": "同位语从句说明 idea 的具体内容。"
+      }
+    ]
+  },
+  {
+    "topic": "sentence",
+    "id": "there-be",
+    "title": "there be 句",
+    "en": "There be",
+    "level": "基础",
+    "sortOrder": 10,
+    "summary": "there be 表示「某处有某物」，是英语特有的存在句。there 只是引导词，真正的句子主语是 be 后面的名词，所以谓语要和它一致。",
+    "points": [
+      "基本结构：There is/are + 名词 + 地点状语：There is a book on the desk.",
+      "there 是引导词，不作主语；真正的主语是 be 后面的名词。",
+      "就近原则：There is a pen and two books... / There are two books and a pen...",
+      "there be 能带时态和情态：There was / There will be / There must be / There seems to be。",
+      "和 have 的分工：there be 表「存在」，have 表「拥有」；不能说 There has a book。"
+    ],
+    "examples": [
+      {
+        "en": "There is a book on the desk.",
+        "zh": "桌上有一本书。",
+        "note": "单数用 is，真主语是 a book。"
+      },
+      {
+        "en": "There are two books and a pen on the desk.",
+        "zh": "桌上有两本书和一支笔。",
+        "note": "就近原则：谓语看紧挨着的 two books。"
+      },
+      {
+        "en": "There will be a meeting tomorrow.",
+        "zh": "明天有个会议。",
+        "note": "there be 可以搭配时态和情态。"
+      },
+      {
+        "en": "There seems to be a problem.",
+        "zh": "似乎有个问题。",
+        "note": "there seems to be 是常见搭配。"
+      },
+      {
+        "en": "He has two books.",
+        "zh": "他有两本书。",
+        "note": "表示「拥有」用 have，不用 there be。"
+      }
+    ]
+  },
+  {
+    "topic": "sentence",
+    "id": "it-uses",
+    "title": "it 的用法",
+    "en": "Uses of it",
+    "level": "进阶",
+    "sortOrder": 11,
+    "summary": "it 不只是「它」：它能占住主语位置（形式主语）、占住宾语位置（形式宾语）、表示天气时间距离，也用来构成强调句。",
+    "points": [
+      "代词 it：指前面提到的物或事（I bought a book. It is interesting.）。",
+      "形式主语：真正的主语是不定式或从句，it 先占位（It is hard to say. / It is said that...）。",
+      "形式宾语：真正的宾语是不定式或从句（I find it hard to learn.）。",
+      "无人称 it：天气、时间、日期、距离（It is raining. / It is five o'clock. / It is ten miles.）。",
+      "强调句 it：It is/was ... that ...（It was Tom that broke the window.）。"
+    ],
+    "examples": [
+      {
+        "en": "I bought a book. It is very interesting.",
+        "zh": "我买了本书。它很有意思。",
+        "note": "it 指代前面的 a book。"
+      },
+      {
+        "en": "It is hard to learn Japanese.",
+        "zh": "日语很难学。",
+        "note": "it 是形式主语，真正的主语是 to learn Japanese。"
+      },
+      {
+        "en": "I find it hard to learn Japanese.",
+        "zh": "我觉得日语很难学。",
+        "note": "it 是形式宾语，真正的宾语是 to learn Japanese。"
+      },
+      {
+        "en": "It is raining outside.",
+        "zh": "外面在下雨。",
+        "note": "无人称 it，指天气。"
+      },
+      {
+        "en": "It was Tom that broke the window.",
+        "zh": "是汤姆打破了窗户。",
+        "note": "强调句里的 it。"
+      }
+    ]
+  },
+  {
     "topic": "relative-clauses",
     "id": "relative-basics",
     "title": "先行词与关系词",

@@ -55,7 +55,7 @@ JAVA_HOME=/path/to/jdk-21 ./gradlew bootRun
 
 启动后 <http://localhost:8080>。
 
-启动时会把 `src/main/resources/seed/*.json` 灌进数据库（20 个元音 + 28 个辅音，含发音要点与例词；2 个语法大类、23 个语法主题（词法 13 + 句法 10，全部有内容）、185 条语法；4 个词库共 371 个词，其中不规则动词 120 个）。灌数据的策略分两种：
+启动时会把 `src/main/resources/seed/*.json` 灌进数据库（20 个元音 + 28 个辅音，含发音要点与例词；2 个语法大类、23 个语法主题（词法 13 + 句法 10，全部有内容）、189 条语法；4 个词库共 371 个词，其中不规则动词 120 个）。灌数据的策略分两种：
 
 - **语法目录**（`grammar-categories.json` / `grammar-topics.json`）按 id、**元音与辅音**按符号 upsert：每次启动都会用种子文件覆盖成最新值
 - **语法条目**（`grammar.json`）和**词库**按 id 增量插入：库里没有的补进去，已有的不覆盖，所以新增主题不用清库；词库的「相关语法」（`related`）例外，每次启动会按种子刷新，方便随时调整跳转
@@ -67,7 +67,7 @@ JAVA_HOME=/path/to/jdk-21 ./gradlew bootRun
 | GET | `/api/health` | 健康检查，返回 `{"status":"ok"}` |
 | GET | `/api/vowels` | 20 个元音，含单元音/双元音分类、音频文件名、主例词、发音要点与补充例词 |
 | GET | `/api/consonants` | 28 个辅音，含爆破音/摩擦音/破擦音/鼻音/边音/半元音分组、主例词、发音要点与补充例词（暂未配音频，音频字段为空） |
-| GET | `/api/grammar` | 全部语法条目（共 185 条：词法 91 节 + 句法 94 节） |
+| GET | `/api/grammar` | 全部语法条目（共 189 条：词法 91 节 + 句法 98 节） |
 | GET | `/api/grammar/topics` | 语法目录：大类、主题、每个主题已收录的节数（前端目录页只读这个接口） |
 | GET | `/api/grammar?topic=articles` | 按主题过滤，主题见下表 |
 | GET | `/api/grammar/{id}` | 单条语法，如 `/api/grammar/plural`，不存在返回 404 |
@@ -75,7 +75,7 @@ JAVA_HOME=/path/to/jdk-21 ./gradlew bootRun
 | GET | `/api/vocabulary/series/{id}` | 某系列的词条，按分类分组，并带上关联的语法主题（`related`，供详情页跳转） |
 | GET | `/api/vocabulary/related?topic=tenses` | 反查：关联了某个语法主题的词库系列（语法详情页的「相关词库」用） |
 
-`topic` 可选值（词法 `tenses` 14 节、`nonfinite` 10 节、`verbs` / `passive` / `prepositions` 各 9 节，其余各 5 节；句法 `sentence` 7 节、`relative-clauses` 9 节、`adverbial-clauses` 10 节、`noun-clauses` 10 节、`subjunctive` 10 节、`inversion` 9 节、`cleft` 9 节、`ellipsis` 10 节、`reported-speech` 10 节、`questions-negation` 10 节）：
+`topic` 可选值（词法 `tenses` 14 节、`nonfinite` 10 节、`verbs` / `passive` / `prepositions` 各 9 节，其余各 5 节；句法 `sentence` 11 节、`relative-clauses` 9 节、`adverbial-clauses` 10 节、`noun-clauses` 10 节、`subjunctive` 10 节、`inversion` 9 节、`cleft` 9 节、`ellipsis` 10 节、`reported-speech` 10 节、`questions-negation` 10 节）：
 
 | topic | 主题 | topic | 主题 |
 |-------|------|-------|------|
