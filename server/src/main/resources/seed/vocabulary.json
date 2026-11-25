@@ -1696,5 +1696,216 @@
       { "category": "特殊变化（高频易错）", "en": "arise", "zh": "出现", "note": "arose / arisen" },
       { "category": "特殊变化（高频易错）", "en": "beat", "zh": "打，击败", "note": "beat / beaten" }
     ]
+  },
+  {
+    "id": "phrasal-verbs",
+    "title": "短语动词",
+    "en": "Phrasal Verbs",
+    "summary": "按核心动词分组，共 80 个高频短语动词。每条给出中文意思和一小段用法提示，注意哪些能拆开、哪些不能。",
+    "sortOrder": 5,
+    "related": [
+      {
+        "topic": "verbs",
+        "category": "word",
+        "title": "动词基础",
+        "reason": "短语动词本身就在「动词基础」的第 05 节：及物与不及物、可分开与不可分开，先看那一节的规则。"
+      },
+      {
+        "topic": "prepositions",
+        "category": "word",
+        "title": "介词",
+        "reason": "短语动词里的小词是介词还是副词，决定宾语能不能放中间：turn it on 可以，look after it 不能拆。"
+      }
+    ],
+    "words": [
+      { "category": "get", "en": "get up", "zh": "起床", "note": "不及物；I get up at six." },
+      { "category": "get", "en": "get on", "zh": "上车（公交、火车）", "note": "get on the bus" },
+      { "category": "get", "en": "get off", "zh": "下车", "note": "get off at the next stop" },
+      { "category": "get", "en": "get over", "zh": "克服、从……恢复", "note": "get over an illness" },
+      { "category": "get", "en": "get along with", "zh": "与……相处", "note": "get along well with sb" },
+
+      { "category": "put", "en": "put on", "zh": "穿上、上演", "note": "put on a coat" },
+      { "category": "put", "en": "put off", "zh": "推迟", "note": "put off the meeting" },
+      { "category": "put", "en": "put up with", "zh": "忍受", "note": "I can't put up with the noise." },
+      { "category": "put", "en": "put away", "zh": "收起来", "note": "put away the books" },
+      { "category": "put", "en": "put out", "zh": "扑灭", "note": "put out the fire" },
+
+      { "category": "take", "en": "take off", "zh": "起飞、脱下", "note": "The plane took off." },
+      { "category": "take", "en": "take up", "zh": "开始从事、占用", "note": "take up tennis / take up space" },
+      { "category": "take", "en": "take after", "zh": "长得像（长辈）", "note": "She takes after her mother." },
+      { "category": "take", "en": "take care of", "zh": "照顾", "note": "take care of the baby" },
+      { "category": "take", "en": "take over", "zh": "接管", "note": "take over the company" },
+
+      { "category": "look", "en": "look after", "zh": "照顾", "note": "after 是介词，不能拆" },
+      { "category": "look", "en": "look for", "zh": "寻找", "note": "look for my keys" },
+      { "category": "look", "en": "look forward to", "zh": "期待", "note": "to 是介词，后接 doing" },
+      { "category": "look", "en": "look up", "zh": "查阅", "note": "look up a word in the dictionary" },
+      { "category": "look", "en": "look into", "zh": "调查", "note": "look into the case" },
+
+      { "category": "make", "en": "make up", "zh": "编造、组成、化妆", "note": "make up a story" },
+      { "category": "make", "en": "make out", "zh": "辨认出", "note": "make out the words" },
+      { "category": "make", "en": "make up for", "zh": "弥补", "note": "make up for the loss" },
+      { "category": "make", "en": "make off", "zh": "匆忙离开", "note": "make off with sth" },
+      { "category": "make", "en": "make do with", "zh": "凑合着用", "note": "make do with what we have" },
+
+      { "category": "come", "en": "come up with", "zh": "想出（主意）", "note": "come up with a plan" },
+      { "category": "come", "en": "come across", "zh": "偶然遇到", "note": "come across an old friend" },
+      { "category": "come", "en": "come along", "zh": "一起来、进展", "note": "Come along with us." },
+      { "category": "come", "en": "come over", "zh": "过来", "note": "Come over for dinner." },
+      { "category": "come", "en": "come down with", "zh": "染上（病）", "note": "come down with a cold" },
+
+      { "category": "go", "en": "go on", "zh": "继续", "note": "go on with the work" },
+      { "category": "go", "en": "go over", "zh": "复习、检查", "note": "go over the notes" },
+      { "category": "go", "en": "go through", "zh": "经历、仔细检查", "note": "go through a hard time" },
+      { "category": "go", "en": "go off", "zh": "爆炸、（闹钟）响", "note": "The alarm went off." },
+      { "category": "go", "en": "go out", "zh": "出去、熄灭", "note": "The light went out." },
+
+      { "category": "turn", "en": "turn on", "zh": "打开（电器）", "note": "turn on the TV / turn it on" },
+      { "category": "turn", "en": "turn off", "zh": "关掉", "note": "turn off the light" },
+      { "category": "turn", "en": "turn up", "zh": "出现、调大", "note": "turn up the volume" },
+      { "category": "turn", "en": "turn down", "zh": "拒绝、调小", "note": "turn down the offer" },
+      { "category": "turn", "en": "turn into", "zh": "变成", "note": "Ice turns into water." },
+
+      { "category": "break", "en": "break down", "zh": "出故障、崩溃", "note": "The car broke down." },
+      { "category": "break", "en": "break out", "zh": "爆发", "note": "War broke out." },
+      { "category": "break", "en": "break up", "zh": "分手、解散", "note": "They broke up last year." },
+      { "category": "break", "en": "break into", "zh": "闯入", "note": "break into a house" },
+      { "category": "break", "en": "break off", "zh": "中断、折断", "note": "break off the talks" },
+
+      { "category": "bring", "en": "bring up", "zh": "抚养、提出", "note": "bring up a child" },
+      { "category": "bring", "en": "bring about", "zh": "引起、导致", "note": "bring about changes" },
+      { "category": "bring", "en": "bring back", "zh": "带回、使想起", "note": "bring back memories" },
+      { "category": "bring", "en": "bring in", "zh": "引入、赚得", "note": "bring in new rules" },
+      { "category": "bring", "en": "bring out", "zh": "使显现、出版", "note": "bring out a new book" },
+
+      { "category": "keep", "en": "keep up with", "zh": "跟上", "note": "keep up with the class" },
+      { "category": "keep", "en": "keep on", "zh": "继续", "note": "keep on trying" },
+      { "category": "keep", "en": "keep away", "zh": "远离", "note": "keep away from the fire" },
+      { "category": "keep", "en": "keep off", "zh": "避开、不接近", "note": "keep off the grass" },
+      { "category": "keep", "en": "keep out", "zh": "挡住、不进入", "note": "keep out the cold" },
+
+      { "category": "run", "en": "run out of", "zh": "用完", "note": "run out of time" },
+      { "category": "run", "en": "run into", "zh": "偶然遇到、撞上", "note": "run into an old friend" },
+      { "category": "run", "en": "run over", "zh": "碾过", "note": "The car ran over a cat." },
+      { "category": "run", "en": "run away", "zh": "逃跑", "note": "run away from home" },
+      { "category": "run", "en": "run across", "zh": "偶然发现", "note": "run across a photo" },
+
+      { "category": "set", "en": "set up", "zh": "建立、设置", "note": "set up a company" },
+      { "category": "set", "en": "set off", "zh": "出发、引发", "note": "set off for Beijing" },
+      { "category": "set", "en": "set out", "zh": "出发、着手", "note": "set out to do sth" },
+      { "category": "set", "en": "set aside", "zh": "留出、搁置", "note": "set aside some money" },
+      { "category": "set", "en": "set down", "zh": "写下、放下", "note": "set down the rules" },
+
+      { "category": "give", "en": "give up", "zh": "放弃", "note": "give up smoking" },
+      { "category": "give", "en": "give in", "zh": "屈服、让步", "note": "give in to pressure" },
+      { "category": "give", "en": "give away", "zh": "赠送、泄露", "note": "give away the secret" },
+      { "category": "give", "en": "give out", "zh": "分发、耗尽", "note": "give out the papers" },
+      { "category": "give", "en": "give back", "zh": "归还", "note": "give back the book" },
+
+      { "category": "pick", "en": "pick up", "zh": "捡起、接人、学会", "note": "pick up the phone" },
+      { "category": "pick", "en": "pick out", "zh": "挑出", "note": "pick out a gift" },
+      { "category": "pick", "en": "pick on", "zh": "找茬、欺负", "note": "pick on the new kid" },
+      { "category": "pick", "en": "pick up on", "zh": "注意到", "note": "pick up on the hint" },
+
+      { "category": "work", "en": "work out", "zh": "算出、锻炼、解决", "note": "work out the problem" },
+      { "category": "work", "en": "work on", "zh": "从事、致力于", "note": "work on a project" },
+      { "category": "work", "en": "work off", "zh": "消耗掉", "note": "work off stress" },
+      { "category": "work", "en": "work up", "zh": "激起、逐步建立", "note": "work up an appetite" },
+
+      { "category": "hold", "en": "hold on", "zh": "稍等、坚持", "note": "Hold on a moment." },
+      { "category": "hold", "en": "hold up", "zh": "举起、延误", "note": "hold up the traffic" }
+    ]
+  },
+  {
+    "id": "preposition-collocations",
+    "title": "介词搭配",
+    "en": "Preposition Collocations",
+    "summary": "按「动词 + 介词」「形容词 + 介词」「名词 + 介词」「固定介词短语」分四类，共 60 条高频搭配。每条的 note 给出一个最简用法。",
+    "sortOrder": 6,
+    "related": [
+      {
+        "topic": "prepositions",
+        "category": "word",
+        "title": "介词",
+        "reason": "固定搭配、形容词 + 介词、动词 + 介词与易混介词，都在「介词」这一主题里；这张表是它的配套清单。"
+      },
+      {
+        "topic": "verbs",
+        "category": "word",
+        "title": "动词基础",
+        "reason": "「动词 + 介词」里的小词是介词还是副词，决定宾语位置与能否拆分，见动词基础第 05 节。"
+      },
+      {
+        "topic": "adjectives",
+        "category": "word",
+        "title": "形容词",
+        "reason": "形容词后面跟哪个介词是固定搭配，和形容词主题里的位置、比较级一起记更牢。"
+      }
+    ],
+    "words": [
+      { "category": "动词 + 介词", "en": "depend on", "zh": "依赖、取决于", "note": "depend on + 名词/doing，on 不能省" },
+      { "category": "动词 + 介词", "en": "look after", "zh": "照顾", "note": "look after sb" },
+      { "category": "动词 + 介词", "en": "wait for", "zh": "等待", "note": "wait for sb / sth" },
+      { "category": "动词 + 介词", "en": "listen to", "zh": "听", "note": "listen to music" },
+      { "category": "动词 + 介词", "en": "belong to", "zh": "属于", "note": "belong to sb" },
+      { "category": "动词 + 介词", "en": "agree with", "zh": "同意（某人）", "note": "agree with sb；agree to a plan" },
+      { "category": "动词 + 介词", "en": "apologize for", "zh": "为……道歉", "note": "apologize for being late" },
+      { "category": "动词 + 介词", "en": "arrive at / in", "zh": "到达", "note": "at 小地点，in 大地点" },
+      { "category": "动词 + 介词", "en": "ask for", "zh": "请求", "note": "ask for help" },
+      { "category": "动词 + 介词", "en": "believe in", "zh": "相信、信任", "note": "believe in yourself" },
+      { "category": "动词 + 介词", "en": "care about", "zh": "关心", "note": "care about others" },
+      { "category": "动词 + 介词", "en": "deal with", "zh": "处理", "note": "deal with a problem" },
+      { "category": "动词 + 介词", "en": "insist on", "zh": "坚持", "note": "insist on doing sth" },
+      { "category": "动词 + 介词", "en": "laugh at", "zh": "嘲笑", "note": "laugh at sb" },
+      { "category": "动词 + 介词", "en": "prepare for", "zh": "为……做准备", "note": "prepare for the exam" },
+      { "category": "动词 + 介词", "en": "refer to", "zh": "提到、查阅", "note": "refer to the dictionary" },
+      { "category": "动词 + 介词", "en": "rely on", "zh": "依靠", "note": "rely on sb" },
+      { "category": "动词 + 介词", "en": "succeed in", "zh": "成功做成", "note": "succeed in doing sth" },
+      { "category": "动词 + 介词", "en": "think about", "zh": "考虑", "note": "think about it" },
+      { "category": "动词 + 介词", "en": "worry about", "zh": "担心", "note": "worry about the exam" },
+
+      { "category": "形容词 + 介词", "en": "afraid of", "zh": "害怕", "note": "afraid of dogs" },
+      { "category": "形容词 + 介词", "en": "angry with", "zh": "对（人）生气", "note": "angry with sb / about sth" },
+      { "category": "形容词 + 介词", "en": "good at", "zh": "擅长", "note": "good at maths" },
+      { "category": "形容词 + 介词", "en": "interested in", "zh": "对……感兴趣", "note": "interested in history" },
+      { "category": "形容词 + 介词", "en": "proud of", "zh": "为……自豪", "note": "proud of you" },
+      { "category": "形容词 + 介词", "en": "similar to", "zh": "与……相似", "note": "similar to mine" },
+      { "category": "形容词 + 介词", "en": "different from", "zh": "与……不同", "note": "different from before" },
+      { "category": "形容词 + 介词", "en": "famous for", "zh": "因……出名", "note": "famous for its food" },
+      { "category": "形容词 + 介词", "en": "ready for", "zh": "为……准备好", "note": "ready for the test" },
+      { "category": "形容词 + 介词", "en": "responsible for", "zh": "对……负责", "note": "responsible for the result" },
+      { "category": "形容词 + 介词", "en": "tired of", "zh": "厌倦", "note": "tired of waiting" },
+      { "category": "形容词 + 介词", "en": "worried about", "zh": "担心", "note": "worried about him" },
+      { "category": "形容词 + 介词", "en": "fond of", "zh": "喜欢", "note": "fond of reading" },
+      { "category": "形容词 + 介词", "en": "kind to", "zh": "对……友善", "note": "kind to animals" },
+      { "category": "形容词 + 介词", "en": "surprised at", "zh": "对……惊讶", "note": "surprised at the news" },
+
+      { "category": "名词 + 介词", "en": "reason for", "zh": "……的原因", "note": "the reason for the delay" },
+      { "category": "名词 + 介词", "en": "solution to", "zh": "……的解决办法", "note": "a solution to the problem" },
+      { "category": "名词 + 介词", "en": "key to", "zh": "……的关键", "note": "the key to success" },
+      { "category": "名词 + 介词", "en": "access to", "zh": "使用/进入……的途径", "note": "access to the internet" },
+      { "category": "名词 + 介词", "en": "advantage of", "zh": "……的优点", "note": "the advantage of online study" },
+      { "category": "名词 + 介词", "en": "effect on", "zh": "对……的影响", "note": "the effect on health" },
+      { "category": "名词 + 介词", "en": "increase in", "zh": "在……方面的增长", "note": "an increase in price" },
+      { "category": "名词 + 介词", "en": "demand for", "zh": "对……的需求", "note": "demand for workers" },
+      { "category": "名词 + 介词", "en": "attitude towards", "zh": "对……的态度", "note": "attitude towards work" },
+      { "category": "名词 + 介词", "en": "chance of", "zh": "……的机会", "note": "a chance of winning" },
+      { "category": "名词 + 介词", "en": "experience in", "zh": "在……方面的经验", "note": "experience in teaching" },
+      { "category": "名词 + 介词", "en": "interest in", "zh": "对……的兴趣", "note": "interest in music" },
+
+      { "category": "固定介词短语", "en": "in charge of", "zh": "负责", "note": "in charge of the team" },
+      { "category": "固定介词短语", "en": "in spite of", "zh": "尽管", "note": "in spite of the rain" },
+      { "category": "固定介词短语", "en": "on behalf of", "zh": "代表", "note": "on behalf of the company" },
+      { "category": "固定介词短语", "en": "by means of", "zh": "通过……方式", "note": "by means of email" },
+      { "category": "固定介词短语", "en": "in addition to", "zh": "除……之外（还有）", "note": "in addition to English" },
+      { "category": "固定介词短语", "en": "as a result of", "zh": "由于", "note": "as a result of the rain" },
+      { "category": "固定介词短语", "en": "at the cost of", "zh": "以……为代价", "note": "at the cost of health" },
+      { "category": "固定介词短语", "en": "in terms of", "zh": "就……而言", "note": "in terms of price" },
+      { "category": "固定介词短语", "en": "on account of", "zh": "因为", "note": "on account of the weather" },
+      { "category": "固定介词短语", "en": "in favour of", "zh": "支持", "note": "in favour of the plan" },
+      { "category": "固定介词短语", "en": "with regard to", "zh": "关于", "note": "with regard to your letter" },
+      { "category": "固定介词短语", "en": "thanks to", "zh": "多亏", "note": "thanks to your help" },
+      { "category": "固定介词短语", "en": "due to", "zh": "由于", "note": "due to bad weather" }
+    ]
   }
 ]
