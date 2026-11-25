@@ -5,6 +5,7 @@ import Login from './pages/Login.tsx'
 import Dashboard from './pages/Dashboard.tsx'
 import GrammarAdmin from './pages/GrammarAdmin.tsx'
 import VowelsAdmin from './pages/VowelsAdmin.tsx'
+import UsersAdmin from './pages/UsersAdmin.tsx'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route index element={<Dashboard />} />
           <Route path="grammar" element={<GrammarAdmin />} />
           <Route path="vowels" element={<VowelsAdmin />} />
+          <Route path="users" element={<UsersAdmin />} />
         </Route>
       </Route>
 

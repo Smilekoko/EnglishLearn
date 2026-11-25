@@ -5,6 +5,13 @@ spring:
   application:
     name: englishlearn-server
 
+  # 本地配置覆盖：server/local.yml 存在就加载（已 gitignore）。
+  # 用来放 ADMIN_MIDS 之类只有本机才需要的设置，避免依赖 shell 环境变量：
+  # gradlew bootRun 是由 Gradle Daemon 起的 JVM，Daemon 的环境在它自己启动时就固定了，
+  # 之后新开的终端里设置的变量它读不到。
+  config:
+    import: optional:file:./local.yml
+
   datasource:
     # 数据库需先创建：db/init.sql
     url: ${DB_URL:jdbc:mysql://localhost:3306/englishlearn?useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true&connectionTimeZone=Asia/Shanghai}
@@ -22,3 +29,12 @@ spring:
 logging:
   level:
     org.hibernate.SQL: info
+
+app:
+  auth:
+    # 管理员白名单：B 站 mid，逗号分隔（如 "123456,234567"）；为空则没人能进后台
+    admin-mids: ${ADMIN_MIDS:}
+    # 会话有效期（天）
+    session-days: ${AUTH_SESSION_DAYS:30}
+    # 线上用 https 时设为 true，cookie 只在 https 下发送
+    cookie-secure: ${AUTH_COOKIE_SECURE:false}

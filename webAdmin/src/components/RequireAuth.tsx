@@ -1,10 +1,20 @@
+import { Spin } from 'antd'
 import { Navigate, Outlet, useLocation } from 'react-router-dom'
-import { isLoggedIn } from '../auth.ts'
+import { useAuth } from '../auth/context.ts'
 
 function RequireAuth() {
   const location = useLocation()
+  const { user, loading } = useAuth()
 
-  if (!isLoggedIn()) {
+  if (loading) {
+    return (
+      <div style={{ display: 'grid', minHeight: '100vh', placeItems: 'center' }}>
+        <Spin tip="正在检查登录状态…" />
+      </div>
+    )
+  }
+
+  if (!user || user.role !== 'ADMIN') {
     return <Navigate to="/login" replace state={{ from: location.pathname }} />
   }
 

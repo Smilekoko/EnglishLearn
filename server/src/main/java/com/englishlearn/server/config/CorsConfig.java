@@ -18,6 +18,8 @@ public class CorsConfig implements WebMvcConfigurer {
                 .allowedOrigins("http://localhost:5173", "http://localhost:5174")
                 .allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
+                // 会话走 HttpOnly Cookie，必须允许携带凭证
+                .allowCredentials(true)
                 .maxAge(3600);
     }
 }

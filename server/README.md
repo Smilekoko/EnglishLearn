@@ -75,6 +75,59 @@ JAVA_HOME=/path/to/jdk-21 ./gradlew bootRun
 | GET | `/api/vocabulary/series/{id}` | 某系列的词条，按分类分组，并带上关联的语法主题（`related`，供详情页跳转） |
 | GET | `/api/vocabulary/related?topic=tenses` | 反查：关联了某个语法主题的词库系列（语法详情页的「相关词库」用） |
 
+### 登录与用户（B 站扫码）
+
+| 方法 | 路径 | 说明 |
+|------|------|------|
+| POST | `/api/auth/bili/qr` | 生成扫码登录二维码，返回 `key` + 已渲染好的 `svg` |
+| GET | `/api/auth/bili/qr/{key}` | 轮询扫码状态：`pending` / `scanned` / `ok` / `expired`；`ok` 时下发会话 Cookie 并返回用户 |
+| GET | `/api/auth/me` | 当前登录用户，未登录返回 401 |
+| PATCH | `/api/auth/me` | 改昵称（请求体 `{"nickname":"..."}`） |
+| POST | `/api/auth/logout` | 退出登录，清 Cookie |
+| GET | `/api/admin/users` | 用户列表，支持 `?q=` 搜索昵称、`?page=&size=` 分页（**需要管理员**） |
+| PATCH | `/api/admin/users/{id}` | 封禁 / 解封，请求体 `{"status":"BANNED"}` 或 `{"status":"ACTIVE"}`（**需要管理员**） |
+
+登录走 B 站网页版扫码接口（非官方 OpenAPI，B 站改版可能失效）：后端调 `generate` 拿 `qrcode_key`，前端轮询 `poll`，成功后用同一份 cookie 调 `nav` 取 `mid / uname / face`，再建立本系统会话。每个二维码用独立的 HttpClient 与 CookieManager，避免不同用户串号。
+
+会话是服务端 `auth_sessions` 表 + HttpOnly Cookie（`EL_SESSION`，SameSite=Lax），Cookie 里只放随机 token，库里只存它的 SHA-256。**不保存 B 站密码与 SESSDATA**。
+
+管理员由环境变量决定（不落库）：
+
+| 变量 | 默认 | 说明 |
+|------|------|------|
+| `ADMIN_MIDS` | 空 | B 站 mid，逗号分隔；为空时没人能进后台 |
+| `AUTH_SESSION_DAYS` | 30 | 会话有效期（天） |
+| `AUTH_COOKIE_SECURE` | false | 线上 https 时设为 true |
+
+本地开发设置管理员（改完要**重启后端**才生效）：
+
+**方式一（推荐）：`server/local.yml`**
+
+```yaml
+app:
+  auth:
+    admin-mids: "8343799"
+```
+
+`application.yml` 里有 `spring.config.import: optional:file:./local.yml`，这个文件会被自动加载，且已加入 `server/.gitignore`。
+
+**方式二：环境变量**
+
+```powershell
+$env:ADMIN_MIDS = "8343799"     # 多个用逗号分隔
+.\gradlew.bat bootRun
+```
+
+> 注意：`gradlew bootRun` 是由 **Gradle Daemon** 拉起应用 JVM 的，而 Daemon 的环境变量在它自己启动时就固定了。新开的终端里设置的变量，**旧 Daemon 读不到**。用环境变量时必须先 `.\gradlew.bat --stop` 再启动，或者干脆用方式一。
+
+启动日志会打印实际读到的白名单，一眼就能确认：
+
+```
+管理员白名单已加载 1 个：[8343799]
+```
+
+线上写 `/etc/englishlearn/env`（模板见 `deploy/env.example`），systemd 启动时读取。角色是每次请求实时算出来的，所以改完重启后端后，已登录的管理员刷新页面就有权限，不用重新扫码。
+
 `topic` 可选值（词法 `tenses` 14 节、`nonfinite` 10 节、`verbs` / `passive` / `prepositions` 各 9 节，其余各 5 节；句法 `sentence` 11 节、`relative-clauses` 9 节、`adverbial-clauses` 10 节、`noun-clauses` 10 节、`subjunctive` 10 节、`inversion` 9 节、`cleft` 9 节、`ellipsis` 10 节、`reported-speech` 10 节、`questions-negation` 10 节）：
 
 | topic | 主题 | topic | 主题 |

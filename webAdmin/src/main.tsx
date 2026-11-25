@@ -6,6 +6,7 @@ import zhCN from 'antd/locale/zh_CN'
 import 'antd/dist/reset.css'
 import './index.css'
 import App from './App.tsx'
+import { AuthProvider } from './auth/AuthProvider.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -19,9 +20,11 @@ createRoot(document.getElementById('root')!).render(
       }}
     >
       <AntdApp>
-        <HashRouter>
-          <App />
-        </HashRouter>
+        <AuthProvider>
+          <HashRouter>
+            <App />
+          </HashRouter>
+        </AuthProvider>
       </AntdApp>
     </ConfigProvider>
   </StrictMode>,

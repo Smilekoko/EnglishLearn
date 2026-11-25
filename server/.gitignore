@@ -13,3 +13,6 @@ out/
 # IDE / 系统
 .idea/
 .DS_Store
+
+# 本机覆盖配置（管理员白名单等）
+local.yml

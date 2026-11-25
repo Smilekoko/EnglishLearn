@@ -26,6 +26,9 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-validation")
 
+    // 扫码登录二维码（后端直接生成 SVG，前端不需要额外依赖）
+    implementation("com.google.zxing:core:3.5.3")
+
     // MySQL 驱动（版本由 Spring Boot BOM 管理）
     runtimeOnly("com.mysql:mysql-connector-j")
 

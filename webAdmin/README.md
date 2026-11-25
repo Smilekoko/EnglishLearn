@@ -29,14 +29,15 @@ Node 解释器固定为 `E:\node\node.exe`，换机器时改这些 XML 里的路
 
 ## 登录
 
-当前是**前端演示登录**，账号写死在 `src/auth.ts`：
+后台登录用的是**同一个 B 站扫码接口**（`POST /api/auth/bili/qr` + 轮询），没有独立账号密码：
 
-```
-用户名 admin
-密码   123456
-```
+1. 打开 `/#/login`，用 B 站 App 扫码
+2. 登录成功后后端会校验该账号的 B 站 mid 是否在服务器的 `ADMIN_MIDS` 环境变量里
+3. 不在白名单 → 页面提示「这个 B 站账号不在管理员白名单里」，需要把 mid 加进去并重启后端
 
-会话存在 `localStorage`（键名 `englishlearn.admin.session`）。接入后端后改为调用登录接口、由服务端下发 HttpOnly Cookie，前端不再保存任何凭据，登录页的“演示账号”提示也要一并删掉。
+会话由服务端下发 HttpOnly Cookie（`EL_SESSION`），前端不保存任何凭据；`RequireAuth` 通过 `GET /api/auth/me` 判断登录态与 `role === 'ADMIN'`。
+
+> 本地要先跑 `server`（8080）。`vite.config.ts` 里已经配了 `/api` 代理，所以 admin 开发服务器（5174）与后端是同源，Cookie 能正常带上。
 
 ## 目录结构
 
@@ -44,22 +45,29 @@ Node 解释器固定为 `E:\node\node.exe`，换机器时改这些 XML 里的路
 webAdmin/
 ├── index.html
 └── src/
-    ├── main.tsx              # ConfigProvider（中文 + 主题色）+ HashRouter
+    ├── main.tsx              # ConfigProvider（中文 + 主题色）+ AuthProvider + HashRouter
     ├── App.tsx               # 路由：/login、受保护的布局与子页面
-    ├── auth.ts               # 演示登录、会话读写
     ├── index.css             # 全局基础样式
+    ├── api/
+    │   ├── client.ts         # fetch 封装，统一带 Cookie
+    │   ├── auth.ts           # 扫码登录、当前用户、退出
+    │   └── users.ts          # 用户列表与封禁/解封
+    ├── auth/
+    │   ├── context.ts        # AuthContext + useAuth
+    │   └── AuthProvider.tsx  # 启动时请求 /api/auth/me
     ├── components/
-    │   └── RequireAuth.tsx   # 未登录跳转 /login
+    │   └── RequireAuth.tsx   # 未登录或非管理员跳转 /login
     ├── layouts/
     │   ├── AdminLayout.tsx   # 侧边栏 + 顶栏 + 内容区
     │   └── AdminLayout.module.css
     ├── mock/
-    │   └── data.ts           # 语法 5 条、元音 20 条演示数据
+    │   └── data.ts           # 概览页演示数据（还没接真实接口）
     └── pages/
-        ├── Login.tsx         # 登录页
+        ├── Login.tsx         # 扫码登录
         ├── Dashboard.tsx     # 概览
         ├── GrammarAdmin.tsx  # 语法管理（表格）
-        └── VowelsAdmin.tsx   # 音标管理（表格）
+        ├── VowelsAdmin.tsx   # 音标管理（表格）
+        └── UsersAdmin.tsx    # 用户管理（搜索 / 分页 / 封禁）
 ```
 
 ## 路由
@@ -70,6 +78,7 @@ webAdmin/
 | `/#/` | 概览 | 是 |
 | `/#/grammar` | 语法管理 | 是 |
 | `/#/vowels` | 音标管理 | 是 |
+| `/#/users` | 用户管理 | 是 |
 
 ## 部署
 

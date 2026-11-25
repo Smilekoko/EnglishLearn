@@ -8,6 +8,8 @@ import Vowels from './pages/Vowels.tsx'
 import Consonants from './pages/Consonants.tsx'
 import Vocabulary from './pages/Vocabulary.tsx'
 import VocabularySeries from './pages/VocabularySeries.tsx'
+import Login from './pages/Login.tsx'
+import AccountMenu from './components/AccountMenu.tsx'
 import NotFound from './pages/NotFound.tsx'
 import styles from './App.module.css'
 
@@ -43,6 +45,8 @@ function App() {
             </NavLink>
           ))}
         </nav>
+
+        <AccountMenu />
       </header>
 
       <main className={styles.main}>
@@ -58,6 +62,7 @@ function App() {
           <Route path="/phonetics/consonants" element={<Consonants />} />
           <Route path="/vocabulary" element={<Vocabulary />} />
           <Route path="/vocabulary/:seriesId" element={<VocabularySeries />} />
+          <Route path="/login" element={<Login />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

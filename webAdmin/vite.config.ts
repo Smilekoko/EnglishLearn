@@ -9,5 +9,12 @@ export default defineConfig({
   // 与 webReact 的 5173 错开，两个项目可以同时跑
   server: {
     port: 5174,
+    // 同源访问后端，会话 Cookie 不需要跨域
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8080',
+        changeOrigin: true,
+      },
+    },
   },
 })

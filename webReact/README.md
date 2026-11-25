@@ -73,11 +73,17 @@ webReact/
     ├── App.module.css
     ├── index.css           # 全局变量与基础样式（含深色模式）
     ├── api/
-    │   ├── client.ts       # fetch 封装、baseURL、错误处理
+    │   ├── client.ts       # fetch 封装、baseURL、错误处理（统一带 Cookie）
+    │   ├── auth.ts         # B 站扫码登录、当前用户、退出
     │   ├── grammar.ts      # 语法接口：目录（/api/grammar/topics）与条目（/api/grammar）
     │   ├── vowels.ts       # 元音接口（/api/vowels）
     │   ├── consonants.ts   # 辅音接口（/api/consonants）
     │   └── vocabulary.ts   # 词库接口的类型与请求函数
+    ├── auth/
+    │   ├── context.ts      # AuthContext + useAuth
+    │   └── AuthProvider.tsx # 启动时请求 /api/auth/me
+    ├── components/
+    │   └── AccountMenu.tsx # 顶栏右侧：登录入口 / 头像 + 退出
     └── pages/
         ├── Home.tsx        # 首页（条目数、元音数来自接口）
         ├── Grammar.tsx     # 语法首页：词法 / 句法两个入口，目录来自接口
@@ -88,6 +94,7 @@ webReact/
         ├── Phonetics.tsx   # 音标（元音 / 辅音入口，数量来自接口）
         ├── Vowels.tsx      # 元音：卡片 + 播放按钮，数据来自 /api/vowels
         ├── Consonants.tsx  # 辅音：按六类分组展示，数据来自 /api/consonants（暂无音频）
+        ├── Login.tsx       # B 站扫码登录（二维码 + 轮询状态）
         ├── NotFound.tsx    # 404
         └── Page.module.css # 各页面共用样式
 ```
@@ -97,6 +104,7 @@ webReact/
 | 路径 | 页面 |
 |------|------|
 | `/#/` | 首页 |
+| `/#/login` | B 站扫码登录（已登录时显示当前账号） |
 | `/#/grammar` | 语法（词法 / 句法两个入口） |
 | `/#/grammar/word` | 词法 · 13 个条目（全部已上线） |
 | `/#/grammar/:category/:topic` | 语法详情，`category` 为 `word` / `syntax`，`topic` 为 `noun`、`tenses`、`sentence`、`relative-clauses`、`adverbial-clauses`、`noun-clauses`、`subjunctive`、`inversion`、`cleft`、`ellipsis`、`reported-speech`、`questions-negation` 等 |

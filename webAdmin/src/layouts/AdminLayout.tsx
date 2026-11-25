@@ -6,9 +6,10 @@ import {
   LogoutOutlined,
   ReadOutlined,
   SoundOutlined,
+  TeamOutlined,
   UserOutlined,
 } from '@ant-design/icons'
-import { logout, session } from '../auth.ts'
+import { useAuth } from '../auth/context.ts'
 import styles from './AdminLayout.module.css'
 
 const { Sider, Header, Content } = Layout
@@ -17,34 +18,37 @@ const menuItems = [
   { key: 'dashboard', icon: <DashboardOutlined />, label: '概览' },
   { key: 'grammar', icon: <ReadOutlined />, label: '语法管理' },
   { key: 'vowels', icon: <SoundOutlined />, label: '音标管理' },
+  { key: 'users', icon: <TeamOutlined />, label: '用户管理' },
 ]
 
 const routes: Record<string, string> = {
   dashboard: '/',
   grammar: '/grammar',
   vowels: '/vowels',
+  users: '/users',
 }
 
 const titles: Record<string, string> = {
   dashboard: '概览',
   grammar: '语法管理',
   vowels: '音标管理',
+  users: '用户管理',
 }
 
 function AdminLayout() {
   const navigate = useNavigate()
   const location = useLocation()
-  const user = session()
+  const { user, logout } = useAuth()
 
   const activeKey = useMemo(() => {
     if (location.pathname.startsWith('/grammar')) return 'grammar'
     if (location.pathname.startsWith('/vowels')) return 'vowels'
+    if (location.pathname.startsWith('/users')) return 'users'
     return 'dashboard'
   }, [location.pathname])
 
   const onLogout = () => {
-    logout()
-    navigate('/login', { replace: true })
+    void logout().then(() => navigate('/login', { replace: true }))
   }
 
   return (
@@ -80,8 +84,12 @@ function AdminLayout() {
             }}
           >
             <div className={styles.user}>
-              <Avatar size={28} icon={<UserOutlined />} style={{ background: '#2f6fed' }} />
-              <span className={styles.userName}>{user?.username ?? '未登录'}</span>
+              {user?.avatar ? (
+                <Avatar size={28} src={user.avatar} />
+              ) : (
+                <Avatar size={28} icon={<UserOutlined />} style={{ background: '#2f6fed' }} />
+              )}
+              <span className={styles.userName}>{user?.nickname ?? '未登录'}</span>
             </div>
           </Dropdown>
         </Header>
